@@ -1,7 +1,7 @@
-package com.tardisengineer.villagecraft2essentials.setup;
+package com.timeshipmodding.villagecraft2essentials.setup;
 
-import com.tardisengineer.villagecraft2essentials.VillageCraft2Essentials;
-import com.tardisengineer.villagecraft2essentials.datagen.*;
+import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.datagen.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

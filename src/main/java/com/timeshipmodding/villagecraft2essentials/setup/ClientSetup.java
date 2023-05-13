@@ -1,4 +1,4 @@
-package com.tardisengineer.villagecraft2essentials.setup;
+package com.timeshipmodding.villagecraft2essentials.setup;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 

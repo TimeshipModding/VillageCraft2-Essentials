@@ -1,4 +1,4 @@
-package com.tardisengineer.villagecraft2essentials.providers;
+package com.timeshipmodding.villagecraft2essentials.providers;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

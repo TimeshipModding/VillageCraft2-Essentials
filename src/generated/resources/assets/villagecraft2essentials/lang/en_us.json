@@ -2,5 +2,6 @@
   "block.villagecraft2essentials.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.villagecraft2essentials.ruby_block": "Block of Ruby",
   "block.villagecraft2essentials.ruby_ore": "Ruby Ore",
-  "item.villagecraft2essentials.ruby": "Ruby"
+  "item.villagecraft2essentials.ruby": "Ruby",
+  "itemgroup.essentialstab1": "VillageCraft 2 Essentials"
 }

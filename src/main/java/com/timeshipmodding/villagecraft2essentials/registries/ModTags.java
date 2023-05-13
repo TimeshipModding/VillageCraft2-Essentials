@@ -1,6 +1,6 @@
-package com.tardisengineer.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.registries;
 
-import com.tardisengineer.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;

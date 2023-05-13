@@ -1,7 +1,7 @@
-package com.tardisengineer.villagecraft2essentials.datagen;
+package com.timeshipmodding.villagecraft2essentials.datagen;
 
-import com.tardisengineer.villagecraft2essentials.VillageCraft2Essentials;
-import com.tardisengineer.villagecraft2essentials.registries.ModBlocks;
+import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.registries.ModBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;

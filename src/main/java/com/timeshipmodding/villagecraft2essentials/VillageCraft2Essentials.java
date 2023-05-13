@@ -1,10 +1,8 @@
-package com.tardisengineer.villagecraft2essentials;
+package com.timeshipmodding.villagecraft2essentials;
 
-import com.tardisengineer.villagecraft2essentials.registries.ModBlocks;
-import com.tardisengineer.villagecraft2essentials.registries.ModItems;
-import com.tardisengineer.villagecraft2essentials.registries.ModTags;
-import com.tardisengineer.villagecraft2essentials.setup.ClientSetup;
-import com.tardisengineer.villagecraft2essentials.setup.ModSetup;
+import com.timeshipmodding.villagecraft2essentials.registries.*;
+import com.timeshipmodding.villagecraft2essentials.setup.ClientSetup;
+import com.timeshipmodding.villagecraft2essentials.setup.ModSetup;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +28,8 @@ public class VillageCraft2Essentials {
         ModItems.init();
         ModBlocks.init();
         ModTags.init();
+        ModConfiguredFeatures.init();
+        ModPlacedFeatures.init();
 
         // Register the setup method for modloading
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();

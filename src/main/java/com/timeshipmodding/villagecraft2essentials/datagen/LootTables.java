@@ -1,8 +1,8 @@
-package com.tardisengineer.villagecraft2essentials.datagen;
+package com.timeshipmodding.villagecraft2essentials.datagen;
 
-import com.tardisengineer.villagecraft2essentials.providers.BaseLootTableProvider;
-import com.tardisengineer.villagecraft2essentials.registries.ModBlocks;
-import com.tardisengineer.villagecraft2essentials.registries.ModItems;
+import com.timeshipmodding.villagecraft2essentials.providers.BaseLootTableProvider;
+import com.timeshipmodding.villagecraft2essentials.registries.ModBlocks;
+import com.timeshipmodding.villagecraft2essentials.registries.ModItems;
 import net.minecraft.data.DataGenerator;
 
 public class LootTables extends BaseLootTableProvider {

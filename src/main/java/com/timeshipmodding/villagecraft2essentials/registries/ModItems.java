@@ -1,6 +1,7 @@
-package com.tardisengineer.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.registries;
 
-import com.tardisengineer.villagecraft2essentials.setup.ModCreativeModeTab;
+import com.timeshipmodding.villagecraft2essentials.setup.ModCreativeModeTab;
+import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -10,12 +11,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.tardisengineer.villagecraft2essentials.VillageCraft2Essentials.MODID;
-import static com.tardisengineer.villagecraft2essentials.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
 
 public class ModItems {
 
-    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, VillageCraft2Essentials.MODID);
 
     public static void init() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();

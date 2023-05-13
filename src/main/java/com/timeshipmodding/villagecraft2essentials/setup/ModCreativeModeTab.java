@@ -1,8 +1,8 @@
-package com.tardisengineer.villagecraft2essentials.setup;
+package com.timeshipmodding.villagecraft2essentials.setup;
 
 import com.simibubi.create.AllBlocks;
-import com.tardisengineer.villagecraft2essentials.registries.ModBlocks;
-import com.tardisengineer.villagecraft2essentials.registries.ModItems;
+import com.timeshipmodding.villagecraft2essentials.registries.ModBlocks;
+import com.timeshipmodding.villagecraft2essentials.registries.ModItems;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;

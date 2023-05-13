@@ -1,5 +1,6 @@
-package com.tardisengineer.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.registries;
 
+import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
@@ -12,11 +13,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.tardisengineer.villagecraft2essentials.VillageCraft2Essentials.MODID;
-
 public class ModBlocks {
 
-    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+    private static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, VillageCraft2Essentials.MODID);
 
     public static void init() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
