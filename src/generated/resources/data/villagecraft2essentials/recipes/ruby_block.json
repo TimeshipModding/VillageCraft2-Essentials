@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "villagecraft2essentials",
+  "ingredients": [
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    },
+    {
+      "item": "villagecraft2essentials:ruby"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "villagecraft2essentials:ruby_block"
+  }
+}

@@ -1,0 +1,38 @@
+# Mod Loading Info
+modLoader="javafml" #mandatory
+loaderVersion="[43,)"
+license="All rights reserved"
+
+# VillageCraft2 Essentials Config
+[[mods]]
+modId="villagecraft2essentials"
+version="${file.jarVersion}"
+displayName="VillageCraft2 Essentials"
+logoFile="villagecraft2essentials.png"
+credits="Created by SirDoctorWho and TardisEngineer"
+authors="TardisEngineer"
+description='''
+Work in progress!
+'''
+
+# Dependency for Forge
+[[dependencies.villagecraft2essentials]]
+    modId="forge"
+    mandatory=true
+    versionRange="[43,)"
+    ordering="NONE"
+    side="BOTH"
+# Dependency for Minecraft
+[[dependencies.villagecraft2essentials]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.2,1.20)"
+    ordering="NONE"
+    side="BOTH"
+# Dependency for Create
+[[dependencies.modid]]
+    modId="create"
+    mandatory=true
+    versionRange="[0.5.0.i,)"
+    ordering="NONE"
+    side="BOTH"
