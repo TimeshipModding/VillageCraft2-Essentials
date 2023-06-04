@@ -9,7 +9,7 @@ modId="villagecraft2essentials"
 version="${file.jarVersion}"
 displayName="VillageCraft2 Essentials"
 logoFile="villagecraft2essentials.png"
-credits="Created by SirDoctorWho and TardisEngineer"
+credits="TimeshipModding"
 authors="TardisEngineer"
 description='''
 Work in progress!
@@ -30,9 +30,9 @@ Work in progress!
     ordering="NONE"
     side="BOTH"
 # Dependency for Create
-[[dependencies.modid]]
+[[dependencies.villagecraft2essentials]]
     modId="create"
     mandatory=true
-    versionRange="[0.5.0.i,)"
+    versionRange="[0.5.1.b,)"
     ordering="NONE"
     side="BOTH"

@@ -1,9 +1,11 @@
 package com.timeshipmodding.villagecraft2essentials.registries;
 
+import com.timeshipmodding.villagecraft2essentials.content.item.CurrencyArmorMaterials;
+import com.timeshipmodding.villagecraft2essentials.content.item.CurrencyItemTiers;
 import com.timeshipmodding.villagecraft2essentials.setup.ModCreativeModeTab;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -26,14 +28,26 @@ public class ModItems {
     // Items
     public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",() -> new Item(ITEM_PROPERTIES));
 
-    //BlockItems
-    public static final RegistryObject<Item> RUBY_BLOCK_BLOCKITEM = fromBlock(RUBY_BLOCK);
+    // Tool Items
+    public static final RegistryObject<Item> RUBY_SWORD
+            = ITEMS.register("ruby_sword", () -> new SwordItem(CurrencyItemTiers.RUBY, 3, -2.4F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_SHOVEL
+            = ITEMS.register("ruby_shovel", () -> new ShovelItem(CurrencyItemTiers.RUBY, 1.5F, -3.0F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_PICKAXE
+            = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(CurrencyItemTiers.RUBY, 1, -2.8F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_AXE
+            = ITEMS.register("ruby_axe", () -> new AxeItem(CurrencyItemTiers.RUBY, 5.0F, -3.0F, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_HOE
+            = ITEMS.register("ruby_hoe", () -> new PickaxeItem(CurrencyItemTiers.RUBY, -3, 0.0F, ITEM_PROPERTIES));
 
-    public static final RegistryObject<Item> RUBY_ORE_BLOCKITEM = fromBlock(RUBY_ORE);
-    public static final RegistryObject<Item> DEEPSLATE_RUBY_ORE_BLOCKITEM = fromBlock(DEEPSLATE_RUBY_ORE);
-
-    public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
-        return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));
-    }
+    // Armor Item
+    public static final RegistryObject<Item> RUBY_HELMET
+            = ITEMS.register("ruby_helmet", () -> new ArmorItem(CurrencyArmorMaterials.RUBY, EquipmentSlot.HEAD, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_CHESTPLATE
+            = ITEMS.register("ruby_chestplate", () -> new ArmorItem(CurrencyArmorMaterials.RUBY, EquipmentSlot.CHEST, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_LEGGINGS
+            = ITEMS.register("ruby_leggings", () -> new ArmorItem(CurrencyArmorMaterials.RUBY, EquipmentSlot.LEGS, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_BOOTS
+            = ITEMS.register("ruby_boots", () -> new ArmorItem(CurrencyArmorMaterials.RUBY, EquipmentSlot.FEET, ITEM_PROPERTIES));
 }
 

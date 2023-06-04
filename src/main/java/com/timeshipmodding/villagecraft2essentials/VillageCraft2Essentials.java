@@ -27,6 +27,7 @@ public class VillageCraft2Essentials {
 
         ModItems.init();
         ModBlocks.init();
+        ModBlockItems.init();
         ModTags.init();
         ModConfiguredFeatures.init();
         ModPlacedFeatures.init();
@@ -37,9 +38,6 @@ public class VillageCraft2Essentials {
         // Register ModSetup and ClientSetup
         modbus.addListener(ModSetup::init);
         DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
-        // Register World Gen classes
-
-
     }
     public static ResourceLocation asResource(String path) {
         return new ResourceLocation(MODID, path);

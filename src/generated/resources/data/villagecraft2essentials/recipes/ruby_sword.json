@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "createlectrfied",
+  "key": {
+    "!": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "villagecraft2essentials:ruby"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "!"
+  ],
+  "result": {
+    "item": "villagecraft2essentials:ruby_sword"
+  }
+}

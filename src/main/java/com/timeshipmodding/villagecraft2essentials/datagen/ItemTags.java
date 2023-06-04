@@ -1,6 +1,7 @@
 package com.timeshipmodding.villagecraft2essentials.datagen;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.registries.ModBlockItems;
 import com.timeshipmodding.villagecraft2essentials.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.registries.ModTags;
 import net.minecraft.data.DataGenerator;
@@ -18,8 +19,8 @@ public class ItemTags extends ItemTagsProvider {
     protected void addTags() {
         // VillageCraft2 Essentials Tags
         tag(ModTags.RUBY_ORE_ITEM)
-                .add(ModItems.RUBY_ORE_BLOCKITEM.get())
-                .add(ModItems.DEEPSLATE_RUBY_ORE_BLOCKITEM.get());
+                .add(ModBlockItems.RUBY_ORE_BLOCKITEM.get())
+                .add(ModBlockItems.DEEPSLATE_RUBY_ORE_BLOCKITEM.get());
     }
 
     @Override

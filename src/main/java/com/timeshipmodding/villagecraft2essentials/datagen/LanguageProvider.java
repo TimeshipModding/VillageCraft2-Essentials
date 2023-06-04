@@ -13,10 +13,23 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
     @Override
     protected void addTranslations() {
         // CreativeModeTab Translations
-        add("itemgroup.essentialstab1", "VillageCraft 2 Essentials");
+        add("itemGroup.essentialstab1", "VillageCraft 2 Essentials");
 
         // Item Translations
         add(ModItems.RUBY.get(), "Ruby");
+
+        // Tool Item Translations
+        add(ModItems.RUBY_SWORD.get(), "Ruby Sword");
+        add(ModItems.RUBY_SHOVEL.get(), "Ruby Shovel");
+        add(ModItems.RUBY_PICKAXE.get(), "Ruby Pickaxe");
+        add(ModItems.RUBY_AXE.get(), "Ruby Axe");
+        add(ModItems.RUBY_HOE.get(), "Ruby Hoe");
+
+        // Armor Item Translations
+        add(ModItems.RUBY_HELMET.get(), "Ruby Helmet");
+        add(ModItems.RUBY_CHESTPLATE.get(), "Ruby Chestplate");
+        add(ModItems.RUBY_LEGGINGS.get(), "Ruby Leggings");
+        add(ModItems.RUBY_BOOTS.get(), "Ruby Boots");
 
         // Block Translations
         add(ModBlocks.RUBY_ORE.get(), "Ruby Ore");

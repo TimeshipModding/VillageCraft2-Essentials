@@ -1,5 +1,14 @@
-// 1.19.2	2023-05-13T19:15:15.2620169	Item Models: villagecraft2essentials
+// 1.19.2	2023-06-04T17:59:44.1939673	Item Models: villagecraft2essentials
 56e7ae2c4c2480f761dcda131537de5892ef54fa assets/villagecraft2essentials/models/item/deepslate_ruby_ore.json
 faee49144c2687065e297264c6ba136aa7c4b66c assets/villagecraft2essentials/models/item/ruby.json
+454f3989bf609d2b53508a4876d9503d1089cc3c assets/villagecraft2essentials/models/item/ruby_axe.json
 2ffdb17791e5546723b9ee94094dd7cb92c64b30 assets/villagecraft2essentials/models/item/ruby_block.json
+98e22c530451d4217e7dd8cfdb8cb7af68f08612 assets/villagecraft2essentials/models/item/ruby_boots.json
+cce3514fa2e525f922bb26481c9c55947035375a assets/villagecraft2essentials/models/item/ruby_chestplate.json
+ee4d1629bc98084e6d301c9a951e031aae5530b4 assets/villagecraft2essentials/models/item/ruby_helmet.json
+1bf764d04dcd20864f99f04b1aa0bcb9ff2a8d81 assets/villagecraft2essentials/models/item/ruby_hoe.json
+470cff5eff387f8399a9c07ef530aa0a28baacf0 assets/villagecraft2essentials/models/item/ruby_leggings.json
 ef5d04305c7ba3a71b7a5eb6bb7c836a68d1eab1 assets/villagecraft2essentials/models/item/ruby_ore.json
+b40c6abd9986bc894f6262d9fc3e72e62b9f03cb assets/villagecraft2essentials/models/item/ruby_pickaxe.json
+f7f459e3c5f7ed5d29634b754a446d7d45de52c7 assets/villagecraft2essentials/models/item/ruby_shovel.json
+b759ed4557b121ad7f382583cff4d5cbab429d7b assets/villagecraft2essentials/models/item/ruby_sword.json

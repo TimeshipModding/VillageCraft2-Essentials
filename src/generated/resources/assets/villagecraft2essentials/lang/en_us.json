@@ -3,5 +3,14 @@
   "block.villagecraft2essentials.ruby_block": "Block of Ruby",
   "block.villagecraft2essentials.ruby_ore": "Ruby Ore",
   "item.villagecraft2essentials.ruby": "Ruby",
-  "itemgroup.essentialstab1": "VillageCraft 2 Essentials"
+  "item.villagecraft2essentials.ruby_axe": "Ruby Axe",
+  "item.villagecraft2essentials.ruby_boots": "Ruby Boots",
+  "item.villagecraft2essentials.ruby_chestplate": "Ruby Chestplate",
+  "item.villagecraft2essentials.ruby_helmet": "Ruby Helmet",
+  "item.villagecraft2essentials.ruby_hoe": "Ruby Hoe",
+  "item.villagecraft2essentials.ruby_leggings": "Ruby Leggings",
+  "item.villagecraft2essentials.ruby_pickaxe": "Ruby Pickaxe",
+  "item.villagecraft2essentials.ruby_shovel": "Ruby Shovel",
+  "item.villagecraft2essentials.ruby_sword": "Ruby Sword",
+  "itemGroup.essentialstab1": "VillageCraft 2 Essentials"
 }

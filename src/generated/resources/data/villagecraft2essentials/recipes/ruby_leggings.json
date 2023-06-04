@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "createlectrfied",
+  "key": {
+    "#": {
+      "item": "villagecraft2essentials:ruby"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "result": {
+    "item": "villagecraft2essentials:ruby_leggings"
+  }
+}
