@@ -1,6 +1,8 @@
 package com.timeshipmodding.villagecraft2essentials.registries;
 
+import com.simibubi.create.AllBlocks;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.content.block.RubyAtmBlock;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
@@ -28,4 +30,7 @@ public class ModBlocks {
             = BLOCKS.register("deepslate_ruby_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(RUBY_ORE.get()).strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), UniformInt.of(3, 7)));
     public static final RegistryObject<Block> RUBY_BLOCK
             = BLOCKS.register("ruby_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(5.0F, 6.0F)));
+
+    public static final RegistryObject<Block> RUBY_ATM
+            = BLOCKS.register("ruby_atm", () -> new RubyAtmBlock(BlockBehaviour.Properties.copy(AllBlocks.BRASS_BLOCK.get()).noOcclusion().requiresCorrectToolForDrops()));
 }

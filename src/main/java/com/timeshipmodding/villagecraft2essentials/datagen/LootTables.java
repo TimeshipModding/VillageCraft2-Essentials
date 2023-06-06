@@ -12,6 +12,7 @@ public class LootTables extends BaseLootTableProvider {
     protected void addTables() {
         // Simple LootTables
         lootTables.put(ModBlocks.RUBY_BLOCK.get(), createSimpleTable("ruby_block", ModBlocks.RUBY_BLOCK.get()));
+        lootTables.put(ModBlocks.RUBY_ATM.get(), createSimpleTable("ruby_atm", ModBlocks.RUBY_ATM.get()));
 
         // Ore LootTables
         lootTables.put(ModBlocks.RUBY_ORE.get(), createSilkTouchTable("electrum_ore", ModBlocks.RUBY_ORE.get(), ModItems.RUBY.get(), 1, 2));

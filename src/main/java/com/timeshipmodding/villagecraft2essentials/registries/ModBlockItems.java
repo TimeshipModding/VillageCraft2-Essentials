@@ -28,6 +28,9 @@ public class ModBlockItems {
     public static final RegistryObject<Item> RUBY_ORE_BLOCKITEM = fromBlock(RUBY_ORE);
     public static final RegistryObject<Item> DEEPSLATE_RUBY_ORE_BLOCKITEM = fromBlock(DEEPSLATE_RUBY_ORE);
 
+    // Model BlockItems
+    public static final RegistryObject<Item> RUBY_ATM_BLOCKITEM = fromBlock(RUBY_ATM);
+
     public static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
         return BLOCKITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));
     }

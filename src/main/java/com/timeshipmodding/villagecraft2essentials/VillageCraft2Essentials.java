@@ -13,7 +13,6 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(VillageCraft2Essentials.MODID)
 public class VillageCraft2Essentials {
 
@@ -24,13 +23,13 @@ public class VillageCraft2Essentials {
     public VillageCraft2Essentials() {
 
         // Register the registry classes
-
         ModItems.init();
         ModBlocks.init();
         ModBlockItems.init();
         ModTags.init();
         ModConfiguredFeatures.init();
         ModPlacedFeatures.init();
+        ModLootModifiers.init();
 
         // Register the setup method for modloading
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();

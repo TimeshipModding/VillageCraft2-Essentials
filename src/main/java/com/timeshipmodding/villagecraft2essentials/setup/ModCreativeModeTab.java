@@ -19,6 +19,7 @@ public class ModCreativeModeTab {
         @Override
         public void fillItemList(NonNullList<ItemStack> pItems) {
             // CreativeModeTab Organization
+            pItems.add(new ItemStack(ModBlocks.RUBY_ATM.get()));
             pItems.add(new ItemStack(ModItems.RUBY.get()));
             pItems.add(new ItemStack(ModItems.RUBY_SWORD.get()));
             pItems.add(new ItemStack(ModItems.RUBY_SHOVEL.get()));

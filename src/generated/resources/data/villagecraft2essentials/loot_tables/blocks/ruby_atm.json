@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "villagecraft2essentials:ruby_atm"
+        }
+      ],
+      "name": "ruby_atm",
+      "rolls": 1.0
+    }
+  ]
+}

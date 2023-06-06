@@ -49,5 +49,13 @@ public class ModItems {
             = ITEMS.register("ruby_leggings", () -> new ArmorItem(CurrencyArmorMaterials.RUBY, EquipmentSlot.LEGS, ITEM_PROPERTIES));
     public static final RegistryObject<Item> RUBY_BOOTS
             = ITEMS.register("ruby_boots", () -> new ArmorItem(CurrencyArmorMaterials.RUBY, EquipmentSlot.FEET, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_NETHERITE_HELMET
+            = ITEMS.register("ruby_netherite_helmet", () -> new ArmorItem(CurrencyArmorMaterials.RUBY_NETHERITE, EquipmentSlot.HEAD, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_NETHERITE_CHESTPLATE
+            = ITEMS.register("ruby_netherite_chestplate", () -> new ArmorItem(CurrencyArmorMaterials.RUBY_NETHERITE, EquipmentSlot.CHEST, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_NETHERITE_LEGGINGS
+            = ITEMS.register("ruby_netherite_leggings", () -> new ArmorItem(CurrencyArmorMaterials.RUBY_NETHERITE, EquipmentSlot.LEGS, ITEM_PROPERTIES));
+    public static final RegistryObject<Item> RUBY_NETHERITE_BOOTS
+            = ITEMS.register("ruby_netherite_boots", () -> new ArmorItem(CurrencyArmorMaterials.RUBY_NETHERITE, EquipmentSlot.FEET, ITEM_PROPERTIES));
 }
 

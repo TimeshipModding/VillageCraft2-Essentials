@@ -19,12 +19,14 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.RUBY_ORE.get())
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE.get())
-                .add(ModBlocks.RUBY_BLOCK.get());
+                .add(ModBlocks.RUBY_BLOCK.get())
+                .add(ModBlocks.RUBY_ATM.get());
 
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.RUBY_ORE.get())
                 .add(ModBlocks.DEEPSLATE_RUBY_ORE.get())
-                .add(ModBlocks.RUBY_BLOCK.get());
+                .add(ModBlocks.RUBY_BLOCK.get())
+                .add(ModBlocks.RUBY_ATM.get());
 
 
         // VillageCraft2 Essnetials Tags

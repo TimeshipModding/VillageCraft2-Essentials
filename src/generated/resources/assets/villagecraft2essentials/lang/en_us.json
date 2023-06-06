@@ -1,5 +1,6 @@
 {
   "block.villagecraft2essentials.deepslate_ruby_ore": "Deepslate Ruby Ore",
+  "block.villagecraft2essentials.ruby_atm": "Gripper City ATM",
   "block.villagecraft2essentials.ruby_block": "Block of Ruby",
   "block.villagecraft2essentials.ruby_ore": "Ruby Ore",
   "item.villagecraft2essentials.ruby": "Ruby",
@@ -9,6 +10,10 @@
   "item.villagecraft2essentials.ruby_helmet": "Ruby Helmet",
   "item.villagecraft2essentials.ruby_hoe": "Ruby Hoe",
   "item.villagecraft2essentials.ruby_leggings": "Ruby Leggings",
+  "item.villagecraft2essentials.ruby_netherite_boots": "Ruby Netherite Boots",
+  "item.villagecraft2essentials.ruby_netherite_chestplate": "Ruby Netherite Chestplate",
+  "item.villagecraft2essentials.ruby_netherite_helmet": "Ruby Netherite Helmet",
+  "item.villagecraft2essentials.ruby_netherite_leggings": "Ruby Netherite Leggings",
   "item.villagecraft2essentials.ruby_pickaxe": "Ruby Pickaxe",
   "item.villagecraft2essentials.ruby_shovel": "Ruby Shovel",
   "item.villagecraft2essentials.ruby_sword": "Ruby Sword",
