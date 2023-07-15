@@ -30,8 +30,6 @@ public class RubyAtmBlock extends DirectionalBlock {
         return SHAPE;
     }
 
-    // Facing
-
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());

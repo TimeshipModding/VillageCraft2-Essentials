@@ -6,8 +6,6 @@ import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.util.valueproviders.ConstantInt;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -16,6 +14,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
+
+import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_RUBY_SMALL = registerKey("ore_ruby_small");
@@ -27,9 +27,10 @@ public class ModConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
         List<OreConfiguration.TargetBlockState> rubyOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModBlocks.RUBY_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
+                OreConfiguration.target(stoneReplaceables, RUBY_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
 
+        // Ruby Ores
         register(context, ORE_RUBY_SMALL, Feature.ORE, new OreConfiguration(rubyOres, 4, 0.5f));
         register(context, ORE_RUBY_LARGE, Feature.ORE, new OreConfiguration(rubyOres, 12, 0.7f));
         register(context, ORE_RUBY_BURIED, Feature.ORE, new OreConfiguration(rubyOres, 9, 1f));

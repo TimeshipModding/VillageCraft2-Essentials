@@ -1,18 +1,16 @@
 package com.timeshipmodding.villagecraft2essentials.registries;
 
-import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import com.timeshipmodding.villagecraft2essentials.registries.ModBlocks;
-import com.timeshipmodding.villagecraft2essentials.registries.ModItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+
+import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
 
 public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -27,21 +25,21 @@ public class ModCreativeModeTabs {
             .icon(() -> new ItemStack(Blocks.BEACON))
             // Add default items to tab
             .displayItems((pParametres, pOutput) -> {
-                pOutput.accept(ModBlocks.RUBY_ATM.get());
-                pOutput.accept(ModItems.RUBY.get());
-                pOutput.accept(ModItems.RUBY_SWORD.get());
-                pOutput.accept(ModItems.RUBY_SHOVEL.get());
-                pOutput.accept(ModItems.RUBY_PICKAXE.get());
-                pOutput.accept(ModItems.RUBY_AXE.get());
-                pOutput.accept(ModItems.RUBY_AXE.get());
-                pOutput.accept(ModItems.RUBY_HOE.get());
-                pOutput.accept(ModItems.RUBY_HELMET.get());
-                pOutput.accept(ModItems.RUBY_CHESTPLATE.get());
-                pOutput.accept(ModItems.RUBY_LEGGINGS.get());
-                pOutput.accept(ModItems.RUBY_BOOTS.get());
-                pOutput.accept(ModBlocks.RUBY_ORE.get());
-                pOutput.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
-                pOutput.accept(ModBlocks.RUBY_BLOCK.get());
+                pOutput.accept(RUBY_ATM.get());
+                pOutput.accept(RUBY.get());
+                pOutput.accept(RUBY_SWORD.get());
+                pOutput.accept(RUBY_SHOVEL.get());
+                pOutput.accept(RUBY_PICKAXE.get());
+                pOutput.accept(RUBY_AXE.get());
+                pOutput.accept(RUBY_AXE.get());
+                pOutput.accept(RUBY_HOE.get());
+                pOutput.accept(RUBY_HELMET.get());
+                pOutput.accept(RUBY_CHESTPLATE.get());
+                pOutput.accept(RUBY_LEGGINGS.get());
+                pOutput.accept(RUBY_BOOTS.get());
+                pOutput.accept(RUBY_ORE.get());
+                pOutput.accept(DEEPSLATE_RUBY_ORE.get());
+                pOutput.accept(RUBY_BLOCK.get());
             })
             .build()
     );

@@ -15,7 +15,6 @@ public class VillageCraft2Essentials {
     private static final Logger LOGGER = LogManager.getLogger();
     public static final String MODID = "villagecraft2essentials";
 
-
     public VillageCraft2Essentials() {
         // Register the setup method for modloading
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -23,6 +22,7 @@ public class VillageCraft2Essentials {
         // Setup DataGeneration
         modEventBus.addListener(ModDataGeneration::generate);
 
+        // Register Forge Event Bus
         MinecraftForge.EVENT_BUS.register(this);
 
         // Register the registry classes

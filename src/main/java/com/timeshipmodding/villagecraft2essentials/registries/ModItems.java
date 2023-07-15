@@ -21,15 +21,15 @@ public class ModItems {
 
     // Tool Items
     public static final RegistryObject<SwordItem> RUBY_SWORD
-            = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTiers.RUBY_TOOL, 3, -2.4F, ITEM_PROPERTIES));
+            = ITEMS.register("ruby_sword", () -> new SwordItem(ModItemTiers.RUBY, 3, -2.4F, ITEM_PROPERTIES));
     public static final RegistryObject<Item> RUBY_SHOVEL
-            = ITEMS.register("ruby_shovel", () -> new ShovelItem(ModItemTiers.RUBY_TOOL, 1.5F, -3.0F, ITEM_PROPERTIES));
+            = ITEMS.register("ruby_shovel", () -> new ShovelItem(ModItemTiers.RUBY, 1.5F, -3.0F, ITEM_PROPERTIES));
     public static final RegistryObject<PickaxeItem> RUBY_PICKAXE
-            = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(ModItemTiers.RUBY_TOOL, 1, -2.8F, ITEM_PROPERTIES));
+            = ITEMS.register("ruby_pickaxe", () -> new PickaxeItem(ModItemTiers.RUBY, 1, -2.8F, ITEM_PROPERTIES));
     public static final RegistryObject<AxeItem> RUBY_AXE
-            = ITEMS.register("ruby_axe", () -> new AxeItem(ModItemTiers.RUBY_TOOL, 5.0F, -3.0F, ITEM_PROPERTIES));
+            = ITEMS.register("ruby_axe", () -> new AxeItem(ModItemTiers.RUBY, 5.0F, -3.0F, ITEM_PROPERTIES));
     public static final RegistryObject<HoeItem> RUBY_HOE
-            = ITEMS.register("ruby_hoe", () -> new HoeItem(ModItemTiers.RUBY_TOOL, -3, 0.0F, ITEM_PROPERTIES));
+            = ITEMS.register("ruby_hoe", () -> new HoeItem(ModItemTiers.RUBY, -3, 0.0F, ITEM_PROPERTIES));
 
     // Armor Item
     public static final RegistryObject<ArmorItem> RUBY_HELMET

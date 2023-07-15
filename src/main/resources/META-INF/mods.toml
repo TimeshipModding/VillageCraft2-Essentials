@@ -1,25 +1,23 @@
 # Mod Loading Info
-modLoader="javafml" #mandatory
-loaderVersion="[43,)"
-license="All rights reserved"
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+license="${mod_license}"
 
 # VillageCraft2 Essentials Config
 [[mods]]
 modId="villagecraft2essentials"
-version="${file.jarVersion}"
-displayName="VillageCraft2 Essentials"
+version="${mod_version}"
+displayName="${mod_name}"
 logoFile="villagecraft2essentials.png"
-credits="Created TardisEngineer from Timeship Modding"
-authors="TardisEngineer"
-description='''
-Work in progress!
-'''
+credits="${mod_credits}"
+authors="${mod_authors}"
+description='''${mod_description}'''
 
 # Dependency for Forge
 [[dependencies.villagecraft2essentials]]
     modId="forge"
     mandatory=true
-    versionRange="[47,)"
+    versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
 
@@ -27,6 +25,10 @@ Work in progress!
 [[dependencies.villagecraft2essentials]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.20.1,1.21)"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
+
+
+
+
