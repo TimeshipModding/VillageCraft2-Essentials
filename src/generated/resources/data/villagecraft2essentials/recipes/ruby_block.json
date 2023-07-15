@@ -1,37 +1,20 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
   "group": "villagecraft2essentials",
-  "ingredients": [
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
-      "item": "villagecraft2essentials:ruby"
-    },
-    {
+  "key": {
+    "#": {
       "item": "villagecraft2essentials:ruby"
     }
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
   ],
   "result": {
     "count": 9,
     "item": "villagecraft2essentials:ruby_block"
-  }
+  },
+  "show_notification": true
 }

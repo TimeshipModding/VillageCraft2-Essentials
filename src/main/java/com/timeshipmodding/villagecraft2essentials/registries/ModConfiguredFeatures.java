@@ -1,39 +1,47 @@
 package com.timeshipmodding.villagecraft2essentials.registries;
 
-import com.google.common.base.Suppliers;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import net.minecraft.core.Registry;
-import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
-import java.util.function.Supplier;
 
 public class ModConfiguredFeatures {
-    private static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, VillageCraft2Essentials.MODID);
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_RUBY_SMALL = registerKey("ore_ruby_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_RUBY_LARGE = registerKey("ore_ruby_large");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_RUBY_BURIED = registerKey("ore_ruby_buried");
 
-    public static void init() {
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        CONFIGURED_FEATURES.register(bus);
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+
+        List<OreConfiguration.TargetBlockState> rubyOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.RUBY_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
+
+        register(context, ORE_RUBY_SMALL, Feature.ORE, new OreConfiguration(rubyOres, 4, 0.5f));
+        register(context, ORE_RUBY_LARGE, Feature.ORE, new OreConfiguration(rubyOres, 12, 0.7f));
+        register(context, ORE_RUBY_BURIED, Feature.ORE, new OreConfiguration(rubyOres, 9, 1f));
     }
 
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_RUBY_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.RUBY_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState())));
 
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(VillageCraft2Essentials.MODID, name));
+    }
 
-    public static final RegistryObject<ConfiguredFeature<?, ?>> RUBY_ORE = CONFIGURED_FEATURES.register("ruby_ore",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_RUBY_ORES.get(),4, 0.5F)));
-
-    public static final RegistryObject<ConfiguredFeature<?, ?>> RUBY_ORE_LARGE = CONFIGURED_FEATURES.register("ruby_ore_large",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_RUBY_ORES.get(),12, 0.7F)));
-
-    public static final RegistryObject<ConfiguredFeature<?, ?>> RUBY_ORE_BURIED = CONFIGURED_FEATURES.register("ruby_ore_buried",
-            () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(OVERWORLD_RUBY_ORES.get(),8, 1.0F)));
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+        context.register(key, new ConfiguredFeature<>(feature, configuration));
+    }
 }

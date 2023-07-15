@@ -4,17 +4,18 @@ import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import com.timeshipmodding.villagecraft2essentials.registries.ModBlocks;
 import com.timeshipmodding.villagecraft2essentials.registries.ModItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.fml.common.Mod;
 
 public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
-    public LanguageProvider(DataGenerator gen, String locale) {
-        super(gen, VillageCraft2Essentials.MODID, locale);
+    public LanguageProvider(PackOutput output, String locale) {
+        super(output, VillageCraft2Essentials.MODID, locale);
     }
 
     @Override
     protected void addTranslations() {
         // CreativeModeTab Translations
-        add("itemGroup.essentialstab1", "VillageCraft 2 Essentials");
+        add("item_group.villagecraft2essentials.essentials_tab", "VillageCraft 2 Essentials");
 
         // Item Translations
         add(ModItems.RUBY.get(), "Ruby");

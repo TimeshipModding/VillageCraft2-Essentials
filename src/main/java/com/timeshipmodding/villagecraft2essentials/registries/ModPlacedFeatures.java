@@ -1,47 +1,54 @@
 package com.timeshipmodding.villagecraft2essentials.registries;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import net.minecraft.core.Registry;
+import com.timeshipmodding.villagecraft2essentials.content.worldgen.OrePlacement;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.placement.*;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
+import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
-    private static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, VillageCraft2Essentials.MODID);
+    public static final ResourceKey<PlacedFeature> ORE_RUBY_SMALL = createKey("ore_ruby_small");
+    public static final ResourceKey<PlacedFeature> ORE_RUBY_LARGE = createKey("ore_ruby_large");
+    public static final ResourceKey<PlacedFeature> ORE_RUBY_BURIED = createKey("ore_ruby_buried");
 
-    public static void init() {
-        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
-        PLACED_FEATURES.register(bus);
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+
+        register(context, ORE_RUBY_SMALL, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_RUBY_SMALL),
+                OrePlacement.commonOrePlacement(7, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, ORE_RUBY_LARGE, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_RUBY_LARGE),
+                OrePlacement.rareOrePlacement(9, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        register(context, ORE_RUBY_BURIED, configuredFeatures.getOrThrow(ModConfiguredFeatures.ORE_RUBY_BURIED),
+                OrePlacement.commonOrePlacement(4, // veins per chunk
+                        HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
     }
 
 
-    public static final RegistryObject<PlacedFeature> RUBY_ORE_PLACED = PLACED_FEATURES.register("ruby_ore_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(), commonOrePlacement(7, // VeinsPerChunk
-                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
-    public static final RegistryObject<PlacedFeature> RUBY_ORE_LARGE_PLACED = PLACED_FEATURES.register("ruby_ore_large_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(), rareOrePlacement(9, // VeinsPerChunk
-                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
-    public static final RegistryObject<PlacedFeature> RUBY_ORE_BURIED_PLACED = PLACED_FEATURES.register("ruby_ore_buried_placed",
-            () -> new PlacedFeature(ModConfiguredFeatures.RUBY_ORE.getHolder().get(), commonOrePlacement(4, // VeinsPerChunk
-                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-
-    public static List<PlacementModifier> orePlacement(PlacementModifier p_195347_, PlacementModifier p_195348_) {
-        return List.of(p_195347_, InSquarePlacement.spread(), p_195348_, BiomeFilter.biome());
+    private static ResourceKey<PlacedFeature> createKey(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(VillageCraft2Essentials.MODID, name));
     }
 
-    public static List<PlacementModifier> commonOrePlacement(int p_195344_, PlacementModifier p_195345_) {
-        return orePlacement(CountPlacement.of(p_195344_), p_195345_);
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 
-    public static List<PlacementModifier> rareOrePlacement(int p_195350_, PlacementModifier p_195351_) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(p_195350_), p_195351_);
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 PlacementModifier... modifiers) {
+        register(context, key, configuration, List.of(modifiers));
     }
 }
-

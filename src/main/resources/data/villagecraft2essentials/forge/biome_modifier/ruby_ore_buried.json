@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "villagecraft2essentials:ruby_ore_buried_placed",
+  "features": "villagecraft2essentials:ore_ruby_buried",
   "step": "underground_ores"
 }

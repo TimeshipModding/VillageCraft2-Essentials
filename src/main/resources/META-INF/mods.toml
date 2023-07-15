@@ -19,7 +19,7 @@ Work in progress!
 [[dependencies.villagecraft2essentials]]
     modId="forge"
     mandatory=true
-    versionRange="[43,)"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 
@@ -27,14 +27,6 @@ Work in progress!
 [[dependencies.villagecraft2essentials]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2,1.20)"
-    ordering="NONE"
-    side="BOTH"
-
-# Dependency for Create
-[[dependencies.villagecraft2essentials]]
-    modId="create"
-    mandatory=true
-    versionRange="[0.5.1.b,)"
+    versionRange="[1.20.1,1.21)"
     ordering="NONE"
     side="BOTH"

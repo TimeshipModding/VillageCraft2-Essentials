@@ -1,0 +1,4 @@
+// 1.20.1	2023-07-12T19:15:42.5344179	Tags for minecraft:block mod id villagecraft2essentials
+23ae6458e96b4521b8af6bbe36556afae461d76e data/minecraft/tags/blocks/mineable/pickaxe.json
+23ae6458e96b4521b8af6bbe36556afae461d76e data/minecraft/tags/blocks/needs_iron_tool.json
+69ce9b7ad1aca7b6bcf3282997d8ac58f5e23df8 data/villagecraft2essentials/tags/blocks/ruby_ore_block.json

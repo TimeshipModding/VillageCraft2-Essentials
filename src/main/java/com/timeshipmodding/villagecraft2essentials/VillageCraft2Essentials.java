@@ -1,13 +1,9 @@
 package com.timeshipmodding.villagecraft2essentials;
 
 import com.timeshipmodding.villagecraft2essentials.registries.*;
-import com.timeshipmodding.villagecraft2essentials.setup.ClientSetup;
-import com.timeshipmodding.villagecraft2essentials.setup.ModSetup;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.api.distmarker.Dist;
+import com.timeshipmodding.villagecraft2essentials.registries.ModDataGeneration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
@@ -21,24 +17,18 @@ public class VillageCraft2Essentials {
 
 
     public VillageCraft2Essentials() {
+        // Register the setup method for modloading
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        // Setup DataGeneration
+        modEventBus.addListener(ModDataGeneration::generate);
+
+        MinecraftForge.EVENT_BUS.register(this);
 
         // Register the registry classes
-        ModItems.init();
-        ModBlocks.init();
-        ModBlockItems.init();
-        ModTags.init();
-        ModConfiguredFeatures.init();
-        ModPlacedFeatures.init();
-        ModLootModifiers.init();
-
-        // Register the setup method for modloading
-        IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
-        MinecraftForge.EVENT_BUS.register(this);
-        // Register ModSetup and ClientSetup
-        modbus.addListener(ModSetup::init);
-        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
-    }
-    public static ResourceLocation asResource(String path) {
-        return new ResourceLocation(MODID, path);
+        ModItems.init(modEventBus);
+        ModBlocks.init(modEventBus);
+        ModBlockItems.init(modEventBus);
+        ModCreativeModeTabs.init(modEventBus);
     }
 }
