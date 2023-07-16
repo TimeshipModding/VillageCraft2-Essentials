@@ -23,23 +23,22 @@ public class ModCreativeModeTabs {
     public static final RegistryObject<CreativeModeTab> ESSENTIALS_TAB = CREATIVE_MODE_TABS.register("essentials_tab", () -> CreativeModeTab.builder()
             .title(Component.translatable("item_group.villagecraft2essentials.essentials_tab"))
             .icon(() -> new ItemStack(Blocks.BEACON))
-            // Add default items to tab
+            // Add items to tab
             .displayItems((pParametres, pOutput) -> {
+                pOutput.accept(RUBY_BLOCK.get());
+                pOutput.accept(RUBY_ORE.get());
+                pOutput.accept(DEEPSLATE_RUBY_ORE.get());
                 pOutput.accept(RUBY_ATM.get());
-                pOutput.accept(RUBY.get());
-                pOutput.accept(RUBY_SWORD.get());
                 pOutput.accept(RUBY_SHOVEL.get());
                 pOutput.accept(RUBY_PICKAXE.get());
                 pOutput.accept(RUBY_AXE.get());
-                pOutput.accept(RUBY_AXE.get());
                 pOutput.accept(RUBY_HOE.get());
+                pOutput.accept(RUBY_SWORD.get());
                 pOutput.accept(RUBY_HELMET.get());
                 pOutput.accept(RUBY_CHESTPLATE.get());
                 pOutput.accept(RUBY_LEGGINGS.get());
                 pOutput.accept(RUBY_BOOTS.get());
-                pOutput.accept(RUBY_ORE.get());
-                pOutput.accept(DEEPSLATE_RUBY_ORE.get());
-                pOutput.accept(RUBY_BLOCK.get());
+                pOutput.accept(RUBY.get());
             })
             .build()
     );

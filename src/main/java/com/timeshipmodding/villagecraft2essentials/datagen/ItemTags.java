@@ -4,8 +4,10 @@ import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.ForgeItemTagsProvider;
 
 import static com.timeshipmodding.villagecraft2essentials.registries.ModBlockItems.*;
 import static com.timeshipmodding.villagecraft2essentials.registries.ModTags.*;
