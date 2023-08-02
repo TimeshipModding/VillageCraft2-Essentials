@@ -70,9 +70,9 @@ repositories {
     }
 
     // TOP Maven
-    maven {
-        url "https://maven.k-4u.nl"
-    }
+    maven { url "https://maven.k-4u.nl" }
+
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -87,6 +87,8 @@ dependencies {
     implementation fg.deobf(project.dependencies.create("mcjty.theoneprobe:theoneprobe:${top_version}") {
         transitive = false
     })
+
+    implementation 'com.github.TimeshipModding:Engineers-Library:Forge-1.20.1snap-v0.01'
 }
 
 // gradle.properties entries
