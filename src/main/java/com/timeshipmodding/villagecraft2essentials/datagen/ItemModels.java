@@ -7,6 +7,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
+import static net.minecraft.world.item.Items.*;
 
 public class ItemModels extends ItemModelProvider {
 

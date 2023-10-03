@@ -38,6 +38,10 @@ public class ModCreativeModeTabs {
                 pOutput.accept(RUBY_CHESTPLATE.get());
                 pOutput.accept(RUBY_LEGGINGS.get());
                 pOutput.accept(RUBY_BOOTS.get());
+                pOutput.accept(RUBY_NETHERITE_HELMET.get());
+                pOutput.accept(RUBY_NETHERITE_CHESTPLATE.get());
+                pOutput.accept(RUBY_NETHERITE_LEGGINGS.get());
+                pOutput.accept(RUBY_NETHERITE_BOOTS.get());
                 pOutput.accept(RUBY.get());
             })
             .build()

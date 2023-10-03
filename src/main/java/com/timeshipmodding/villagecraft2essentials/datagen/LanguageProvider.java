@@ -5,6 +5,7 @@ import net.minecraft.data.PackOutput;
 
 import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
+import static net.minecraft.world.item.Items.*;
 
 public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
     public LanguageProvider(PackOutput output, String locale) {
@@ -27,6 +28,10 @@ public class LanguageProvider extends net.minecraftforge.common.data.LanguagePro
         add(RUBY_HOE.get(), "Ruby Hoe");
 
         // Armor Item Translations
+        add(NETHERITE_HELMET, "Diamond Netherite Helmet");
+        add(NETHERITE_CHESTPLATE, "Diamond Netherite Chestplate");
+        add(NETHERITE_LEGGINGS, "Diamond Netherite Leggings");
+        add(NETHERITE_BOOTS, "Diamond Netherite Boots");
         add(RUBY_HELMET.get(), "Ruby Helmet");
         add(RUBY_CHESTPLATE.get(), "Ruby Chestplate");
         add(RUBY_LEGGINGS.get(), "Ruby Leggings");
