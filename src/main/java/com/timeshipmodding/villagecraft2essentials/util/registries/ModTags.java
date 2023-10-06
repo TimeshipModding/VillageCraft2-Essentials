@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.util.registries;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.core.Registry;

@@ -1,6 +1,7 @@
-package com.timeshipmodding.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.content.item.registries;
 
 import com.timeshipmodding.villagecraft2essentials.content.item.CurrencyArmorMaterial;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;

@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.content.worldgen.registries;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.core.registries.Registries;
@@ -15,7 +15,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 import java.util.List;
 
-import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_RUBY_SMALL = registerKey("ore_ruby_small");

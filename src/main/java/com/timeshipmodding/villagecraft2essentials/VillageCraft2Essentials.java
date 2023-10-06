@@ -1,7 +1,10 @@
 package com.timeshipmodding.villagecraft2essentials;
 
-import com.timeshipmodding.villagecraft2essentials.registries.*;
-import com.timeshipmodding.villagecraft2essentials.registries.ModDataGeneration;
+import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
+import com.timeshipmodding.villagecraft2essentials.content.creativetab.EssentialsTab;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModBlockItems;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
+import com.timeshipmodding.villagecraft2essentials.util.DataGeneration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -20,7 +23,7 @@ public class VillageCraft2Essentials {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Setup DataGeneration
-        modEventBus.addListener(ModDataGeneration::generate);
+        modEventBus.addListener(DataGeneration::generate);
 
         // Register Forge Event Bus
         MinecraftForge.EVENT_BUS.register(this);
@@ -29,6 +32,6 @@ public class VillageCraft2Essentials {
         ModItems.init(modEventBus);
         ModBlocks.init(modEventBus);
         ModBlockItems.init(modEventBus);
-        ModCreativeModeTabs.init(modEventBus);
+        EssentialsTab.init(modEventBus);
     }
 }

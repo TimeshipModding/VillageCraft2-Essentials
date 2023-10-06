@@ -9,8 +9,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
-import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.registries.ModTags.*;
+import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.util.registries.ModTags.*;
 
 public class BlockTags extends BlockTagsProvider {
 

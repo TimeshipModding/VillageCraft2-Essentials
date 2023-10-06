@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.content.worldgen.registries;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import com.timeshipmodding.villagecraft2essentials.content.worldgen.OrePlacement;

@@ -1,8 +1,8 @@
 package com.timeshipmodding.villagecraft2essentials.datagen;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import com.timeshipmodding.villagecraft2essentials.registries.ModConfiguredFeatures;
-import com.timeshipmodding.villagecraft2essentials.registries.ModPlacedFeatures;
+import com.timeshipmodding.villagecraft2essentials.content.worldgen.registries.ModConfiguredFeatures;
+import com.timeshipmodding.villagecraft2essentials.content.worldgen.registries.ModPlacedFeatures;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;

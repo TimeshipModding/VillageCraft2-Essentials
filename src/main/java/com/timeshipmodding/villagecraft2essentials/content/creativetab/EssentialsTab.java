@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.content.creativetab;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -9,10 +9,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
+import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 
-public class ModCreativeModeTabs {
+public class EssentialsTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, "villagecraft2essentials");
 

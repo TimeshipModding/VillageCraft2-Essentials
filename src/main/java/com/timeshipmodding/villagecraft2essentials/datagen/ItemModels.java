@@ -5,9 +5,8 @@ import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
-import static net.minecraft.world.item.Items.*;
+import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 
 public class ItemModels extends ItemModelProvider {
 

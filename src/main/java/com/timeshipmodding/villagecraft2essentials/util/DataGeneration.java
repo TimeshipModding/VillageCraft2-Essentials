@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.registries;
+package com.timeshipmodding.villagecraft2essentials.util;
 
 import com.timeshipmodding.villagecraft2essentials.datagen.*;
 import com.timeshipmodding.villagecraft2essentials.datagen.WorldGeneration;
@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-public class ModDataGeneration {
+public class DataGeneration {
 
     public static void generate(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();

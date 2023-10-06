@@ -2,8 +2,8 @@ package com.timeshipmodding.villagecraft2essentials.datagen;
 
 import com.timeshipmodding.villagecraft2essentials.providers.BaseLootTableProvider;
 
-import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
+import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 
 public class LootTables extends BaseLootTableProvider {
     @Override

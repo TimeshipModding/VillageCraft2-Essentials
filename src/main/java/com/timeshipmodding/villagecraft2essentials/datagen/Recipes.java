@@ -7,9 +7,9 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 
-import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
-import static com.timeshipmodding.villagecraft2essentials.registries.ModTags.*;
+import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
+import static com.timeshipmodding.villagecraft2essentials.util.registries.ModTags.*;
 
 import java.util.function.Consumer;
 

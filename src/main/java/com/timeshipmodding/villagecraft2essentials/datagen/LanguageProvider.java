@@ -3,8 +3,8 @@ package com.timeshipmodding.villagecraft2essentials.datagen;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.data.PackOutput;
 
-import static com.timeshipmodding.villagecraft2essentials.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.registries.ModItems.*;
+import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 import static net.minecraft.world.item.Items.*;
 
 public class LanguageProvider extends net.minecraftforge.common.data.LanguageProvider {
