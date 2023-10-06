@@ -64,17 +64,22 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     // JEI Maven
+    maven { url "https://maven.blamejared.com"}
+
+    // Jade Maven
     maven {
-        url "https://maven.blamejared.com"
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
     }
 
-    // TOP Maven
-    maven { url "https://maven.k-4u.nl" }
-
+    // Jitpack Maven
     maven { url 'https://jitpack.io' }
 }
 
 dependencies {
+    // Minecraft Dependency
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     // JEI Dependencies
@@ -82,18 +87,17 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
 
-    // TOP Dependency
-    implementation fg.deobf(project.dependencies.create("mcjty.theoneprobe:theoneprobe:${top_version}") {
-        transitive = false
-    })
+    // Jade Dependency
+    implementation fg.deobf("curse.maven:jade-324717:4768593")
 
+    // Engineer's Library Dependency
     implementation 'com.github.TimeshipModding:Engineers-Library:Forge-1.20.1snap-v0.01'
 }
 
 // gradle.properties entries
 tasks.named('processResources', ProcessResources).configure {
     var replaceProperties = [
-            // Minercraft Versions
+            // Minecraft Versions
             minecraft_version: minecraft_version, minecraft_version_range: minecraft_version_range,
 
             // Forge Versions
