@@ -23,7 +23,6 @@ minecraft {
 
     copyIdeResources = true
 
-
     runs {
         configureEach {
             workingDirectory project.file('run')
