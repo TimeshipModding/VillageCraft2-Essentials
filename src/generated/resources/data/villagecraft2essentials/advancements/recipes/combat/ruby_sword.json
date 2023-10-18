@@ -1,14 +1,21 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "criteria": {
+    "has_ruby": {
       "conditions": {
         "items": [
           {
             "items": [
               "villagecraft2essentials:ruby"
             ]
-          },
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stick": {
+      "conditions": {
+        "items": [
           {
             "items": [
               "minecraft:stick"
@@ -27,7 +34,8 @@
   },
   "requirements": [
     [
-      "criteria",
+      "has_ruby",
+      "has_stick",
       "has_the_recipe"
     ]
   ],

@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "villagecraft2essentials",
   "ingredients": [
-    {
-      "item": "villagecraft2essentials:ruby_block"
-    }
+    []
   ],
   "result": {
     "count": 9,

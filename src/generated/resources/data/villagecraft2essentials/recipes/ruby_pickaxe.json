@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
-  "group": "createlectrfied",
+  "group": "villagecraft2essentials",
   "key": {
     "!": {
       "item": "minecraft:stick"

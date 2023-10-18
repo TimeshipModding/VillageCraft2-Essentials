@@ -5,6 +5,7 @@ import com.timeshipmodding.villagecraft2essentials.content.creativetab.Essential
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModBlockItems;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.util.DataGeneration;
+import com.timeshipmodding.villagecraft2essentials.util.registries.ModTags;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -29,9 +30,9 @@ public class VillageCraft2Essentials {
         MinecraftForge.EVENT_BUS.register(this);
 
         // Register the registry classes
-        ModItems.init(modEventBus);
+        EssentialsTab.init(modEventBus);
         ModBlocks.init(modEventBus);
         ModBlockItems.init(modEventBus);
-        EssentialsTab.init(modEventBus);
+        ModItems.init(modEventBus);
     }
 }

@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "criteria": {
+    "has_ruby": {
       "conditions": {
         "items": [
           {
-            "tag": "villagecraft2essentials:ruby_ore_item"
+            "items": [
+              "villagecraft2essentials:ruby"
+            ]
           }
         ]
       },
@@ -13,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:ruby1"
+        "recipe": "minecraft:ruby_smelting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "criteria",
+      "has_ruby",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:ruby1"
+      "minecraft:ruby_smelting"
     ]
   },
   "sends_telemetry_event": false

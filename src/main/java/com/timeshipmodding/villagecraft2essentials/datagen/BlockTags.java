@@ -10,7 +10,6 @@ import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.util.registries.ModTags.*;
 
 public class BlockTags extends BlockTagsProvider {
 
@@ -32,11 +31,5 @@ public class BlockTags extends BlockTagsProvider {
                 .add(DEEPSLATE_RUBY_ORE.get())
                 .add(RUBY_BLOCK.get())
                 .add(RUBY_ATM.get());
-
-        // VillageCraft2 Essentials Tags
-        tag(RUBY_ORE_BLOCK)
-                .add(RUBY_ORE.get())
-                .add(DEEPSLATE_RUBY_ORE.get());
-
     }
 }
