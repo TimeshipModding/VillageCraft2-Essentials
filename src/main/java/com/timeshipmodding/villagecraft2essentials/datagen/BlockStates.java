@@ -18,9 +18,7 @@ public class BlockStates extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        // Block With Item
-        blockWithItem(RUBY_BLOCK);
-
+        // Drop Experince Block With Item
         dropExperienceBlockWithItem(RUBY_ORE);
         dropExperienceBlockWithItem(DEEPSLATE_RUBY_ORE);
     }

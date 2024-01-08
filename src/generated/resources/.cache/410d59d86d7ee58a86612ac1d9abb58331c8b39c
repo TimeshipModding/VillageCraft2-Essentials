@@ -1,10 +1,7 @@
-// 1.20.1	2023-10-18T14:27:45.244653	Block States: villagecraft2essentials
+// 1.20.1	2024-01-09T08:28:35.6789325	Block States: villagecraft2essentials
 bc5a7df684716a13c3ffa068db9edc828bb462b9 assets/villagecraft2essentials/blockstates/deepslate_ruby_ore.json
-c392ef1a890fcc08c3a73051239f321dc1bd1376 assets/villagecraft2essentials/blockstates/ruby_block.json
 34e94caaf82a2a8164867f361e3672d4b1d0f4a0 assets/villagecraft2essentials/blockstates/ruby_ore.json
 3dafd10ddac647a916a05b674182d4c9bf9ad462 assets/villagecraft2essentials/models/block/deepslate_ruby_ore.json
-f3fd3bd6dfc617d9e8a374edd7e647cded7ec468 assets/villagecraft2essentials/models/block/ruby_block.json
 6af4622d64f6eae0e255dd1b4f160f47b743a30e assets/villagecraft2essentials/models/block/ruby_ore.json
 56e7ae2c4c2480f761dcda131537de5892ef54fa assets/villagecraft2essentials/models/item/deepslate_ruby_ore.json
-2ffdb17791e5546723b9ee94094dd7cb92c64b30 assets/villagecraft2essentials/models/item/ruby_block.json
 ef5d04305c7ba3a71b7a5eb6bb7c836a68d1eab1 assets/villagecraft2essentials/models/item/ruby_ore.json

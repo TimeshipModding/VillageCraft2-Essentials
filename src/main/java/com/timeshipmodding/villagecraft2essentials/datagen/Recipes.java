@@ -1,12 +1,8 @@
 package com.timeshipmodding.villagecraft2essentials.datagen;
 
-import com.google.common.collect.ImmutableList;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
-import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -17,7 +13,6 @@ import static net.minecraft.world.item.Items.*;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
-import static com.timeshipmodding.villagecraft2essentials.util.registries.ModTags.*;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -26,19 +21,13 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
     private static final List<ItemLike> RUBY_SMELTABLES = List.of(
             RUBY_ORE.get(),
             DEEPSLATE_RUBY_ORE.get());
+
     public Recipes(PackOutput packOutput) {
         super(packOutput);
     }
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-        // Shapeless Crafting for Items
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUBY.get(), 9)
-                .requires(RUBY_BLOCK.get())
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY_BLOCK.get()), has(RUBY_BLOCK.get()))
-                .save(consumer);
-
         // Shaped Crafting for Items
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RUBY_SWORD.get())
                 .pattern("#")
@@ -134,14 +123,37 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                 .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
                 .save(consumer);
 
-        // Cooking for Furnaces
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(RUBY_ORE_ITEM), RecipeCategory.MISC, RUBY.get(), 1.0F, 200)
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .save(consumer, "ruby_smelting");
+        // Shapeless Crafting for Items
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUBY.get(), 9)
+                .requires(RUBY_BLOCK.get())
+                .group("villagecraft2essentials")
+                .unlockedBy(getHasName(RUBY_BLOCK.get()), has(RUBY_BLOCK.get()))
+                .save(consumer);
 
-        // Cooking for Blast Furnaces
-        SimpleCookingRecipeBuilder.blasting(Ingredient.of(RUBY_ORE_ITEM), RecipeCategory.MISC, RUBY.get(), 1.0F, 100)
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .save(consumer, "ruby_blasting");
+        // Ore Smelting
+        oreSmelting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, RUBY.get(), 1.0F, 200, "ruby");
+
+        // Ore Blasting
+        oreBlasting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, RUBY.get(), 1.0F, 100, "ruby");
+    }
+
+    // Generate Methods
+    protected static void oreSmelting(Consumer <FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTIme, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.SMELTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTIme, pGroup, "_from_smelting");
+    }
+
+    protected static void oreBlasting(Consumer<FinishedRecipe> pFinishedRecipeConsumer, List<ItemLike> pIngredients, RecipeCategory
+            pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup) {
+        oreCooking(pFinishedRecipeConsumer, RecipeSerializer.BLASTING_RECIPE, pIngredients, pCategory, pResult, pExperience, pCookingTime, pGroup, "_from_blasting");
+    }
+
+    protected static void oreCooking(Consumer <FinishedRecipe> pFinishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> pCookingSerializer, List <ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pRecipeName) {
+        for (ItemLike itemlike : pIngredients) {
+            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult,
+                            pExperience, pCookingTime, pCookingSerializer)
+                    .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
+                    .save(pFinishedRecipeConsumer, VillageCraft2Essentials.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
+
+        }
     }
 }

@@ -20,15 +20,15 @@ public class EssentialsTab {
         CREATIVE_MODE_TABS.register(modEventBus);
     }
 
-    public static final RegistryObject<CreativeModeTab> ESSENTIALS_TAB = CREATIVE_MODE_TABS.register("essentials_tab", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_group.villagecraft2essentials.essentials_tab"))
+    public static final RegistryObject<CreativeModeTab> ESSENTIALS_TAB = CREATIVE_MODE_TABS.register("essentials_tab", () ->
+            CreativeModeTab.builder()
+            .title(Component.translatable("creativemodetab.villagecraft2essentials.essentialstab"))
             .icon(() -> new ItemStack(Blocks.BEACON))
             // Add items to tab
             .displayItems((pParametres, pOutput) -> {
                 pOutput.accept(RUBY_BLOCK.get());
                 pOutput.accept(RUBY_ORE.get());
                 pOutput.accept(DEEPSLATE_RUBY_ORE.get());
-                pOutput.accept(RUBY_ATM.get());
                 pOutput.accept(RUBY_SHOVEL.get());
                 pOutput.accept(RUBY_PICKAXE.get());
                 pOutput.accept(RUBY_AXE.get());
@@ -38,10 +38,6 @@ public class EssentialsTab {
                 pOutput.accept(RUBY_CHESTPLATE.get());
                 pOutput.accept(RUBY_LEGGINGS.get());
                 pOutput.accept(RUBY_BOOTS.get());
-                pOutput.accept(RUBY_NETHERITE_HELMET.get());
-                pOutput.accept(RUBY_NETHERITE_CHESTPLATE.get());
-                pOutput.accept(RUBY_NETHERITE_LEGGINGS.get());
-                pOutput.accept(RUBY_NETHERITE_BOOTS.get());
                 pOutput.accept(RUBY.get());
             })
             .build()

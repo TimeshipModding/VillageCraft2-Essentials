@@ -44,7 +44,7 @@ public class ItemModels extends ItemModelProvider {
         // Items
         simpleItem(RUBY);
 
-        // Tool Items
+        // Handheld Items
         handheldItem(RUBY_SWORD);
         handheldItem(RUBY_SHOVEL);
         handheldItem(RUBY_PICKAXE);
@@ -56,18 +56,6 @@ public class ItemModels extends ItemModelProvider {
         trimmedArmorItem(RUBY_CHESTPLATE);
         trimmedArmorItem(RUBY_LEGGINGS);
         trimmedArmorItem(RUBY_BOOTS);
-        trimmedArmorItem(RUBY_NETHERITE_HELMET);
-        trimmedArmorItem(RUBY_NETHERITE_CHESTPLATE);
-        trimmedArmorItem(RUBY_NETHERITE_LEGGINGS);
-        trimmedArmorItem(RUBY_NETHERITE_BOOTS);
-
-        // Model Blocks
-        //withExistingParent(RUBY_ORE.getId().getPath(), modLoc("block/ruby_ore"));
-        //withExistingParent(DEEPSLATE_RUBY_ORE.getId().getPath(), modLoc("block/deepslate_ruby_ore"));
-        //withExistingParent(RUBY_BLOCK.getId().getPath(), modLoc("block/ruby_block"));
-
-        // Model Blocks
-        modelBlockItem(RUBY_ATM);
     }
 
     private ItemModelBuilder modelBlockItem(RegistryObject<Block> block) {
