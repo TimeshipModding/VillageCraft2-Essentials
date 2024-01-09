@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_dragon_scale_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "villagecraft2essentials:dragon_scale_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "villagecraft2essentials:dragon_scale"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_dragon_scale_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "villagecraft2essentials:dragon_scale"
+    ]
+  },
+  "sends_telemetry_event": false
+}

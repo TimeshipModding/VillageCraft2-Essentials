@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "villagecraft2essentials:block/deepslate_dragon_scale_ore"
+  }
+}

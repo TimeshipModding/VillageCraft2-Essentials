@@ -18,9 +18,8 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class Recipes extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> RUBY_SMELTABLES = List.of(
-            RUBY_ORE.get(),
-            DEEPSLATE_RUBY_ORE.get());
+    private static final List<ItemLike> RUBY_SMELTABLES = List.of(RUBY_ORE.get(), DEEPSLATE_RUBY_ORE.get());
+    private static final List<ItemLike> DRAGON_SCALE_SMELTABLES = List.of(DRAGON_SCALE_ORE.get(), DEEPSLATE_DRAGON_SCALE_ORE.get());
 
     public Recipes(PackOutput packOutput) {
         super(packOutput);
@@ -28,113 +27,107 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
-        // Shaped Crafting for Items
+        // Shaped Crafting
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RUBY_SWORD.get())
                 .pattern("#")
                 .pattern("#")
                 .pattern("!")
-                .define('#', RUBY.get()).define('!', STICK)
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .unlockedBy(getHasName(STICK), has(STICK))
-                .save(consumer);
-
+                .define('#', RUBY.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RUBY_SHOVEL.get())
                 .pattern("#")
                 .pattern("!")
                 .pattern("!")
-                .define('#', RUBY.get()).define('!', STICK)
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .unlockedBy(getHasName(STICK), has(STICK))
-                .save(consumer);
-
+                .define('#', RUBY.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RUBY_PICKAXE.get())
                 .pattern("###")
                 .pattern(" ! ")
                 .pattern(" ! ")
-                .define('#', RUBY.get()).define('!', STICK)
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .unlockedBy(getHasName(STICK), has(STICK))
-                .save(consumer);
-
+                .define('#', RUBY.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RUBY_AXE.get())
                 .pattern("##")
                 .pattern("#!")
                 .pattern(" !")
-                .define('#', RUBY.get()).define('!', STICK)
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .unlockedBy(getHasName(STICK), has(STICK))
-                .save(consumer);
-
+                .define('#', RUBY.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, RUBY_HOE.get())
                 .pattern("##")
                 .pattern(" !")
                 .pattern(" !")
-                .define('#', RUBY.get()).define('!', STICK)
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .unlockedBy(getHasName(STICK), has(STICK))
-                .save(consumer);
-
+                .define('#', RUBY.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RUBY_HELMET.get())
                 .pattern("###")
                 .pattern("# #")
-                .define('#', RUBY.get())
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .save(consumer);
-
+                .define('#', RUBY.get()).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RUBY_CHESTPLATE.get())
                 .pattern("# #")
                 .pattern("###")
                 .pattern("###")
-                .define('#', RUBY.get())
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .save(consumer);
-
+                .define('#', RUBY.get()).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RUBY_LEGGINGS.get())
                 .pattern("###")
                 .pattern("# #")
                 .pattern("# #")
-                .define('#', RUBY.get())
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .save(consumer);
-
+                .define('#', RUBY.get()).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).save(consumer);
         ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, RUBY_BOOTS.get())
                 .pattern("# #")
                 .pattern("# #")
-                .define('#', RUBY.get())
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .save(consumer);
+                .define('#', RUBY.get()).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DRAGON_SCALE_SWORD.get())
+                .pattern("#")
+                .pattern("#")
+                .pattern("!")
+                .define('#', DRAGON_SCALE.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, DRAGON_SCALE_SHOVEL.get())
+                .pattern("#")
+                .pattern("!")
+                .pattern("!")
+                .define('#', DRAGON_SCALE.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, DRAGON_SCALE_PICKAXE.get())
+                .pattern("###")
+                .pattern(" ! ")
+                .pattern(" ! ")
+                .define('#', DRAGON_SCALE.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, DRAGON_SCALE_AXE.get())
+                .pattern("##")
+                .pattern("#!")
+                .pattern(" !")
+                .define('#', DRAGON_SCALE.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, DRAGON_SCALE_HOE.get())
+                .pattern("##")
+                .pattern(" !")
+                .pattern(" !")
+                .define('#', DRAGON_SCALE.get()).define('!', STICK).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).unlockedBy(getHasName(STICK), has(STICK)).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DRAGON_SCALE_HELMET.get())
+                .pattern("###")
+                .pattern("# #")
+                .define('#', DRAGON_SCALE.get()).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DRAGON_SCALE_CHESTPLATE.get())
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .define('#', DRAGON_SCALE.get()).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DRAGON_SCALE_LEGGINGS.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', DRAGON_SCALE.get()).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, DRAGON_SCALE_BOOTS.get())
+                .pattern("# #")
+                .pattern("# #")
+                .define('#', DRAGON_SCALE.get()).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).save(consumer);
 
-        // Shaped Crafting for Blocks
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, RUBY_BLOCK.get(), 9)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .define('#', RUBY.get())
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY.get()), has(RUBY.get()))
-                .save(consumer);
-
-        // Shapeless Crafting for Items
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUBY.get(), 9)
-                .requires(RUBY_BLOCK.get())
-                .group("villagecraft2essentials")
-                .unlockedBy(getHasName(RUBY_BLOCK.get()), has(RUBY_BLOCK.get()))
-                .save(consumer);
+        // Shapeless Crafting
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUBY.get(), 9).requires(RUBY_BLOCK.get()).group("villagecraft2essentials").unlockedBy(getHasName(RUBY_BLOCK.get()), has(RUBY_BLOCK.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUBY_BLOCK.get()).requires(RUBY.get(), 9).group("villagecraft2essentials").unlockedBy(getHasName(RUBY.get()), has(RUBY_BLOCK.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, DRAGON_SCALE.get(), 9).requires(DRAGON_SCALE_BLOCK.get()).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE_BLOCK.get()), has(DRAGON_SCALE_BLOCK.get())).save(consumer);
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, DRAGON_SCALE_BLOCK.get()).requires(DRAGON_SCALE.get(), 9).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).save(consumer);
 
         // Ore Smelting
         oreSmelting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, RUBY.get(), 1.0F, 200, "ruby");
+        oreSmelting(consumer, DRAGON_SCALE_SMELTABLES, RecipeCategory.MISC, DRAGON_SCALE.get(), 1.0F, 200, "dragon_scale");
 
         // Ore Blasting
         oreBlasting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, RUBY.get(), 1.0F, 100, "ruby");
+        oreBlasting(consumer, DRAGON_SCALE_SMELTABLES, RecipeCategory.MISC, DRAGON_SCALE.get(), 1.0F, 100, "dragon_scale");
     }
 
     // Generate Methods
@@ -153,7 +146,6 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                             pExperience, pCookingTime, pCookingSerializer)
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, VillageCraft2Essentials.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
-
         }
     }
 }

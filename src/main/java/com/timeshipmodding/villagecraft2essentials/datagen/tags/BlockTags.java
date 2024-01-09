@@ -23,13 +23,19 @@ public class BlockTags extends BlockTagsProvider {
         tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_PICKAXE).add(
                 RUBY_ORE.get(),
                 DEEPSLATE_RUBY_ORE.get(),
-                RUBY_BLOCK.get()
+                RUBY_BLOCK.get(),
+                DRAGON_SCALE_ORE.get(),
+                DEEPSLATE_DRAGON_SCALE_ORE.get(),
+                DRAGON_SCALE_BLOCK.get()
         );
 
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(
                 RUBY_ORE.get(),
                 DEEPSLATE_RUBY_ORE.get(),
-                RUBY_BLOCK.get()
+                RUBY_BLOCK.get(),
+                DRAGON_SCALE_ORE.get(),
+                DEEPSLATE_DRAGON_SCALE_ORE.get(),
+                DRAGON_SCALE_BLOCK.get()
         );
     }
 }

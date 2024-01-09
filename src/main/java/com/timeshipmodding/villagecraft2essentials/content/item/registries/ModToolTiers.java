@@ -16,4 +16,8 @@ public class ModToolTiers {
             new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
                     BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(ModItems.RUBY.get())),
             new ResourceLocation(VillageCraft2Essentials.MODID, "ruby"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final Tier DRAGON_SCALE = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
+                    BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(ModItems.DRAGON_SCALE.get())),
+            new ResourceLocation(VillageCraft2Essentials.MODID, "dragon_scale_gem"), List.of(Tiers.IRON), List.of(ModToolTiers.RUBY));
 }

@@ -1,9 +1,12 @@
 {
   "creativemodetab.villagecraft2essentials.essentialstab": "VillageCraft 2 Essentials",
 
+  "block.villagecraft2essentials.ruby_block": "Block of Ruby",
   "block.villagecraft2essentials.ruby_ore": "Ruby Ore",
   "block.villagecraft2essentials.deepslate_ruby_ore": "Deepslate Ruby Ore",
-  "block.villagecraft2essentials.ruby_block": "Block of Ruby",
+  "block.villagecraft2essentials.dragon_scale_block": "Block of Dragon Scale Gem",
+  "block.villagecraft2essentials.dragon_scale_block_ore": "Dragon Scale Gem Ore",
+  "block.villagecraft2essentials.deepslate_dragon_scale_block_ore": "Deepslate Dragon Scale Gem Ore",
 
   "item.villagecraft2essentials.ruby": "Ruby",
   "item.villagecraft2essentials.ruby_sword": "Ruby Sword",
@@ -18,5 +21,15 @@
   "item.villagecraft2essentials.ruby_helmet": "Ruby Helmet",
   "item.villagecraft2essentials.ruby_chestplate": "Ruby Chestplate",
   "item.villagecraft2essentials.ruby_leggings": "Ruby Leggings",
-  "item.villagecraft2essentials.ruby_boots": "Ruby Boots"
+  "item.villagecraft2essentials.ruby_boots": "Ruby Boots",
+  "item.villagecraft2essentials.dragon_scale": "Dragon Scale Gem",
+  "item.villagecraft2essentials.dragon_scale_sword": "Dragon Scale Gem Sword",
+  "item.villagecraft2essentials.dragon_scale_shovel": "Dragon Scale Gem Shovel",
+  "item.villagecraft2essentials.dragon_scale_pickaxe": "Dragon Scale Gem Pickaxe",
+  "item.villagecraft2essentials.dragon_scale_axe": "Dragon Scale Gem Axe",
+  "item.villagecraft2essentials.dragon_scale_hoe": "Dragon Scale Gem Hoe",
+  "item.villagecraft2essentials.dragon_scale_helmet": "Dragon Scale Gem Helmet",
+  "item.villagecraft2essentials.dragon_scale_chestplate": "Dragon Scale Gem Chestplate",
+  "item.villagecraft2essentials.dragon_scale_leggings": "Dragon Scale Gem Leggings",
+  "item.villagecraft2essentials.dragon_scale_boots": "Dragon Scale Gem Boots"
 }

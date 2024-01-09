@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "dragon_scale",
+  "ingredient": {
+    "item": "villagecraft2essentials:dragon_scale_ore"
+  },
+  "result": "villagecraft2essentials:dragon_scale"
+}

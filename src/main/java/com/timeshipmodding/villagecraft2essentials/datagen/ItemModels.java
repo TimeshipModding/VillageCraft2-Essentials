@@ -43,6 +43,7 @@ public class ItemModels extends ItemModelProvider {
     protected void registerModels() {
         // Items
         simpleItem(RUBY);
+        simpleItem(DRAGON_SCALE);
 
         // Handheld Items
         handheldItem(RUBY_SWORD);
@@ -50,12 +51,21 @@ public class ItemModels extends ItemModelProvider {
         handheldItem(RUBY_PICKAXE);
         handheldItem(RUBY_AXE);
         handheldItem(RUBY_HOE);
+        handheldItem(DRAGON_SCALE_SWORD);
+        handheldItem(DRAGON_SCALE_SHOVEL);
+        handheldItem(DRAGON_SCALE_PICKAXE);
+        handheldItem(DRAGON_SCALE_AXE);
+        handheldItem(DRAGON_SCALE_HOE);
 
         // Armor Items
         trimmedArmorItem(RUBY_HELMET);
         trimmedArmorItem(RUBY_CHESTPLATE);
         trimmedArmorItem(RUBY_LEGGINGS);
         trimmedArmorItem(RUBY_BOOTS);
+        trimmedArmorItem(DRAGON_SCALE_HELMET);
+        trimmedArmorItem(DRAGON_SCALE_CHESTPLATE);
+        trimmedArmorItem(DRAGON_SCALE_LEGGINGS);
+        trimmedArmorItem(DRAGON_SCALE_BOOTS);
     }
 
     private ItemModelBuilder modelBlockItem(RegistryObject<Block> block) {
