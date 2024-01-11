@@ -28,6 +28,8 @@ public class DataGeneration {
 
         generator.addProvider(event.includeServer(), new Recipes(packOutput));
 
+        generator.addProvider(event.includeServer(), new WorldGen(packOutput, lookupProvider));
+
         generator.addProvider(event.includeServer(), BlockLootTableProvider.create(packOutput));
 
         generator.addProvider(event.includeClient(), new BlockStates(packOutput, existingFileHelper));

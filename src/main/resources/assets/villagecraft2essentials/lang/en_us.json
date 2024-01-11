@@ -5,8 +5,8 @@
   "block.villagecraft2essentials.ruby_ore": "Ruby Ore",
   "block.villagecraft2essentials.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.villagecraft2essentials.dragon_scale_block": "Block of Dragon Scale Gem",
-  "block.villagecraft2essentials.dragon_scale_block_ore": "Dragon Scale Gem Ore",
-  "block.villagecraft2essentials.deepslate_dragon_scale_block_ore": "Deepslate Dragon Scale Gem Ore",
+  "block.villagecraft2essentials.dragon_scale_ore": "Dragon Scale Gem Ore",
+  "block.villagecraft2essentials.deepslate_dragon_scale_ore": "Deepslate Dragon Scale Gem Ore",
 
   "item.villagecraft2essentials.ruby": "Ruby",
   "item.villagecraft2essentials.ruby_sword": "Ruby Sword",
