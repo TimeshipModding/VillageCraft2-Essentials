@@ -35,5 +35,14 @@ public class ModItems {
     public static final RegistryObject<Item> DRAGON_SCALE_CHESTPLATE = ITEMS.register("dragon_scale_chestplate", () -> new ArmorItem(ModArmorMaterials.DRAGON_SCALE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
     public static final RegistryObject<Item> DRAGON_SCALE_LEGGINGS = ITEMS.register("dragon_scale_leggings", () -> new ArmorItem(ModArmorMaterials.DRAGON_SCALE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
     public static final RegistryObject<Item> DRAGON_SCALE_BOOTS = ITEMS.register("dragon_scale_boots", () -> new ArmorItem(ModArmorMaterials.DRAGON_SCALE, ArmorItem.Type.BOOTS, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_SWORD = ITEMS.register("dragon_scale_netherite_sword", () -> new SwordItem(ModToolTiers.DRAGON_SCALE, 3, -2.4F, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_SHOVEL = ITEMS.register("dragon_scale_netherite_shovel", () -> new ShovelItem(ModToolTiers.DRAGON_SCALE, 1.5F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_PICKAXE = ITEMS.register("dragon_scale_netherite_pickaxe", () -> new PickaxeItem(ModToolTiers.DRAGON_SCALE, 1, -2.8F, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_AXE = ITEMS.register("dragon_scale_netherite_axe", () -> new AxeItem(ModToolTiers.DRAGON_SCALE, 5.0F, -3.0F, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_HOE = ITEMS.register("dragon_scale_netherite_hoe", () -> new HoeItem(ModToolTiers.DRAGON_SCALE, -4, 0.0F, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_HELMET = ITEMS.register("dragon_scale_netherite_helmet", () -> new ArmorItem(ModArmorMaterials.DRAGON_SCALE, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_CHESTPLATE = ITEMS.register("dragon_scale_netherite_chestplate", () -> new ArmorItem(ModArmorMaterials.DRAGON_SCALE, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_LEGGINGS = ITEMS.register("dragon_scale_netherite_leggings", () -> new ArmorItem(ModArmorMaterials.DRAGON_SCALE, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> DRAGON_SCALE_NETHERITE_BOOTS = ITEMS.register("dragon_scale_netherite_boots", () -> new ArmorItem(ModArmorMaterials.DRAGON_SCALE_NETHERITE, ArmorItem.Type.BOOTS, new Item.Properties()));
 }
 

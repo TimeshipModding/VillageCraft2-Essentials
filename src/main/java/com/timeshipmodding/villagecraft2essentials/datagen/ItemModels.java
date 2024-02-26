@@ -20,6 +20,7 @@ import java.util.LinkedHashMap;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.DRAGON_SCALE_NETHERITE_SWORD;
 
 public class ItemModels extends ItemModelProvider {
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
@@ -56,6 +57,11 @@ public class ItemModels extends ItemModelProvider {
         handheldItem(DRAGON_SCALE_PICKAXE);
         handheldItem(DRAGON_SCALE_AXE);
         handheldItem(DRAGON_SCALE_HOE);
+        handheldItem(DRAGON_SCALE_NETHERITE_SWORD);
+        handheldItem(DRAGON_SCALE_NETHERITE_SHOVEL);
+        handheldItem(DRAGON_SCALE_NETHERITE_PICKAXE);
+        handheldItem(DRAGON_SCALE_NETHERITE_AXE);
+        handheldItem(DRAGON_SCALE_NETHERITE_HOE);
 
         // Armor Items
         trimmedArmorItem(RUBY_HELMET);
@@ -66,6 +72,10 @@ public class ItemModels extends ItemModelProvider {
         trimmedArmorItem(DRAGON_SCALE_CHESTPLATE);
         trimmedArmorItem(DRAGON_SCALE_LEGGINGS);
         trimmedArmorItem(DRAGON_SCALE_BOOTS);
+        trimmedArmorItem(DRAGON_SCALE_NETHERITE_HELMET);
+        trimmedArmorItem(DRAGON_SCALE_NETHERITE_CHESTPLATE);
+        trimmedArmorItem(DRAGON_SCALE_NETHERITE_LEGGINGS);
+        trimmedArmorItem(DRAGON_SCALE_NETHERITE_BOOTS);
     }
 
     private ItemModelBuilder modelBlockItem(RegistryObject<Block> block) {

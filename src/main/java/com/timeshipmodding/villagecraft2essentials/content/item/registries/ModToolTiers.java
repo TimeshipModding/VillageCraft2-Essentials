@@ -7,6 +7,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.TierSortingRegistry;
 
 import java.util.List;
@@ -16,8 +17,16 @@ public class ModToolTiers {
             new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
                     BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(ModItems.RUBY.get())),
             new ResourceLocation(VillageCraft2Essentials.MODID, "ruby"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+    public static final Tier RUBY_NETHERITE = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
+                    Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(Tags.Items.INGOTS_NETHERITE)),
+            new ResourceLocation(VillageCraft2Essentials.MODID, "ruby_netherite"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
     public static final Tier DRAGON_SCALE = TierSortingRegistry.registerTier(
             new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
                     BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(ModItems.DRAGON_SCALE.get())),
-            new ResourceLocation(VillageCraft2Essentials.MODID, "dragon_scale_gem"), List.of(Tiers.IRON), List.of(ModToolTiers.RUBY));
+            new ResourceLocation(VillageCraft2Essentials.MODID, "dragon_scale"), List.of(Tiers.IRON), List.of(ModToolTiers.RUBY));
+    public static final Tier DRAGON_SCALE_NETHERITE = TierSortingRegistry.registerTier(
+            new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
+                    Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(Tags.Items.INGOTS_NETHERITE)),
+            new ResourceLocation(VillageCraft2Essentials.MODID, "dragon_scale_netherite"), List.of(Tiers.DIAMOND), List.of(ModToolTiers.RUBY_NETHERITE));
 }
