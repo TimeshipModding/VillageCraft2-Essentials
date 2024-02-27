@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "villagecraft2essentials",
+  "ingredients": [
+    {
+      "item": "villagecraft2essentials:gc_permit_1"
+    },
+    {
+      "item": "villagecraft2essentials:gc_permit_29"
+    }
+  ],
+  "result": {
+    "item": "villagecraft2essentials:gc_permit_30"
+  }
+}

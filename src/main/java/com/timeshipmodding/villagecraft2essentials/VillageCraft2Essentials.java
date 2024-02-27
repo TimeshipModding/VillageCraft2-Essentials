@@ -3,7 +3,9 @@ package com.timeshipmodding.villagecraft2essentials;
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
 import com.timeshipmodding.villagecraft2essentials.content.creativetab.EssentialsTab;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
-import com.timeshipmodding.villagecraft2essentials.util.DataGeneration;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.GCPermits;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.PVPermits;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.VCPermits;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -30,5 +32,9 @@ public class VillageCraft2Essentials {
         // Register the registry classes
         ModBlocks.init(modEventBus);
         ModItems.init(modEventBus);
+
+        GCPermits.init(modEventBus);
+        PVPermits.init(modEventBus);
+        VCPermits.init(modEventBus);
     }
 }

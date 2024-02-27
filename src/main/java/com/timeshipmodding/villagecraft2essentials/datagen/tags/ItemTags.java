@@ -10,6 +10,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import javax.annotation.Nullable;
 
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
+
 import static net.minecraft.tags.ItemTags.*;
 
 import java.util.concurrent.CompletableFuture;
