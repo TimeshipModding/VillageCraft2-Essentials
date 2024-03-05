@@ -37,6 +37,7 @@ public class EssentialsTab {
                 pOutput.accept(DEEPSLATE_RUBY_ORE.get());
                 pOutput.accept(Blocks.DIAMOND_ORE);
                 pOutput.accept(Blocks.DEEPSLATE_DIAMOND_ORE);
+                pOutput.accept(WHITE_ATM.get());
                 pOutput.accept(DRAGON_SCALE_SHOVEL.get());
                 pOutput.accept(DRAGON_SCALE_PICKAXE.get());
                 pOutput.accept(DRAGON_SCALE_AXE.get());

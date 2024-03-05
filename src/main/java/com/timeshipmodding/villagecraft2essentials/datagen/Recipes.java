@@ -3,12 +3,15 @@ package com.timeshipmodding.villagecraft2essentials.datagen;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
+import static net.minecraft.world.level.block.Blocks.*;
 import static net.minecraft.world.item.Items.*;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
@@ -118,6 +121,11 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                 .pattern("# #")
                 .pattern("# #")
                 .define('#', DRAGON_SCALE.get()).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).save(consumer);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, WHITE_ATM.get())
+                .pattern("#!#")
+                .pattern("#y#")
+                .pattern("#x#")
+                .define('#', Blocks.WHITE_CONCRETE).define('!', Blocks.REDSTONE_TORCH).define('y', Blocks.HOPPER).define('x', IRON_INGOT).group("villagecraft2essentials").unlockedBy(getHasName(DRAGON_SCALE.get()), has(DRAGON_SCALE.get())).save(consumer);
 
         // Shapeless Crafting
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUBY.get(), 9).requires(RUBY_BLOCK.get()).group("villagecraft2essentials").unlockedBy(getHasName(RUBY_BLOCK.get()), has(RUBY_BLOCK.get())).save(consumer);

@@ -26,7 +26,8 @@ public class BlockTags extends BlockTagsProvider {
                 RUBY_BLOCK.get(),
                 DRAGON_SCALE_ORE.get(),
                 DEEPSLATE_DRAGON_SCALE_ORE.get(),
-                DRAGON_SCALE_BLOCK.get()
+                DRAGON_SCALE_BLOCK.get(),
+                WHITE_ATM.get()
         );
 
         tag(net.minecraft.tags.BlockTags.NEEDS_IRON_TOOL).add(
@@ -36,6 +37,10 @@ public class BlockTags extends BlockTagsProvider {
                 DRAGON_SCALE_ORE.get(),
                 DEEPSLATE_DRAGON_SCALE_ORE.get(),
                 DRAGON_SCALE_BLOCK.get()
+        );
+
+        tag(net.minecraft.tags.BlockTags.NEEDS_STONE_TOOL).add(
+                WHITE_ATM.get()
         );
     }
 }

@@ -22,6 +22,7 @@ public class BlockLootTables extends BlockLootSubProvider {
         // Block LootTables
         dropSelf(RUBY_BLOCK.get());
         dropSelf(DRAGON_SCALE_BLOCK.get());
+        dropSelf(WHITE_ATM.get());
 
         // Ore LootTables
         add(RUBY_ORE.get(), (block -> createOreDrop(RUBY_ORE.get(), RUBY.get())));

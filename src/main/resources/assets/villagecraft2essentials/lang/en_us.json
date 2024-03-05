@@ -34,12 +34,15 @@
   "tooltip.villagecraft2essentials.permit_tooltip_31": "§eThirty-one Plots",
   "tooltip.villagecraft2essentials.permit_tooltip_32": "§eThirty-two Plots",
 
+  "container.villagecraft2essentials.atm": "Currency Exchange ATM",
+
   "block.villagecraft2essentials.ruby_block": "Block of Ruby",
   "block.villagecraft2essentials.ruby_ore": "Ruby Ore",
   "block.villagecraft2essentials.deepslate_ruby_ore": "Deepslate Ruby Ore",
   "block.villagecraft2essentials.dragon_scale_block": "Block of Dragon Scale Gem",
   "block.villagecraft2essentials.dragon_scale_ore": "Dragon Scale Gem Ore",
   "block.villagecraft2essentials.deepslate_dragon_scale_ore": "Deepslate Dragon Scale Gem Ore",
+  "block.villagecraft2essentials.white_atm": "White ATM",
 
   "item.villagecraft2essentials.ruby": "Ruby",
   "item.villagecraft2essentials.ruby_sword": "Ruby Sword",

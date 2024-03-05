@@ -1,4 +1,4 @@
-// 1.20.1	2024-02-27T18:26:56.9635735	Recipes
+// 1.20.1	2024-03-05T20:10:48.1973748	Recipes
 13f548bfd3e19cce912c42a4d698ed38d797e61c data/villagecraft2essentials/advancements/recipes/combat/dragon_scale_boots.json
 9d9fe729f9bb713c06d1bad2f5888566d9bc715b data/villagecraft2essentials/advancements/recipes/combat/dragon_scale_chestplate.json
 61f5e9c55109ba7ad02e4b5d104b34b084971c3b data/villagecraft2essentials/advancements/recipes/combat/dragon_scale_helmet.json
@@ -114,6 +114,7 @@ d7b6c932124204e21fc85e07f6072b77ddc411dc data/villagecraft2essentials/advancemen
 57f05193770299f26b74bd7c3fa581f6571d5bc9 data/villagecraft2essentials/advancements/recipes/misc/vc_permit_7.json
 aeb50e69a4c983fc847ba7ccd23420e16a708042 data/villagecraft2essentials/advancements/recipes/misc/vc_permit_8.json
 5422011943c85f801034ef9671b6b031bdcc201a data/villagecraft2essentials/advancements/recipes/misc/vc_permit_9.json
+326736af8fd8b285db9878dac9458ed530958da3 data/villagecraft2essentials/advancements/recipes/misc/white_atm.json
 5fafaafa3f21aec25f915620783bef8ad78dc0ca data/villagecraft2essentials/advancements/recipes/tools/dragon_scale_axe.json
 d0f163f7f9aba7129c371237ad3be6aa4383c7f3 data/villagecraft2essentials/advancements/recipes/tools/dragon_scale_hoe.json
 ad6906e3a6963407e6874410a6404abf47a331a3 data/villagecraft2essentials/advancements/recipes/tools/dragon_scale_pickaxe.json
@@ -245,3 +246,4 @@ c8bd13b6f7ee028ecee4472a8cb4798231ce3dda data/villagecraft2essentials/recipes/vc
 7ca1c589b0606033f73576a85489976f3c6ee36c data/villagecraft2essentials/recipes/vc_permit_7.json
 0bfc4ec14d80adf28f4c6e0bad27bd683c80acbb data/villagecraft2essentials/recipes/vc_permit_8.json
 cc422d6accfc7434b78ca03bfa08aa6f5cf80882 data/villagecraft2essentials/recipes/vc_permit_9.json
+321d4d53905bb60119e9fca9ebed98de558a9be5 data/villagecraft2essentials/recipes/white_atm.json

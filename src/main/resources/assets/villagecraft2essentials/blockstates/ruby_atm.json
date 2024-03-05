@@ -1,8 +1,0 @@
-{
-  "variants": {
-    "facing=north": {"model": "villagecraft2essentials:block/ruby_atm"},
-    "facing=east": {"model": "villagecraft2essentials:block/ruby_atm", "y": 90},
-    "facing=south": {"model": "villagecraft2essentials:block/ruby_atm", "y": 180},
-    "facing=west": {"model": "villagecraft2essentials:block/ruby_atm", "y": 270}
-  }
-}
