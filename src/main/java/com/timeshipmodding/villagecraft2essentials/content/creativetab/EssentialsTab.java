@@ -10,9 +10,10 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
+import static net.minecraft.world.item.Items.*;
+
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
-import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.DRAGON_SCALE_BOOTS;
 
 public class EssentialsTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -28,46 +29,65 @@ public class EssentialsTab {
             .icon(() -> new ItemStack(Blocks.BEACON))
             // Add items to tab
             .displayItems((pParametres, pOutput) -> {
-                pOutput.accept(DRAGON_SCALE_BLOCK.get());
+                pOutput.accept(AMBER_BLOCK.get());
                 pOutput.accept(RUBY_BLOCK.get());
                 pOutput.accept(Blocks.DIAMOND_BLOCK);
-                pOutput.accept(DRAGON_SCALE_ORE.get());
-                pOutput.accept(DEEPSLATE_DRAGON_SCALE_ORE.get());
+                pOutput.accept(AMBER_ORE.get());
+                pOutput.accept(DEEPSLATE_AMBER_ORE.get());
                 pOutput.accept(RUBY_ORE.get());
                 pOutput.accept(DEEPSLATE_RUBY_ORE.get());
                 pOutput.accept(Blocks.DIAMOND_ORE);
                 pOutput.accept(Blocks.DEEPSLATE_DIAMOND_ORE);
                 pOutput.accept(WHITE_ATM.get());
-                pOutput.accept(DRAGON_SCALE_SHOVEL.get());
-                pOutput.accept(DRAGON_SCALE_PICKAXE.get());
-                pOutput.accept(DRAGON_SCALE_AXE.get());
-                pOutput.accept(DRAGON_SCALE_HOE.get());
-                pOutput.accept(DRAGON_SCALE_SWORD.get());
+                pOutput.accept(AMBER_SHOVEL.get());
+                pOutput.accept(AMBER_PICKAXE.get());
+                pOutput.accept(AMBER_AXE.get());
+                pOutput.accept(AMBER_HOE.get());
+                pOutput.accept(AMBER_SWORD.get());
                 pOutput.accept(RUBY_SHOVEL.get());
                 pOutput.accept(RUBY_PICKAXE.get());
                 pOutput.accept(RUBY_AXE.get());
                 pOutput.accept(RUBY_HOE.get());
                 pOutput.accept(RUBY_SWORD.get());
-                pOutput.accept(Items.DIAMOND_SHOVEL);
-                pOutput.accept(Items.DIAMOND_PICKAXE);
-                pOutput.accept(Items.DIAMOND_AXE);
-                pOutput.accept(Items.DIAMOND_HOE);
-                pOutput.accept(Items.DIAMOND_SWORD);
-                pOutput.accept(DRAGON_SCALE_HELMET.get());
-                pOutput.accept(DRAGON_SCALE_CHESTPLATE.get());
-                pOutput.accept(DRAGON_SCALE_LEGGINGS.get());
-                pOutput.accept(DRAGON_SCALE_BOOTS.get());
+                pOutput.accept(DIAMOND_SHOVEL);
+                pOutput.accept(DIAMOND_PICKAXE);
+                pOutput.accept(DIAMOND_AXE);
+                pOutput.accept(DIAMOND_HOE);
+                pOutput.accept(DIAMOND_SWORD);
+                pOutput.accept(AMBER_NETHERITE_SHOVEL.get());
+                pOutput.accept(AMBER_NETHERITE_PICKAXE.get());
+                pOutput.accept(AMBER_NETHERITE_AXE.get());
+                pOutput.accept(AMBER_NETHERITE_HOE.get());
+                pOutput.accept(AMBER_NETHERITE_SWORD.get());
+                pOutput.accept(RUBY_NETHERITE_SHOVEL.get());
+                pOutput.accept(RUBY_NETHERITE_PICKAXE.get());
+                pOutput.accept(RUBY_NETHERITE_AXE.get());
+                pOutput.accept(RUBY_NETHERITE_HOE.get());
+                pOutput.accept(RUBY_NETHERITE_SWORD.get());
+                pOutput.accept(NETHERITE_SHOVEL);
+                pOutput.accept(NETHERITE_PICKAXE);
+                pOutput.accept(NETHERITE_AXE);
+                pOutput.accept(NETHERITE_HOE);
+                pOutput.accept(NETHERITE_SWORD);
+                pOutput.accept(AMBER_HELMET.get());
+                pOutput.accept(AMBER_CHESTPLATE.get());
+                pOutput.accept(AMBER_LEGGINGS.get());
+                pOutput.accept(AMBER_BOOTS.get());
                 pOutput.accept(RUBY_HELMET.get());
                 pOutput.accept(RUBY_CHESTPLATE.get());
                 pOutput.accept(RUBY_LEGGINGS.get());
                 pOutput.accept(RUBY_BOOTS.get());
-                pOutput.accept(Items.DIAMOND_HELMET);
-                pOutput.accept(Items.DIAMOND_CHESTPLATE);
-                pOutput.accept(Items.DIAMOND_LEGGINGS);
-                pOutput.accept(Items.DIAMOND_BOOTS);
-                pOutput.accept(DRAGON_SCALE.get());
+                pOutput.accept(DIAMOND_HELMET);
+                pOutput.accept(DIAMOND_CHESTPLATE);
+                pOutput.accept(DIAMOND_LEGGINGS);
+                pOutput.accept(DIAMOND_BOOTS);
+                pOutput.accept(NETHERITE_HELMET);
+                pOutput.accept(NETHERITE_CHESTPLATE);
+                pOutput.accept(NETHERITE_LEGGINGS);
+                pOutput.accept(NETHERITE_BOOTS);
+                pOutput.accept(AMBER.get());
                 pOutput.accept(RUBY.get());
-                pOutput.accept(Items.DIAMOND);
+                pOutput.accept(DIAMOND);
             })
             .build());
 }

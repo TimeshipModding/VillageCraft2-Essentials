@@ -20,7 +20,6 @@ import java.util.LinkedHashMap;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
-import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.DRAGON_SCALE_NETHERITE_SWORD;
 
 public class ItemModels extends ItemModelProvider {
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
@@ -44,7 +43,7 @@ public class ItemModels extends ItemModelProvider {
     protected void registerModels() {
         // Items
         simpleItem(RUBY);
-        simpleItem(DRAGON_SCALE);
+        simpleItem(AMBER);
 
         // Handheld Items
         handheldItem(RUBY_SWORD);
@@ -52,30 +51,31 @@ public class ItemModels extends ItemModelProvider {
         handheldItem(RUBY_PICKAXE);
         handheldItem(RUBY_AXE);
         handheldItem(RUBY_HOE);
-        handheldItem(DRAGON_SCALE_SWORD);
-        handheldItem(DRAGON_SCALE_SHOVEL);
-        handheldItem(DRAGON_SCALE_PICKAXE);
-        handheldItem(DRAGON_SCALE_AXE);
-        handheldItem(DRAGON_SCALE_HOE);
-        handheldItem(DRAGON_SCALE_NETHERITE_SWORD);
-        handheldItem(DRAGON_SCALE_NETHERITE_SHOVEL);
-        handheldItem(DRAGON_SCALE_NETHERITE_PICKAXE);
-        handheldItem(DRAGON_SCALE_NETHERITE_AXE);
-        handheldItem(DRAGON_SCALE_NETHERITE_HOE);
+        handheldItem(AMBER_SWORD);
+        handheldItem(AMBER_SHOVEL);
+        handheldItem(AMBER_PICKAXE);
+        handheldItem(AMBER_AXE);
+        handheldItem(AMBER_HOE);
+        handheldItem(RUBY_NETHERITE_SWORD);
+        handheldItem(RUBY_NETHERITE_SHOVEL);
+        handheldItem(RUBY_NETHERITE_PICKAXE);
+        handheldItem(RUBY_NETHERITE_AXE);
+        handheldItem(RUBY_NETHERITE_HOE);
+        handheldItem(AMBER_NETHERITE_SWORD);
+        handheldItem(AMBER_NETHERITE_SHOVEL);
+        handheldItem(AMBER_NETHERITE_PICKAXE);
+        handheldItem(AMBER_NETHERITE_AXE);
+        handheldItem(AMBER_NETHERITE_HOE);
 
         // Armor Items
         trimmedArmorItem(RUBY_HELMET);
         trimmedArmorItem(RUBY_CHESTPLATE);
         trimmedArmorItem(RUBY_LEGGINGS);
         trimmedArmorItem(RUBY_BOOTS);
-        trimmedArmorItem(DRAGON_SCALE_HELMET);
-        trimmedArmorItem(DRAGON_SCALE_CHESTPLATE);
-        trimmedArmorItem(DRAGON_SCALE_LEGGINGS);
-        trimmedArmorItem(DRAGON_SCALE_BOOTS);
-        trimmedArmorItem(DRAGON_SCALE_NETHERITE_HELMET);
-        trimmedArmorItem(DRAGON_SCALE_NETHERITE_CHESTPLATE);
-        trimmedArmorItem(DRAGON_SCALE_NETHERITE_LEGGINGS);
-        trimmedArmorItem(DRAGON_SCALE_NETHERITE_BOOTS);
+        trimmedArmorItem(AMBER_HELMET);
+        trimmedArmorItem(AMBER_CHESTPLATE);
+        trimmedArmorItem(AMBER_LEGGINGS);
+        trimmedArmorItem(AMBER_BOOTS);
     }
 
     private ItemModelBuilder modelBlockItem(RegistryObject<Block> block) {

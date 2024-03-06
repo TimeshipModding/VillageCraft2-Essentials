@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "villagecraft2essentials:dragon_scale_ore"
+          "Name": "villagecraft2essentials:amber_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",
@@ -15,7 +15,7 @@
       },
       {
         "state": {
-          "Name": "villagecraft2essentials:deepslate_dragon_scale_ore"
+          "Name": "villagecraft2essentials:deepslate_amber_ore"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

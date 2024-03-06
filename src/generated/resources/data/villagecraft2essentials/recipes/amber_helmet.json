@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "villagecraft2essentials",
+  "key": {
+    "#": {
+      "item": "villagecraft2essentials:amber"
+    }
+  },
+  "pattern": [
+    "###",
+    "# #"
+  ],
+  "result": {
+    "item": "villagecraft2essentials:amber_helmet"
+  },
+  "show_notification": true
+}

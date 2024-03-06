@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "villagecraft2essentials",
+  "ingredients": [
+    {
+      "item": "villagecraft2essentials:amber_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "villagecraft2essentials:amber"
+  }
+}

@@ -21,13 +21,13 @@ public class BlockStates extends BlockStateProvider {
     protected void registerStatesAndModels() {
         // Block with Item
         blockWithItem(RUBY_BLOCK);
-        blockWithItem(DRAGON_SCALE_BLOCK);
+        blockWithItem(AMBER_BLOCK);
 
         // Drop Experince Block With Item
         dropExperienceBlockWithItem(RUBY_ORE);
         dropExperienceBlockWithItem(DEEPSLATE_RUBY_ORE);
-        dropExperienceBlockWithItem(DRAGON_SCALE_ORE);
-        dropExperienceBlockWithItem(DEEPSLATE_DRAGON_SCALE_ORE);
+        dropExperienceBlockWithItem(AMBER_ORE);
+        dropExperienceBlockWithItem(DEEPSLATE_AMBER_ORE);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

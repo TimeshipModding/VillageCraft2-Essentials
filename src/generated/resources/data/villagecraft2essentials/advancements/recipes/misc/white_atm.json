@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dragon_scale": {
+    "has_amber": {
       "conditions": {
         "items": [
           {
             "items": [
-              "villagecraft2essentials:dragon_scale"
+              "villagecraft2essentials:amber"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_dragon_scale",
+      "has_amber",
       "has_the_recipe"
     ]
   ],

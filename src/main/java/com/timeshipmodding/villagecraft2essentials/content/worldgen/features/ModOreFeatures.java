@@ -33,8 +33,8 @@ public class ModOreFeatures {
                 OreConfiguration.target(stoneReplaceable, ModBlocks.RUBY_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_RUBY_ORE.get().defaultBlockState()));
         List<OreConfiguration.TargetBlockState> dragonScaleOres = List.of(
-                OreConfiguration.target(stoneReplaceable, ModBlocks.DRAGON_SCALE_ORE.get().defaultBlockState()),
-                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_DRAGON_SCALE_ORE.get().defaultBlockState()));
+                OreConfiguration.target(stoneReplaceable, ModBlocks.AMBER_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_AMBER_ORE.get().defaultBlockState()));
 
         register(context, ORE_RUBY_SMALL, Feature.ORE, new OreConfiguration(rubyOres, 4, 0.5F));
         register(context, ORE_RUBY_LARGE, Feature.ORE, new OreConfiguration(rubyOres, 12, 0.7F));

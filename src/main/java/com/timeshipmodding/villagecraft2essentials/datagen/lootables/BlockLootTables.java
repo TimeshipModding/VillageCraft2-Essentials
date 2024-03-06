@@ -21,14 +21,14 @@ public class BlockLootTables extends BlockLootSubProvider {
     protected void generate() {
         // Block LootTables
         dropSelf(RUBY_BLOCK.get());
-        dropSelf(DRAGON_SCALE_BLOCK.get());
+        dropSelf(AMBER_BLOCK.get());
         dropSelf(WHITE_ATM.get());
 
         // Ore LootTables
         add(RUBY_ORE.get(), (block -> createOreDrop(RUBY_ORE.get(), RUBY.get())));
         add(DEEPSLATE_RUBY_ORE.get(), (block -> createOreDrop(DEEPSLATE_RUBY_ORE.get(), RUBY.get())));
-        add(DRAGON_SCALE_ORE.get(), (block -> createOreDrop(DRAGON_SCALE_ORE.get(), DRAGON_SCALE.get())));
-        add(DEEPSLATE_DRAGON_SCALE_ORE.get(), (block -> createOreDrop(DEEPSLATE_DRAGON_SCALE_ORE.get(), DRAGON_SCALE.get())));
+        add(AMBER_ORE.get(), (block -> createOreDrop(AMBER_ORE.get(), AMBER.get())));
+        add(DEEPSLATE_AMBER_ORE.get(), (block -> createOreDrop(DEEPSLATE_AMBER_ORE.get(), AMBER.get())));
 
     }
 

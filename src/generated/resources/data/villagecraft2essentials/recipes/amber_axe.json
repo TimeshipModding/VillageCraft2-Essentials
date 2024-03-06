@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "villagecraft2essentials",
+  "key": {
+    "!": {
+      "item": "minecraft:stick"
+    },
+    "#": {
+      "item": "villagecraft2essentials:amber"
+    }
+  },
+  "pattern": [
+    "##",
+    "#!",
+    " !"
+  ],
+  "result": {
+    "item": "villagecraft2essentials:amber_axe"
+  },
+  "show_notification": true
+}

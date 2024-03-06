@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "villagecraft2essentials",
+  "ingredients": [
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    },
+    {
+      "item": "villagecraft2essentials:amber"
+    }
+  ],
+  "result": {
+    "item": "villagecraft2essentials:amber_block"
+  }
+}

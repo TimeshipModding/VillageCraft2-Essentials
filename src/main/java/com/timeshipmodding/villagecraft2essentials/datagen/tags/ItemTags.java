@@ -29,14 +29,10 @@ public class ItemTags extends ItemTagsProvider {
                 RUBY_CHESTPLATE.get(),
                 RUBY_LEGGINGS.get(),
                 RUBY_BOOTS.get(),
-                DRAGON_SCALE_HELMET.get(),
-                DRAGON_SCALE_CHESTPLATE.get(),
-                DRAGON_SCALE_LEGGINGS.get(),
-                DRAGON_SCALE_BOOTS.get(),
-                DRAGON_SCALE_NETHERITE_HELMET.get(),
-                DRAGON_SCALE_NETHERITE_CHESTPLATE.get(),
-                DRAGON_SCALE_NETHERITE_LEGGINGS.get(),
-                DRAGON_SCALE_NETHERITE_BOOTS.get()
+                AMBER_HELMET.get(),
+                AMBER_CHESTPLATE.get(),
+                AMBER_LEGGINGS.get(),
+                AMBER_BOOTS.get()
         );
     }
 }
