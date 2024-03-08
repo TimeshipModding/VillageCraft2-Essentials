@@ -19,6 +19,8 @@ import static com.timeshipmodding.villagecraft2essentials.content.item.registrie
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.ACPermits.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.VCPermits.*;
 
+import static com.timeshipmodding.villagecraft2essentials.util.ModTags.*;
+
 import java.util.List;
 import java.util.function.Consumer;
 

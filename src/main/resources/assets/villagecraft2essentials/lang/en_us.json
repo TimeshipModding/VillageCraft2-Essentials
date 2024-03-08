@@ -177,5 +177,8 @@
   "item.villagecraft2essentials.vc_permit_29": "VillageCraft City Permit",
   "item.villagecraft2essentials.vc_permit_30": "VillageCraft City Permit",
   "item.villagecraft2essentials.vc_permit_31": "VillageCraft City Permit",
-  "item.villagecraft2essentials.vc_permit_32": "VillageCraft City Permit"
+  "item.villagecraft2essentials.vc_permit_32": "VillageCraft City Permit",
+
+  "item.minecraft.smithing_template.netherite_upgrade.applies_to": "Diamond, Ruby and Amber Equipment",
+  "item.minecraft.smithing_template.netherite_upgrade.base_slot_description": "Add diamond, ruby, amber armor, weapon, or tool"
 }

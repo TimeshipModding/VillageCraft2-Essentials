@@ -92,6 +92,7 @@ public class EssentialsTab {
                 pOutput.accept(AMBER.get());
                 pOutput.accept(RUBY.get());
                 pOutput.accept(DIAMOND);
+                pOutput.accept(NETHERITE_INGOT);
                 pOutput.accept(AC_PERMIT_1.get());
                 pOutput.accept(GC_PERMIT_1.get());
                 pOutput.accept(VC_PERMIT_1.get());

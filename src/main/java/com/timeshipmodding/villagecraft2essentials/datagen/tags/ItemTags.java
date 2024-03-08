@@ -10,8 +10,10 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import javax.annotation.Nullable;
 
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
+import static net.minecraft.world.item.Items.*;
 
 import static net.minecraft.tags.ItemTags.*;
+import static com.timeshipmodding.villagecraft2essentials.util.ModTags.*;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -33,6 +35,13 @@ public class ItemTags extends ItemTagsProvider {
                 AMBER_CHESTPLATE.get(),
                 AMBER_LEGGINGS.get(),
                 AMBER_BOOTS.get()
+        );
+
+        // VillageCraft 2 Essentials Tags
+        tag(NETHERITE_UPGRADE_SMITHING_TEMPLATE_GEMS).add(
+                DIAMOND,
+                RUBY.get(),
+                AMBER.get()
         );
     }
 }

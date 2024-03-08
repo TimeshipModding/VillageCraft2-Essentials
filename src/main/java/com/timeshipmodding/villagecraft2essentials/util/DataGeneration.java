@@ -5,7 +5,6 @@ import com.timeshipmodding.villagecraft2essentials.datagen.*;
 import com.timeshipmodding.villagecraft2essentials.datagen.Recipes;
 import com.timeshipmodding.villagecraft2essentials.datagen.tags.BlockTags;
 import com.timeshipmodding.villagecraft2essentials.datagen.tags.ItemTags;
-import com.timeshipmodding.villagecraft2essentials.providers.BlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

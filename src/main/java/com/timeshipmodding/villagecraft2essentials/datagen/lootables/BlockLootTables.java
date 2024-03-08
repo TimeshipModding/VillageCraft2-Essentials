@@ -1,7 +1,6 @@
 package com.timeshipmodding.villagecraft2essentials.datagen.lootables;
 
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
-import com.timeshipmodding.villagecraft2essentials.providers.BlockLootTableProvider;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
