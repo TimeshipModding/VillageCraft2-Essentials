@@ -4,10 +4,8 @@ import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModB
 import com.timeshipmodding.villagecraft2essentials.content.creativetab.EssentialsTab;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.GCPermits;
-import com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.PVPermits;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.ACPermits;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.VCPermits;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -37,7 +35,7 @@ public class VillageCraft2Essentials {
         ModItems.init(modEventBus);
 
         GCPermits.init(modEventBus);
-        PVPermits.init(modEventBus);
+        ACPermits.init(modEventBus);
         VCPermits.init(modEventBus);
 
         // Add Listeners

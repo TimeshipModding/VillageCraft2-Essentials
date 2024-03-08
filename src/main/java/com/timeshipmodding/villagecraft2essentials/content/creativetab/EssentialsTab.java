@@ -15,6 +15,10 @@ import static net.minecraft.world.item.Items.*;
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.ACPermits.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.GCPermits.*;
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.VCPermits.*;
+
 public class EssentialsTab {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, "villagecraft2essentials");
@@ -88,6 +92,9 @@ public class EssentialsTab {
                 pOutput.accept(AMBER.get());
                 pOutput.accept(RUBY.get());
                 pOutput.accept(DIAMOND);
+                pOutput.accept(AC_PERMIT_1.get());
+                pOutput.accept(GC_PERMIT_1.get());
+                pOutput.accept(VC_PERMIT_1.get());
             })
             .build());
 }
