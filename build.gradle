@@ -64,17 +64,6 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {
     // JEI Maven
     maven { url "https://maven.blamejared.com"}
-
-    // Jade Maven
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-
-    // Jitpack Maven
-    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -85,12 +74,6 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
-
-    // Jade Dependency
-    //implementation fg.deobf("curse.maven:jade-324717:4768593")
-
-    // Engineer's Library Dependency
-    implementation 'com.github.TimeshipModding:Engineers-Library:Forge-1.20.1snap-v0.01'
 }
 
 // gradle.properties entries
@@ -108,7 +91,7 @@ tasks.named('processResources', ProcessResources).configure {
             mod_authors: mod_authors, mod_description: mod_description, mod_credits: mod_credits,
 
             // Dependency Information
-            jei_version: jei_version, top_version: top_version,
+            jei_version: jei_version,
     ]
     inputs.properties replaceProperties
 
