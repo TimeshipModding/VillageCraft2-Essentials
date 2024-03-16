@@ -3,6 +3,8 @@ package com.timeshipmodding.villagecraft2essentials.datagen;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -10,6 +12,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.RUBY_NETHERITE_HOE;
 import static net.minecraft.world.item.Items.*;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
@@ -237,6 +240,29 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
         // Ore Blasting
         oreBlasting(consumer, RUBY_SMELTABLES, RecipeCategory.MISC, RUBY.get(), 1.0F, 100, "ruby");
         oreBlasting(consumer, AMBER_SMELTABLES, RecipeCategory.MISC, AMBER.get(), 1.0F, 100, "amber");
+
+        // Netherite Smithing
+        netheriteSmithing(consumer, AMBER_AXE.get(), RecipeCategory.TOOLS, AMBER_NETHERITE_AXE.get());
+        netheriteSmithing(consumer, AMBER_HOE.get(), RecipeCategory.TOOLS, AMBER_NETHERITE_HOE.get());
+        netheriteSmithing(consumer, AMBER_PICKAXE.get(), RecipeCategory.TOOLS, AMBER_NETHERITE_PICKAXE.get());
+        netheriteSmithing(consumer, AMBER_SHOVEL.get(), RecipeCategory.TOOLS, AMBER_NETHERITE_SHOVEL.get());
+        netheriteSmithing(consumer, AMBER_SWORD.get(), RecipeCategory.TOOLS, AMBER_NETHERITE_SWORD.get());
+        netheriteSmithing(consumer, RUBY_AXE.get(), RecipeCategory.TOOLS, RUBY_NETHERITE_AXE.get());
+        netheriteSmithing(consumer, RUBY_HOE.get(), RecipeCategory.TOOLS, RUBY_NETHERITE_HOE.get());
+        netheriteSmithing(consumer, RUBY_PICKAXE.get(), RecipeCategory.TOOLS, RUBY_NETHERITE_PICKAXE.get());
+        netheriteSmithing(consumer, RUBY_SHOVEL.get(), RecipeCategory.TOOLS, RUBY_NETHERITE_SHOVEL.get());
+        netheriteSmithing(consumer, RUBY_SWORD.get(), RecipeCategory.TOOLS, RUBY_NETHERITE_SWORD.get());
+
+        // Ruby and Amber Netherite Armor Smithing
+        amberNetheriteArmorSmithing(consumer, RUBY_HELMET.get(), RecipeCategory.TOOLS, NETHERITE_HELMET);
+        amberNetheriteArmorSmithing(consumer, RUBY_CHESTPLATE.get(), RecipeCategory.TOOLS, NETHERITE_CHESTPLATE);
+        amberNetheriteArmorSmithing(consumer, RUBY_LEGGINGS.get(), RecipeCategory.TOOLS, NETHERITE_LEGGINGS);
+        amberNetheriteArmorSmithing(consumer, RUBY_BOOTS.get(), RecipeCategory.TOOLS, NETHERITE_BOOTS);
+        rubyNetheriteArmorSmithing(consumer, AMBER_HELMET.get(), RecipeCategory.TOOLS, NETHERITE_HELMET);
+        rubyNetheriteArmorSmithing(consumer, AMBER_CHESTPLATE.get(), RecipeCategory.TOOLS, NETHERITE_CHESTPLATE);
+        rubyNetheriteArmorSmithing(consumer, AMBER_LEGGINGS.get(), RecipeCategory.TOOLS, NETHERITE_LEGGINGS);
+        rubyNetheriteArmorSmithing(consumer, AMBER_BOOTS.get(), RecipeCategory.TOOLS, NETHERITE_BOOTS);
+
     }
 
     // Generate Methods
@@ -256,5 +282,13 @@ public class Recipes extends RecipeProvider implements IConditionBuilder {
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
                     .save(pFinishedRecipeConsumer, VillageCraft2Essentials.MODID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
+    }
+
+    protected static void amberNetheriteArmorSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, RecipeCategory pCategory, Item pResultItem) {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(pIngredientItem), Ingredient.of(Items.NETHERITE_INGOT), pCategory, pResultItem).unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT)).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "amber_smithing");
+    }
+
+    protected static void rubyNetheriteArmorSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, RecipeCategory pCategory, Item pResultItem) {
+        SmithingTransformRecipeBuilder.smithing(Ingredient.of(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE), Ingredient.of(pIngredientItem), Ingredient.of(Items.NETHERITE_INGOT), pCategory, pResultItem).unlocks("has_netherite_ingot", has(Items.NETHERITE_INGOT)).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "ruby_smithing");
     }
 }
