@@ -16,6 +16,7 @@ public class VCPermits {
     }
 
     // VillageCraft City Permits
+    public static final RegistryObject<Item> VC_STARTING_PERMIT = ITEMS.register("vc_starting_permit", () -> new PermitItem(0, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> VC_PERMIT_1 = ITEMS.register("vc_permit_1", () -> new PermitItem(1, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> VC_PERMIT_2 = ITEMS.register("vc_permit_2", () -> new PermitItem(2, new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> VC_PERMIT_3 = ITEMS.register("vc_permit_3", () -> new PermitItem(3, new Item.Properties().stacksTo(1)));

@@ -12,6 +12,8 @@ import net.minecraftforge.common.TierSortingRegistry;
 
 import java.util.List;
 
+import static net.minecraftforge.common.Tags.Blocks.NEEDS_NETHERITE_TOOL;
+
 public class ModToolTiers {
     public static final Tier RUBY = TierSortingRegistry.registerTier(
             new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
@@ -19,7 +21,7 @@ public class ModToolTiers {
             new ResourceLocation(VillageCraft2Essentials.MODID, "ruby"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
     public static final Tier RUBY_NETHERITE = TierSortingRegistry.registerTier(
             new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
-                    Tags.Blocks.NEEDS_NETHERITE_TOOL, () -> Ingredient.of(Tags.Items.INGOTS_NETHERITE)),
+                    NEEDS_NETHERITE_TOOL, () -> Ingredient.of(Tags.Items.INGOTS_NETHERITE)),
             new ResourceLocation(VillageCraft2Essentials.MODID, "ruby_netherite"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
     public static final Tier AMBER = TierSortingRegistry.registerTier(
             new ForgeTier(3, 1561, 8.0F, 3.0F, 10,
