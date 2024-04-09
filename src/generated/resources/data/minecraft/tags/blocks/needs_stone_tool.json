@@ -1,5 +1,20 @@
 {
   "values": [
-    "villagecraft2essentials:white_atm"
+    "villagecraft2essentials:black_atm",
+    "villagecraft2essentials:blue_atm",
+    "villagecraft2essentials:brown_atm",
+    "villagecraft2essentials:cyan_atm",
+    "villagecraft2essentials:gray_atm",
+    "villagecraft2essentials:green_atm",
+    "villagecraft2essentials:light_blue_atm",
+    "villagecraft2essentials:light_gray_atm",
+    "villagecraft2essentials:lime_atm",
+    "villagecraft2essentials:magenta_atm",
+    "villagecraft2essentials:orange_atm",
+    "villagecraft2essentials:pink_atm",
+    "villagecraft2essentials:purple_atm",
+    "villagecraft2essentials:red_atm",
+    "villagecraft2essentials:white_atm",
+    "villagecraft2essentials:yellow_atm"
   ]
 }

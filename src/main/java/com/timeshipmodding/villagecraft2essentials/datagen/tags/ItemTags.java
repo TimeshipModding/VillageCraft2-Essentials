@@ -13,7 +13,7 @@ import static com.timeshipmodding.villagecraft2essentials.content.item.registrie
 import static net.minecraft.world.item.Items.*;
 
 import static net.minecraft.tags.ItemTags.*;
-import static com.timeshipmodding.villagecraft2essentials.util.ModTags.*;
+import static com.timeshipmodding.villagecraft2essentials.util.ModTags.Items.*;
 
 import java.util.concurrent.CompletableFuture;
 

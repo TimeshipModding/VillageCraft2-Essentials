@@ -1,10 +1,11 @@
-package com.timeshipmodding.villagecraft2essentials.util;
+package com.timeshipmodding.villagecraft2essentials.event;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import com.timeshipmodding.villagecraft2essentials.datagen.*;
 import com.timeshipmodding.villagecraft2essentials.datagen.Recipes;
 import com.timeshipmodding.villagecraft2essentials.datagen.tags.BlockTags;
 import com.timeshipmodding.villagecraft2essentials.datagen.tags.ItemTags;
+import com.timeshipmodding.villagecraft2essentials.util.BlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -26,8 +27,8 @@ public class DataGeneration {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new Recipes(packOutput));
-
         generator.addProvider(event.includeServer(), new WorldGen(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new VillagerPoiTypeTags(packOutput, lookupProvider, existingFileHelper));
 
         generator.addProvider(event.includeServer(), BlockLootTableProvider.create(packOutput));
 
