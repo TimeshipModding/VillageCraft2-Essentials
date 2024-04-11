@@ -18,10 +18,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.LinkedHashMap;
 
-import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 
-public class ItemModels extends ItemModelProvider {
+public class DataItemModels extends ItemModelProvider {
     private static LinkedHashMap<ResourceKey<TrimMaterial>, Float> trimMaterials = new LinkedHashMap<>();
     static {
         trimMaterials.put(TrimMaterials.QUARTZ, 0.1F);
@@ -35,7 +34,7 @@ public class ItemModels extends ItemModelProvider {
         trimMaterials.put(TrimMaterials.LAPIS, 0.9F);
         trimMaterials.put(TrimMaterials.AMETHYST, 1.0F);
     }
-    public ItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
+    public DataItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, VillageCraft2Essentials.MODID, existingFileHelper);
     }
 

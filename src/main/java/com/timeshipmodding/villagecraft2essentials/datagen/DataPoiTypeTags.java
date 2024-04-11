@@ -10,8 +10,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
-public class VillagerPoiTypeTags extends PoiTypeTagsProvider {
-    public VillagerPoiTypeTags(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pProvider, @Nullable ExistingFileHelper existingFileHelper) {
+public class DataPoiTypeTags extends PoiTypeTagsProvider {
+    public DataPoiTypeTags(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(pOutput, pProvider, VillageCraft2Essentials.MODID, existingFileHelper);
     }
 

@@ -10,11 +10,10 @@ import javax.annotation.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
-import static com.timeshipmodding.villagecraft2essentials.util.ModTags.Blocks.*;
 
-public class BlockTags extends BlockTagsProvider {
+public class DataBlockTags extends BlockTagsProvider {
 
-    public BlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+    public DataBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, VillageCraft2Essentials.MODID, existingFileHelper);
     }
 

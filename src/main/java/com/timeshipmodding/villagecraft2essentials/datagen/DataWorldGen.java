@@ -14,13 +14,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class WorldGen extends DatapackBuiltinEntriesProvider {
+public class DataWorldGen extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, ModOreFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModOrePlacements::bootstrap)
             .add(ForgeRegistries.Keys.BIOME_MODIFIERS, ModOreBiomeModifiers::bootstrap);
 
-    public WorldGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    public DataWorldGen(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(VillageCraft2Essentials.MODID));
     }
 }

@@ -1,19 +1,17 @@
 package com.timeshipmodding.villagecraft2essentials.datagen;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 
-public class BlockStates extends BlockStateProvider {
-    public BlockStates(PackOutput output, ExistingFileHelper existingFileHelper) {
+public class DataBlockStates extends BlockStateProvider {
+    public DataBlockStates(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, VillageCraft2Essentials.MODID, existingFileHelper);
     }
 

@@ -22,16 +22,14 @@ import static com.timeshipmodding.villagecraft2essentials.content.item.registrie
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.ACPermits.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.permits.VCPermits.*;
 
-import static com.timeshipmodding.villagecraft2essentials.util.ModTags.*;
-
 import java.util.List;
 import java.util.function.Consumer;
 
-public class Recipes extends RecipeProvider implements IConditionBuilder {
+public class DataRecipes extends RecipeProvider implements IConditionBuilder {
     private static final List<ItemLike> RUBY_SMELTABLES = List.of(RUBY_ORE.get(), DEEPSLATE_RUBY_ORE.get());
     private static final List<ItemLike> AMBER_SMELTABLES = List.of(AMBER_ORE.get(), DEEPSLATE_AMBER_ORE.get());
 
-    public Recipes(PackOutput packOutput) {
+    public DataRecipes(PackOutput packOutput) {
         super(packOutput);
     }
 

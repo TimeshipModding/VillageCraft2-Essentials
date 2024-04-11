@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.datagen.lootables;
+package com.timeshipmodding.villagecraft2essentials.datagen.loot;
 
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
 import net.minecraft.data.loot.BlockLootSubProvider;
@@ -11,8 +11,8 @@ import java.util.Set;
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 
-public class BlockLootTables extends BlockLootSubProvider {
-    public BlockLootTables() {
+public class DataBlockLootTables extends BlockLootSubProvider {
+    public DataBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 

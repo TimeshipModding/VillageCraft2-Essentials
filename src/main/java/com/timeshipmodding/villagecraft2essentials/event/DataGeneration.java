@@ -2,9 +2,9 @@ package com.timeshipmodding.villagecraft2essentials.event;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import com.timeshipmodding.villagecraft2essentials.datagen.*;
-import com.timeshipmodding.villagecraft2essentials.datagen.Recipes;
-import com.timeshipmodding.villagecraft2essentials.datagen.tags.BlockTags;
-import com.timeshipmodding.villagecraft2essentials.datagen.tags.ItemTags;
+import com.timeshipmodding.villagecraft2essentials.datagen.DataRecipes;
+import com.timeshipmodding.villagecraft2essentials.datagen.tags.DataBlockTags;
+import com.timeshipmodding.villagecraft2essentials.datagen.tags.DataItemTags;
 import com.timeshipmodding.villagecraft2essentials.util.BlockLootTableProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
@@ -26,17 +26,17 @@ public class DataGeneration {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new Recipes(packOutput));
-        generator.addProvider(event.includeServer(), new WorldGen(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new VillagerPoiTypeTags(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new DataRecipes(packOutput));
+        generator.addProvider(event.includeServer(), new DataWorldGen(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new DataPoiTypeTags(packOutput, lookupProvider, existingFileHelper));
 
         generator.addProvider(event.includeServer(), BlockLootTableProvider.create(packOutput));
 
-        generator.addProvider(event.includeClient(), new BlockStates(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ItemModels(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new DataBlockStates(packOutput, existingFileHelper));
+        generator.addProvider(event.includeClient(), new DataItemModels(packOutput, existingFileHelper));
 
-        BlockTags blockTagGenerator = generator.addProvider(event.includeServer(),
-                new BlockTags(packOutput, lookupProvider, existingFileHelper));
-        generator.addProvider(event.includeServer(), new ItemTags(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
+
+        DataBlockTags blockTagGenerator = generator.addProvider(event.includeServer(), new DataBlockTags(packOutput, lookupProvider, existingFileHelper));
+        generator.addProvider(event.includeServer(), new DataItemTags(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
     }
 }

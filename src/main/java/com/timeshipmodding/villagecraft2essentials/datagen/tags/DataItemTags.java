@@ -17,9 +17,9 @@ import static com.timeshipmodding.villagecraft2essentials.util.ModTags.Items.*;
 
 import java.util.concurrent.CompletableFuture;
 
-public class ItemTags extends ItemTagsProvider {
-    public ItemTags(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
-                    CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
+public class DataItemTags extends ItemTagsProvider {
+    public DataItemTags(PackOutput p_275343_, CompletableFuture<HolderLookup.Provider> p_275729_,
+                        CompletableFuture<TagLookup<Block>> p_275322_, @Nullable ExistingFileHelper existingFileHelper) {
         super(p_275343_, p_275729_, p_275322_, VillageCraft2Essentials.MODID, existingFileHelper);
     }
 
