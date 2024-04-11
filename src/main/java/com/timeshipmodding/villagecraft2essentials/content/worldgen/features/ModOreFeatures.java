@@ -4,7 +4,6 @@ import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -43,7 +42,6 @@ public class ModOreFeatures {
         register(context, ORE_DRAGON_SCALE_LARGE, Feature.ORE, new OreConfiguration(dragonScaleOres, 12, 0.7F));
         register(context, ORE_DRAGON_SCALE_BURIED, Feature.ORE, new OreConfiguration(dragonScaleOres, 8, 1.0F));
     }
-
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(VillageCraft2Essentials.MODID, name));
