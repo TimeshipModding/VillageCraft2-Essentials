@@ -21,7 +21,22 @@ public class BlockLootTables extends BlockLootSubProvider {
         // Block LootTables
         dropSelf(RUBY_BLOCK.get());
         dropSelf(AMBER_BLOCK.get());
+        dropSelf(BLACK_ATM.get());
+        dropSelf(BLUE_ATM.get());
+        dropSelf(BROWN_ATM.get());
+        dropSelf(CYAN_ATM.get());
+        dropSelf(GRAY_ATM.get());
+        dropSelf(GREEN_ATM.get());
+        dropSelf(LIGHT_BLUE_ATM.get());
+        dropSelf(LIGHT_GRAY_ATM.get());
+        dropSelf(LIME_ATM.get());
+        dropSelf(MAGENTA_ATM.get());
+        dropSelf(ORANGE_ATM.get());
+        dropSelf(PINK_ATM.get());
+        dropSelf(PURPLE_ATM.get());
+        dropSelf(RED_ATM.get());
         dropSelf(WHITE_ATM.get());
+        dropSelf(YELLOW_ATM.get());
 
         // Ore LootTables
         add(RUBY_ORE.get(), (block -> createOreDrop(RUBY_ORE.get(), RUBY.get())));

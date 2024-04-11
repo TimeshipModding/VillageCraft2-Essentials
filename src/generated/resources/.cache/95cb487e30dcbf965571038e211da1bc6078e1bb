@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-05T21:01:56.8019683	Tags for minecraft:block mod id villagecraft2essentials
-33cb7b2dcf5a9889ddbbf049a50126b753c0d9bf data/minecraft/tags/blocks/mineable/pickaxe.json
+// 1.20.1	2024-04-09T11:00:40.6309958	Tags for minecraft:block mod id villagecraft2essentials
+dfdbf5dfd43963ca49ed04baea3484b53fd3f89b data/minecraft/tags/blocks/mineable/pickaxe.json
 551df9d57eff09fa582f03321383f81dfe022964 data/minecraft/tags/blocks/needs_iron_tool.json
-8a40cd9188c0a1b3506f9a4c63ca1200d08fcbe7 data/minecraft/tags/blocks/needs_stone_tool.json
+e686d24d2d08a3fb70bb2c4b3acc9b2eab7eb83d data/minecraft/tags/blocks/needs_stone_tool.json

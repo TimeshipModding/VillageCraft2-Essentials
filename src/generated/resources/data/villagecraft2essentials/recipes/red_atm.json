@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "villagecraft2essentials",
+  "ingredients": [
+    {
+      "item": "villagecraft2essentials:white_atm"
+    },
+    {
+      "item": "minecraft:red_dye"
+    }
+  ],
+  "result": {
+    "item": "villagecraft2essentials:red_atm"
+  }
+}
