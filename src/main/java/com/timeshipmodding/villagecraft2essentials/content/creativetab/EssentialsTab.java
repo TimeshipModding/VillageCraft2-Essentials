@@ -4,7 +4,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -108,6 +107,9 @@ public class EssentialsTab {
                 pOutput.accept(RUBY.get());
                 pOutput.accept(DIAMOND);
                 pOutput.accept(NETHERITE_INGOT);
+                pOutput.accept(AC_STARTING_PERMIT.get());
+                pOutput.accept(GC_STARTING_PERMIT.get());
+                pOutput.accept(VC_STARTING_PERMIT.get());
                 pOutput.accept(AC_PERMIT_1.get());
                 pOutput.accept(GC_PERMIT_1.get());
                 pOutput.accept(VC_PERMIT_1.get());

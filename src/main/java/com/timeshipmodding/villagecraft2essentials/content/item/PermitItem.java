@@ -19,7 +19,8 @@ public class PermitItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        if(pTooltip == 1) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_1"));
+        if(pTooltip == 0) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_0"));
+        } else if(pTooltip == 1) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_1"));
         } else if (pTooltip == 2) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_2"));
         } else if (pTooltip == 3) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_3"));
         } else if (pTooltip == 4) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_4"));
