@@ -91,14 +91,17 @@ public class EssentialsTab {
                 pOutput.accept(AMBER_CHESTPLATE.get());
                 pOutput.accept(AMBER_LEGGINGS.get());
                 pOutput.accept(AMBER_BOOTS.get());
+                pOutput.accept(AMBER_HORSE_ARMOR.get());
                 pOutput.accept(RUBY_HELMET.get());
                 pOutput.accept(RUBY_CHESTPLATE.get());
                 pOutput.accept(RUBY_LEGGINGS.get());
                 pOutput.accept(RUBY_BOOTS.get());
+                pOutput.accept(RUBY_HORSE_ARMOR.get());
                 pOutput.accept(DIAMOND_HELMET);
                 pOutput.accept(DIAMOND_CHESTPLATE);
                 pOutput.accept(DIAMOND_LEGGINGS);
                 pOutput.accept(DIAMOND_BOOTS);
+                pOutput.accept(DIAMOND_HORSE_ARMOR);
                 pOutput.accept(NETHERITE_HELMET);
                 pOutput.accept(NETHERITE_CHESTPLATE);
                 pOutput.accept(NETHERITE_LEGGINGS);

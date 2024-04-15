@@ -43,6 +43,8 @@ public class DataItemModels extends ItemModelProvider {
         // Items
         simpleItem(RUBY);
         simpleItem(AMBER);
+        simpleItem(RUBY_HORSE_ARMOR);
+        simpleItem(AMBER_HORSE_ARMOR);
 
         // Handheld Items
         handheldItem(RUBY_SWORD);

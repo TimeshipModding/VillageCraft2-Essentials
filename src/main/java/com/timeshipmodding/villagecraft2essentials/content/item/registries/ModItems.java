@@ -30,6 +30,7 @@ public class ModItems {
     public static final RegistryObject<Item> RUBY_NETHERITE_PICKAXE = ITEMS.register("ruby_netherite_pickaxe", () -> new PickaxeItem(ModToolTiers.RUBY_NETHERITE, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> RUBY_NETHERITE_AXE = ITEMS.register("ruby_netherite_axe", () -> new AxeItem(ModToolTiers.RUBY_NETHERITE, 5.0F, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> RUBY_NETHERITE_HOE = ITEMS.register("ruby_netherite_hoe", () -> new HoeItem(ModToolTiers.RUBY_NETHERITE, -4, 0.0F, new Item.Properties()));
+    public static final RegistryObject<Item> RUBY_HORSE_ARMOR = ITEMS.register("ruby_horse_armor",() -> new HorseArmorItem(11, "ruby", new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> AMBER = ITEMS.register("amber", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> AMBER_SWORD = ITEMS.register("amber_sword", () -> new SwordItem(ModToolTiers.AMBER, 3, -2.4F, new Item.Properties()));
     public static final RegistryObject<Item> AMBER_SHOVEL = ITEMS.register("amber_shovel", () -> new ShovelItem(ModToolTiers.AMBER, 1.5F, -3.0F, new Item.Properties()));
@@ -45,5 +46,5 @@ public class ModItems {
     public static final RegistryObject<Item> AMBER_NETHERITE_PICKAXE = ITEMS.register("amber_netherite_pickaxe", () -> new PickaxeItem(ModToolTiers.AMBER_NETHERITE, 1, -2.8F, new Item.Properties()));
     public static final RegistryObject<Item> AMBER_NETHERITE_AXE = ITEMS.register("amber_netherite_axe", () -> new AxeItem(ModToolTiers.AMBER_NETHERITE, 5.0F, -3.0F, new Item.Properties()));
     public static final RegistryObject<Item> AMBER_NETHERITE_HOE = ITEMS.register("amber_netherite_hoe", () -> new HoeItem(ModToolTiers.AMBER_NETHERITE, -4, 0.0F, new Item.Properties()));
+    public static final RegistryObject<Item> AMBER_HORSE_ARMOR = ITEMS.register("amber_horse_armor",() -> new HorseArmorItem(11, "amber", new Item.Properties().stacksTo(1)));
 }
-
