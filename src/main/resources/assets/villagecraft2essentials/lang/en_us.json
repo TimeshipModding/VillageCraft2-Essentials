@@ -203,5 +203,5 @@
   "item.minecraft.smithing_template.netherite_upgrade.applies_to": "Diamond, Ruby and Amber Equipment",
   "item.minecraft.smithing_template.netherite_upgrade.base_slot_description": "Add diamond, ruby, amber armor, weapon, or tool",
 
-  "entity.minecraft.villager.villagecraft2essentials.gem_banker": "Gem Banker"
+  "entity.minecraft.villager.villagecraft2essentials.banker": "Banker"
 }

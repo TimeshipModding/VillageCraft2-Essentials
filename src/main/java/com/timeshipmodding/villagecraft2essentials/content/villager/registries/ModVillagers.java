@@ -20,12 +20,12 @@ public class ModVillagers {
         VILLAGER_PROFESSIONS.register(eventBus);
     }
     // Poi Types
-    public static final RegistryObject<PoiType> CURRENCY_POI = POI_TYPES.register("currency_poi",
+    public static final RegistryObject<PoiType> BANKER_POI = POI_TYPES.register("banker_poi",
             () -> new PoiType(ImmutableSet.copyOf(ModBlocks.WHITE_ATM.get().getStateDefinition().getPossibleStates()), 1, 1));
 
     // Villager Professions
-    public static final RegistryObject<VillagerProfession> GEM_BANKER =
-            VILLAGER_PROFESSIONS.register("gem_banker", () -> new VillagerProfession("gem_banker",
-                    holder -> holder.get() == CURRENCY_POI.get(), holder -> holder.get() == CURRENCY_POI.get(),
+    public static final RegistryObject<VillagerProfession> BANKER =
+            VILLAGER_PROFESSIONS.register("banker", () -> new VillagerProfession("banker",
+                    holder -> holder.get() == BANKER_POI.get(), holder -> holder.get() == BANKER_POI.get(),
                     ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LIBRARIAN));
 }

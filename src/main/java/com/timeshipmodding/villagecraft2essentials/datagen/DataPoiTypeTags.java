@@ -18,6 +18,6 @@ public class DataPoiTypeTags extends PoiTypeTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         tag(net.minecraft.tags.PoiTypeTags.ACQUIRABLE_JOB_SITE)
-                .addOptional(new ResourceLocation(VillageCraft2Essentials.MODID, "currency_poi"));
+                .addOptional(new ResourceLocation(VillageCraft2Essentials.MODID, "banker_poi"));
     }
 }
