@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "villagecraft2essentials:atm_poi",
+      "required": false
+    }
+  ]
+}

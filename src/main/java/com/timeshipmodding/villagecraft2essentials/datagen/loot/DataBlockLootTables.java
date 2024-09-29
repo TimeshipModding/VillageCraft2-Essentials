@@ -6,40 +6,48 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredHolder;
 
-import java.util.Collections;
 import java.util.Set;
-import java.util.concurrent.CompletableFuture;
 
 import static com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks.*;
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 
 public class DataBlockLootTables extends BlockLootSubProvider {
-    public DataBlockLootTables(CompletableFuture<HolderLookup.Provider> lookupProvider) {
-        super(Collections.emptySet(), FeatureFlags.REGISTRY.allFlags(), lookupProvider);
+    public DataBlockLootTables(HolderLookup.Provider provider) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
     }
-
-
 
     @Override
     protected void generate() {
+        // Drop Self
+        dropSelf(RUBY_BLOCK.get());
+        dropSelf(AMBER_BLOCK.get());
+        dropSelf(BLACK_ATM.get());
+        dropSelf(BLUE_ATM.get());
+        dropSelf(BROWN_ATM.get());
+        dropSelf(CYAN_ATM.get());
+        dropSelf(GRAY_ATM.get());
+        dropSelf(GREEN_ATM.get());
+        dropSelf(LIGHT_BLUE_ATM.get());
+        dropSelf(LIME_ATM.get());
+        dropSelf(LIGHT_GRAY_ATM.get());
+        dropSelf(MAGENTA_ATM.get());
+        dropSelf(ORANGE_ATM.get());
+        dropSelf(PINK_ATM.get());
+        dropSelf(PURPLE_ATM.get());
+        dropSelf(RED_ATM.get());
+        dropSelf(WHITE_ATM.get());
+        dropSelf(YELLOW_ATM.get());
 
-        // Ore LootTables
-        add(RUBY_ORE.get(), (block -> createOreDrop(RUBY_ORE.get(), RUBY.get())));
-        add(DEEPSLATE_RUBY_ORE.get(), (block -> createOreDrop(DEEPSLATE_RUBY_ORE.get(), RUBY.get())));
-        add(AMBER_ORE.get(), (block -> createOreDrop(AMBER_ORE.get(), AMBER.get())));
-        add(DEEPSLATE_AMBER_ORE.get(), (block -> createOreDrop(DEEPSLATE_AMBER_ORE.get(), AMBER.get())));
-
+        // Ore Drops
+        this.add(RUBY_ORE.get(), block -> createOreDrop(RUBY_ORE.get(), RUBY.get()));
+        this.add(DEEPSLATE_RUBY_ORE.get(), block -> createOreDrop(DEEPSLATE_RUBY_ORE.get(), RUBY.get()));
+        this.add(AMBER_ORE.get(), block -> createOreDrop(AMBER_ORE.get(), AMBER.get()));
+        this.add(DEEPSLATE_AMBER_ORE.get(), block -> createOreDrop(DEEPSLATE_AMBER_ORE.get(), AMBER.get()));
     }
 
-    // Generate Methods
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return BLOCKS.getEntries() // Get all registered entries
-                .stream() // Stream the wrapped objects
-                .map(Holder::value) // Get the object if available
-                .toList(); // Create the iterable
+        return ModBlocks.BLOCKS.getEntries().stream().map(Holder::value)::iterator;
     }
 }

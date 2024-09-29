@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "group": "ruby",
+  "ingredient": {
+    "item": "villagecraft2essentials:deepslate_ruby_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "villagecraft2essentials:ruby"
+  }
+}

@@ -1,0 +1,42 @@
+package com.timeshipmodding.villagecraft2essentials.datagen.tags;
+
+import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+
+import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
+
+import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
+import static net.minecraft.world.item.Items.*;
+import static com.timeshipmodding.villagecraft2essentials.util.registries.tags.ModItemTags.*;
+
+public class DataItemTags extends ItemTagsProvider {
+    public DataItemTags(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {
+        super(pOutput, pLookupProvider, pBlockTags, VillageCraft2Essentials.MODID, existingFileHelper);
+    }
+
+    @Override
+    protected void addTags(HolderLookup.Provider pProvider) {
+        // Minecraft Tags
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(RUBY_HELMET.get())
+                .add(RUBY_CHESTPLATE.get())
+                .add(RUBY_LEGGINGS.get())
+                .add(RUBY_BOOTS.get())
+                .add(AMBER_HELMET.get())
+                .add(AMBER_CHESTPLATE.get())
+                .add(AMBER_LEGGINGS.get())
+                .add(AMBER_BOOTS.get());
+
+        // VillageCraft 2 Essentials Tags
+        tag(NETHERITE_UPGRADE_SMITHING_TEMPLATE_GEMS)
+                .add(DIAMOND)
+                .add(RUBY.get())
+                .add(AMBER.get());
+    }
+}

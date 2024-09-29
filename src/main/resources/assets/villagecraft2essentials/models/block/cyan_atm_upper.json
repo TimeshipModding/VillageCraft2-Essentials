@@ -3,7 +3,7 @@
 	"texture_size": [48, 48],
 	"textures": {
 		"11": "villagecraft2essentials:block/atm/cyan_atm",
-		"particle": "villagecraft2essentials:block/atm/cyan_atm"
+		"particle": "minecraft:block/cyan_concrete"
 	},
 	"elements": [
 		{

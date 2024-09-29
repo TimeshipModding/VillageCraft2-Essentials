@@ -2,9 +2,11 @@ package com.timeshipmodding.villagecraft2essentials;
 
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
 import com.timeshipmodding.villagecraft2essentials.content.creativetab.EssentialsTab;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModArmorMaterials;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
-import com.timeshipmodding.villagecraft2essentials.event.DataGeneration;
-import org.jetbrains.annotations.NotNull;
+import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModPermitItems;
+import com.timeshipmodding.villagecraft2essentials.content.villager.registries.ModVillagers;
+import net.neoforged.fml.ModContainer;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -18,13 +20,17 @@ public class VillageCraft2Essentials
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final String MODID = "villagecraft2essentials";
 
-    public VillageCraft2Essentials(@NotNull IEventBus modEventBus)
+    public VillageCraft2Essentials(IEventBus modEventBus, ModContainer modContainer)
     {
+        // Register registry classes
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModPermitItems.ITEMS.register(modEventBus);
+        ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
+        ModVillagers.POI_TYPES.register(modEventBus);
+        ModVillagers.VILLAGER_PROFESSIONS.register(modEventBus);
 
+        // Register creative mode tab
         EssentialsTab.CREATIVE_MODE_TABS.register(modEventBus);
-
-        modEventBus.addListener(DataGeneration::gatherdata);
     }
 }
