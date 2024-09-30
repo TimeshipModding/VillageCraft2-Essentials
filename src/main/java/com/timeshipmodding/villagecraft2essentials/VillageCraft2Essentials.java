@@ -2,6 +2,7 @@ package com.timeshipmodding.villagecraft2essentials;
 
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
 import com.timeshipmodding.villagecraft2essentials.content.creativetab.EssentialsTab;
+import com.timeshipmodding.villagecraft2essentials.content.entity.client.registries.ModEntities;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModArmorMaterials;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModPermitItems;
@@ -29,6 +30,7 @@ public class VillageCraft2Essentials
         ModArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
         ModVillagers.POI_TYPES.register(modEventBus);
         ModVillagers.VILLAGER_PROFESSIONS.register(modEventBus);
+        ModEntities.ENTITY_TYPES.register(modEventBus);
 
         // Register creative mode tab
         EssentialsTab.CREATIVE_MODE_TABS.register(modEventBus);

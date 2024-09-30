@@ -1,7 +1,9 @@
 package com.timeshipmodding.villagecraft2essentials.content.item.registries;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.content.entity.client.registries.ModEntities;
 import net.minecraft.world.item.*;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -41,4 +43,5 @@ public class ModItems {
     public static final DeferredItem<Item> AMBER_NETHERITE_AXE = ITEMS.register("amber_netherite_axe", () -> new AxeItem(ModToolTiers.AMBER_NETHERITE, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.AMBER_NETHERITE, 5.0f, -3.0f))));
     public static final DeferredItem<Item> AMBER_NETHERITE_HOE = ITEMS.register("amber_netherite_hoe", () -> new HoeItem(ModToolTiers.AMBER_NETHERITE, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.AMBER_NETHERITE, -4.0f, 0.0f))));
     public static final DeferredItem<Item> AMBER_HORSE_ARMOR = ITEMS.register("amber_horse_armor",() -> new AnimalArmorItem(ModArmorMaterials.AMBER, AnimalArmorItem.BodyType.EQUESTRIAN, false, new Item.Properties().stacksTo(1)));
+    public static final DeferredItem<Item> MOLE_SPAWN_EGG = ITEMS.register("mole_spawn_egg", () -> new DeferredSpawnEggItem(ModEntities.MOLE, 0xdebd47, 0xccbfbe, new Item.Properties()));
 }

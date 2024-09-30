@@ -108,5 +108,6 @@ public class EssentialsTab {
                 pOutput.accept(VC_PERMIT_1);
                 pOutput.accept(GC_PERMIT_1);
                 pOutput.accept(AC_PERMIT_1);
+                pOutput.accept(MOLE_SPAWN_EGG);
             }).build());
 }

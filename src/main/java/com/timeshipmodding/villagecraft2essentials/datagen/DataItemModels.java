@@ -58,6 +58,9 @@ public class DataItemModels extends ItemModelProvider {
         basicItem(AMBER_LEGGINGS.get());
         basicItem(AMBER_BOOTS.get());
         basicItem(AMBER_HORSE_ARMOR.get());
+
+        // withExistingParent
+        withExistingParent(MOLE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     // Generate Methods

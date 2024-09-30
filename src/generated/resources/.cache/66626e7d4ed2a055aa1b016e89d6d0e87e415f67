@@ -1,4 +1,4 @@
-// 1.21.1	2024-09-12T18:00:39.8087799	Item Models: villagecraft2essentials
+// 1.21.1	2024-09-30T20:30:09.7922955	Item Models: villagecraft2essentials
 7f5864b0e65c9fd4c141d8374ad42db8c19623c1 assets/villagecraft2essentials/models/item/amber.json
 63e6d6da334028e56c1ee36ab579beb6b624cd4c assets/villagecraft2essentials/models/item/amber_axe.json
 85cf076eeb57b9dfc34451c264b04cc97809a4e2 assets/villagecraft2essentials/models/item/amber_boots.json
@@ -15,6 +15,7 @@ fdbab8bad10833b66f8907832be09a3cee8a9368 assets/villagecraft2essentials/models/i
 693666504bc05cf38fbb7d87445fea8f8a94e1f1 assets/villagecraft2essentials/models/item/amber_pickaxe.json
 fac198279b2963879a81c26a0a7f7c25fd6b384d assets/villagecraft2essentials/models/item/amber_shovel.json
 1352f7e3de645e397fbb63d90d70469428568a8e assets/villagecraft2essentials/models/item/amber_sword.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/villagecraft2essentials/models/item/mole_spawn_egg.json
 faee49144c2687065e297264c6ba136aa7c4b66c assets/villagecraft2essentials/models/item/ruby.json
 febba05ffb55cf9b193a8a6dfd4ffb54ce3609e4 assets/villagecraft2essentials/models/item/ruby_axe.json
 98e22c530451d4217e7dd8cfdb8cb7af68f08612 assets/villagecraft2essentials/models/item/ruby_boots.json
