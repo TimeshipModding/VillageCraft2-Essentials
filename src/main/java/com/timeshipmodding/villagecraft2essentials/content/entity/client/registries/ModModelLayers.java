@@ -6,4 +6,5 @@ import net.minecraft.resources.ResourceLocation;
 
 public class ModModelLayers {
     public static final ModelLayerLocation MOLE = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(VillageCraft2Essentials.MODID, "mole"), "main");
+    public static final ModelLayerLocation MOLE_SADDLE = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath(VillageCraft2Essentials.MODID, "mole"), "saddle");
 }

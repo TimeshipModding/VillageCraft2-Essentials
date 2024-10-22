@@ -24,6 +24,8 @@ public class DataItemModels extends ItemModelProvider {
         // Items
         basicItem(RUBY.get());
         basicItem(AMBER.get());
+        basicItem(COOKED_WORM.get());
+        basicItem(WORM.get());
 
         // Tool Items
         handheldItem(RUBY_SWORD.get());
@@ -46,6 +48,7 @@ public class DataItemModels extends ItemModelProvider {
         handheldItem(AMBER_NETHERITE_PICKAXE.get());
         handheldItem(AMBER_NETHERITE_AXE.get());
         handheldItem(AMBER_NETHERITE_HOE.get());
+        handheldItem(WORM_ON_A_STICK.get());
 
         // Armor Items
         basicItem(RUBY_HELMET.get());

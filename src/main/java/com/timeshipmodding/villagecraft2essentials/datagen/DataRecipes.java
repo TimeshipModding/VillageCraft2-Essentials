@@ -196,6 +196,10 @@ public class DataRecipes extends RecipeProvider implements IConditionBuilder {
                 .pattern("#y#")
                 .pattern("#x#")
                 .define('#', Blocks.YELLOW_CONCRETE).define('!', Blocks.REDSTONE_TORCH).define('y', Blocks.HOPPER).define('x', Items.IRON_INGOT).group("villagecraft2essentials").unlockedBy(getHasName(AMBER.get()), has(AMBER.get())).save(recipeOutput);
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, WORM_ON_A_STICK.get())
+                .pattern("# ")
+                .pattern(" X")
+                .define('#', FISHING_ROD).define('X', WORM.get()).group("villagecraft2essentials").unlockedBy(getHasName(WORM.get()), has(WORM.get())).save(recipeOutput);
 
         // Shapeless Crafting
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, RUBY.get(), 9).requires(RUBY_BLOCK.get()).group("villagecraft2essentials").unlockedBy(getHasName(RUBY_BLOCK.get()), has(RUBY_BLOCK.get())).save(recipeOutput);
@@ -395,6 +399,10 @@ public class DataRecipes extends RecipeProvider implements IConditionBuilder {
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AC_PERMIT_62.get()).requires(AC_PERMIT_1.get()).requires(AC_PERMIT_61.get()).group("villagecraft2essentials").unlockedBy(getHasName(VC_PERMIT_1.get()), has(VC_PERMIT_1.get())).save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AC_PERMIT_63.get()).requires(AC_PERMIT_1.get()).requires(AC_PERMIT_62.get()).group("villagecraft2essentials").unlockedBy(getHasName(VC_PERMIT_1.get()), has(VC_PERMIT_1.get())).save(recipeOutput);
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, AC_PERMIT_64.get()).requires(AC_PERMIT_1.get()).requires(AC_PERMIT_63.get()).group("villagecraft2essentials").unlockedBy(getHasName(VC_PERMIT_1.get()), has(VC_PERMIT_1.get())).save(recipeOutput);
+
+        // Simple Cooking Recipe
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(WORM), RecipeCategory.FOOD, COOKED_WORM, 0.35F, 200)
+                .unlockedBy(getHasName(WORM.get()), has(WORM)).save(recipeOutput);
 
         // Ore Smelting
         oreSmelting(recipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, RUBY.get(), 1.0F, 200, "ruby");

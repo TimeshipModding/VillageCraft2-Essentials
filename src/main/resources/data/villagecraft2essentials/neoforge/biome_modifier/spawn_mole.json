@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "minecraft:plains",
+  "spawners": {
+    "type": "villagecraft2essentials:mole",
+    "maxCount": 4,
+    "minCount": 1,
+    "weight": 200
+  }
+}

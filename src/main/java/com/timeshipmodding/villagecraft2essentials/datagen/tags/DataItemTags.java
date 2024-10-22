@@ -38,5 +38,9 @@ public class DataItemTags extends ItemTagsProvider {
                 .add(DIAMOND)
                 .add(RUBY.get())
                 .add(AMBER.get());
+
+        tag(MOLE_FOOD)
+                .add(WORM.get())
+                .add(COOKED_WORM.get());
     }
 }

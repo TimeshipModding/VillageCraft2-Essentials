@@ -8,6 +8,7 @@ import net.minecraft.world.item.Item;
 
 public class ModItemTags {
     public static TagKey<Item> NETHERITE_UPGRADE_SMITHING_TEMPLATE_GEMS = createTag("netherite_upgrade_smithing_template_gems");
+    public static TagKey<Item> MOLE_FOOD = createTag("mole_food");
 
     private static TagKey<Item> createTag(String name) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(VillageCraft2Essentials.MODID, name));
