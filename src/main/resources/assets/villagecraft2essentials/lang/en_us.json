@@ -400,7 +400,12 @@
   "item.minecraft.smithing_template.netherite_upgrade.applies_to": "Diamond, Ruby and Amber Equipment",
   "item.minecraft.smithing_template.netherite_upgrade.base_slot_description": "Add diamond, ruby, amber armor, weapon, or tool",
 
+  "sounds.villagecraft2essentials.mole_ambient": "Mole stridulates",
+  "sounds.villagecraft2essentials.mole_hurt": "Mole hurts",
+  "sounds.villagecraft2essentials.mole_death": "Mole dies",
+
   "entity.minecraft.villager.villagecraft2essentials.banker": "Banker",
+  "entity.villagecraft2essentials.mole": "Mole",
 
   "tutorial.punch_tree.title": "Destroy the trey"
 }

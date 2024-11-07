@@ -1,9 +1,11 @@
 package com.timeshipmodding.villagecraft2essentials.datagen.tags;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.util.registries.tags.ModBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -19,6 +21,13 @@ public class DataBlockTags extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        // VillageCraft 2 Essentials Tags
+        this.tag(ModBlockTags.MOLES_SPAWNABLE_ON)
+                .add(Blocks.DIRT)
+                .add(Blocks.MOSS_BLOCK)
+                .add(Blocks.GRASS_BLOCK)
+                .add(Blocks.GRAVEL);
+
         // Minecraft Tags
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(RUBY_ORE.get())

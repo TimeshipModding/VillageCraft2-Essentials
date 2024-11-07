@@ -1,0 +1,20 @@
+{
+  "mole_ambient": {
+    "subtitle": "sounds.villagecraft2essentials.mole_ambient",
+    "sounds": [
+      "villagecraft2essentials:mole_ambient"
+    ]
+  },
+  "mole_hurt": {
+    "subtitle": "sounds.villagecraft2essentials.mole_hurt",
+    "sounds": [
+      "villagecraft2essentials:mole_hurt"
+    ]
+  },
+  "mole_death": {
+    "subtitle": "sounds.villagecraft2essentials.mole_death",
+    "sounds": [
+      "villagecraft2essentials:mole_death"
+    ]
+  }
+}

@@ -2,6 +2,8 @@ package com.timeshipmodding.villagecraft2essentials.content.entity;
 
 import com.timeshipmodding.villagecraft2essentials.content.entity.client.registries.ModEntities;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
+import com.timeshipmodding.villagecraft2essentials.content.sound.registries.ModSounds;
+import com.timeshipmodding.villagecraft2essentials.util.registries.tags.ModBlockTags;
 import com.timeshipmodding.villagecraft2essentials.util.registries.tags.ModItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -10,9 +12,14 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -23,18 +30,16 @@ import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
 
 public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
-    private static final Vec3 LOWERED_PASSENGER_ATTACHMENT = new Vec3(0.0, 0.5, 0.0);
+    private static final Vec3 LOWERED_PASSENGER_ATTACHMENT = new Vec3(0.0, 0.6, 0.0);
     private static final EntityDataAccessor<Boolean> DATA_SADDLE_ID = SynchedEntityData.defineId(MoleEntity.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Integer> DATA_BOOST_TIME = SynchedEntityData.defineId(MoleEntity.class, EntityDataSerializers.INT);
     private final ItemBasedSteering steering = new ItemBasedSteering(this.entityData, DATA_BOOST_TIME, DATA_SADDLE_ID);
-
-    public final AnimationState idleAnimationState = new AnimationState();
-    private int idleAnimationTimeout = 0;
 
     public MoleEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
@@ -57,6 +62,12 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
                 .add(Attributes.MAX_HEALTH, 14)
                 .add(Attributes.MOVEMENT_SPEED, 0.25)
                 .add(Attributes.FOLLOW_RANGE, 24);
+    }
+
+    public static boolean checkMoleSpawnRules(
+            EntityType<? extends LivingEntity> mole, LevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random
+    ) {
+        return pos.getY() < 60 && level.getRawBrightness(pos, 0) == 0;
     }
 
     @javax.annotation.Nullable
@@ -109,28 +120,10 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
         return ModEntities.MOLE.get().create(level());
     }
 
-    private void setupAnimationStates() {
-        /*if(this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = 20;
-            this.idleAnimationState.start(this.tickCount);
-        } else {
-            --this.idleAnimationTimeout;
-        } */
-    }
-
     @Override
     protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions dimensions, float partialTick) {
         boolean flag = entity instanceof Player;
         return flag ? LOWERED_PASSENGER_ATTACHMENT : super.getPassengerAttachmentPoint(entity, dimensions, partialTick);
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-
-        if(this.level().isClientSide()) {
-            this.setupAnimationStates();
-        }
     }
 
     @Override
@@ -175,7 +168,7 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     public void equipSaddle(ItemStack stack, @javax.annotation.Nullable SoundSource soundSource) {
         this.steering.setSaddle(true);
         if (soundSource != null) {
-            //this.level().playSound(null, this, SoundEvents.PIG_SADDLE, soundSource, 0.5F, 1.0F);
+            this.level().playSound(null, this, SoundEvents.PIG_SADDLE, soundSource, 0.5F, 1.2F);
         }
     }
 
@@ -213,7 +206,6 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     protected void tickRidden(Player player, Vec3 travelVector) {
         super.tickRidden(player, travelVector);
         this.setRot(player.getYRot(), player.getXRot() * 0.5F);
-        //this.yRotO = this.yBodyRot = this.yHeadRot = this.getYRot();
         this.steering.tickBoost();
     }
 
@@ -230,5 +222,23 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     @Override
     public boolean boost() {
         return this.steering.boost(this.getRandom());
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return super.getAmbientSound();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getHurtSound(DamageSource damageSource) {
+        return ModSounds.MOLE_HURT.get();
+    }
+
+    @Nullable
+    @Override
+    protected SoundEvent getDeathSound() {
+        return super.getDeathSound();
     }
 }

@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": "minecraft:plains",
+  "biomes": "#c:is_underground",
   "spawners": {
     "type": "villagecraft2essentials:mole",
     "maxCount": 4,

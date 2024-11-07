@@ -6,6 +6,7 @@ import com.timeshipmodding.villagecraft2essentials.content.entity.client.registr
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModArmorMaterials;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModPermitItems;
+import com.timeshipmodding.villagecraft2essentials.content.sound.registries.ModSounds;
 import com.timeshipmodding.villagecraft2essentials.content.villager.registries.ModVillagers;
 import net.neoforged.fml.ModContainer;
 import org.slf4j.Logger;
@@ -31,6 +32,7 @@ public class VillageCraft2Essentials
         ModVillagers.POI_TYPES.register(modEventBus);
         ModVillagers.VILLAGER_PROFESSIONS.register(modEventBus);
         ModEntities.ENTITY_TYPES.register(modEventBus);
+        ModSounds.SOUND_EVENTS.register(modEventBus);
 
         // Register creative mode tab
         EssentialsTab.CREATIVE_MODE_TABS.register(modEventBus);

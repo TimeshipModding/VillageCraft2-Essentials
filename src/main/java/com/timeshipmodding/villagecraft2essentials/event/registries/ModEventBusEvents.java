@@ -5,6 +5,7 @@ import com.timeshipmodding.villagecraft2essentials.content.entity.MoleEntity;
 import com.timeshipmodding.villagecraft2essentials.content.entity.client.models.MoleModel;
 import com.timeshipmodding.villagecraft2essentials.content.entity.client.registries.ModEntities;
 import com.timeshipmodding.villagecraft2essentials.content.entity.client.registries.ModModelLayers;
+import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -30,6 +31,6 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerSpawnPlacements(RegisterSpawnPlacementsEvent event) {
         event.register(ModEntities.MOLE.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                Animal::checkAnimalSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
+                MoleEntity::checkMoleSpawnRules, RegisterSpawnPlacementsEvent.Operation.REPLACE);
     }
 }
