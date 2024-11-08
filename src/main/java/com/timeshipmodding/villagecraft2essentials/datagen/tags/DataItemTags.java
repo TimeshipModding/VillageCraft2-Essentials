@@ -13,7 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 import static com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems.*;
 import static net.minecraft.world.item.Items.*;
-import static com.timeshipmodding.villagecraft2essentials.util.registries.tags.ModItemTags.*;
+import static com.timeshipmodding.villagecraft2essentials.util.tags.registries.ModItemTags.*;
 
 public class DataItemTags extends ItemTagsProvider {
     public DataItemTags(PackOutput pOutput, CompletableFuture<HolderLookup.Provider> pLookupProvider, CompletableFuture<TagLookup<Block>> pBlockTags, @Nullable ExistingFileHelper existingFileHelper) {

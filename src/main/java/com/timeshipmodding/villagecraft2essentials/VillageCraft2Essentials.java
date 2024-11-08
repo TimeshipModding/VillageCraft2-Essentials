@@ -22,7 +22,7 @@ public class VillageCraft2Essentials
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final String MODID = "villagecraft2essentials";
 
-    public VillageCraft2Essentials(IEventBus modEventBus, ModContainer modContainer)
+    public VillageCraft2Essentials(IEventBus modEventBus)
     {
         // Register registry classes
         ModBlocks.BLOCKS.register(modEventBus);

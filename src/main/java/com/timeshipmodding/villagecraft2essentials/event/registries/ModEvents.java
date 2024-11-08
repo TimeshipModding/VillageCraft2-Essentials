@@ -1,6 +1,12 @@
 package com.timeshipmodding.villagecraft2essentials.event.registries;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
+import com.timeshipmodding.villagecraft2essentials.content.commands.ambercaves.AmberCavesSetSpawnCommand;
+import com.timeshipmodding.villagecraft2essentials.content.commands.ambercaves.AmberCavesSpawnCommand;
+import com.timeshipmodding.villagecraft2essentials.content.commands.grippercity.GripperCitySetSpawnCommand;
+import com.timeshipmodding.villagecraft2essentials.content.commands.grippercity.GripperCitySpawnCommand;
+import com.timeshipmodding.villagecraft2essentials.content.commands.villagecraftcity.VillageCraftCitySpawnCommand;
+import com.timeshipmodding.villagecraft2essentials.content.commands.villagecraftcity.VillageCraftCitySetSpawnCommand;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.content.villager.registries.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -12,7 +18,10 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
+import net.neoforged.neoforge.server.command.ConfigCommand;
 
 import java.util.List;
 
@@ -59,5 +68,23 @@ public class ModEvents {
                     new ItemStack(ModItems.AMBER.get(), 1), 128, 64, 0.0f
             ));
         }
+    }
+
+    @SubscribeEvent
+    public static void onCommandsRegister(RegisterCommandsEvent event) {
+        new AmberCavesSetSpawnCommand(event.getDispatcher());
+        new AmberCavesSpawnCommand(event.getDispatcher());
+        new GripperCitySetSpawnCommand(event.getDispatcher());
+        new GripperCitySpawnCommand(event.getDispatcher());
+        new VillageCraftCitySetSpawnCommand(event.getDispatcher());
+        new VillageCraftCitySpawnCommand(event.getDispatcher());
+
+        ConfigCommand.register(event.getDispatcher());
+    }
+
+    @SubscribeEvent
+    public static void onPlayerCloned(PlayerEvent.Clone event) {
+        event.getEntity().getPersistentData().putIntArray("villagecraft2essentials.homepos",
+                event.getOriginal().getPersistentData().getIntArray("villagecraft2essentials.homepos"));
     }
 }

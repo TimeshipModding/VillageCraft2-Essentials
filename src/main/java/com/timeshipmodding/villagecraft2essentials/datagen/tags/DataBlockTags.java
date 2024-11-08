@@ -1,7 +1,7 @@
 package com.timeshipmodding.villagecraft2essentials.datagen.tags;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import com.timeshipmodding.villagecraft2essentials.util.registries.tags.ModBlockTags;
+import com.timeshipmodding.villagecraft2essentials.util.tags.registries.ModBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

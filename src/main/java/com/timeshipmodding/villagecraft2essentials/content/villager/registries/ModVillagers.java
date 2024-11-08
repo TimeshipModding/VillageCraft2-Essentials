@@ -1,20 +1,13 @@
 package com.timeshipmodding.villagecraft2essentials.content.villager.registries;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import com.timeshipmodding.villagecraft2essentials.content.block.DoubleBlock;
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
-import com.timeshipmodding.villagecraft2essentials.util.registries.tags.ModBlockTags;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Set;

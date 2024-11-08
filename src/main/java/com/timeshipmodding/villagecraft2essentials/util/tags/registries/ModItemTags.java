@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.util.registries.tags;
+package com.timeshipmodding.villagecraft2essentials.util.tags.registries;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import net.minecraft.resources.ResourceLocation;
