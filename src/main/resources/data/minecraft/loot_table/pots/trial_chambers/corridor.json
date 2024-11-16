@@ -98,7 +98,7 @@
               "function": "minecraft:set_count"
             }
           ],
-          "name": "villagecraft2essentials;ruby",
+          "name": "villagecraft2essentials:ruby",
           "weight": 5
         },
         {

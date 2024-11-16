@@ -38,30 +38,30 @@
               "name": "minecraft:dirt"
             }
           ]
-        },
+        }
+      ],
+      "rolls": 1.0
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
         {
-          "bonus_rolls": 0.0,
-          "entries": [
+          "type": "minecraft:alternatives",
+          "children": [
             {
-              "type": "minecraft:alternatives",
-              "children": [
+              "type": "minecraft:item",
+              "conditions": [
                 {
-                  "type": "minecraft:item",
-                  "conditions": [
-                    {
-                      "condition": "minecraft:survives_explosion"
-                    },
-                    {
-                      "chance": 0.125,
-                      "condition": "minecraft:random_chance"
-                    }
-                  ],
-                  "name": "villagecraft2essentials:worm"
+                  "condition": "minecraft:survives_explosion"
+                },
+                {
+                  "chance": 0.125,
+                  "condition": "minecraft:random_chance"
                 }
-              ]
+              ],
+              "name": "villagecraft2essentials:worm"
             }
-          ],
-          "rolls": 1.0
+          ]
         }
       ],
       "rolls": 1.0

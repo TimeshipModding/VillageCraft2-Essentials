@@ -3,6 +3,7 @@ package com.timeshipmodding.villagecraft2essentials.content.entity;
 import com.timeshipmodding.villagecraft2essentials.content.entity.client.registries.ModEntities;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.content.sound.registries.ModSounds;
+import com.timeshipmodding.villagecraft2essentials.util.tags.registries.ModBlockTags;
 import com.timeshipmodding.villagecraft2essentials.util.tags.registries.ModItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -14,6 +15,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -27,6 +29,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.vehicle.DismountHelper;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.phys.AABB;
@@ -65,7 +68,12 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     public static boolean checkMoleSpawnRules(
             EntityType<? extends LivingEntity> mole, LevelAccessor level, MobSpawnType spawnType, BlockPos pos, RandomSource random
     ) {
-        return pos.getY() < 60 && level.getRawBrightness(pos, 0) == 0;
+        boolean flag = MobSpawnType.ignoresLightRequirements(spawnType) || isBrightEnoughToSpawn(level, pos);
+        return level.getBlockState(pos.below()).is(ModBlockTags.MOLES_SPAWNABLE_ON) && flag;
+    }
+
+    protected static boolean isBrightEnoughToSpawn(BlockAndTintGetter level, BlockPos pos) {
+        return level.getRawBrightness(pos, 0) > 8;
     }
 
     @javax.annotation.Nullable

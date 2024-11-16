@@ -1,10 +1,10 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": "#c:is_underground",
+  "biomes": "minecraft:wooded_badlands",
   "spawners": {
     "type": "villagecraft2essentials:mole",
-    "maxCount": 4,
+    "maxCount": 3,
     "minCount": 1,
-    "weight": 200
+    "weight": 100
   }
 }

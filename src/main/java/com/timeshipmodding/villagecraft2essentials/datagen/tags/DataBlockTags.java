@@ -24,9 +24,8 @@ public class DataBlockTags extends BlockTagsProvider {
         // VillageCraft 2 Essentials Tags
         this.tag(ModBlockTags.MOLES_SPAWNABLE_ON)
                 .add(Blocks.DIRT)
-                .add(Blocks.MOSS_BLOCK)
-                .add(Blocks.GRASS_BLOCK)
-                .add(Blocks.GRAVEL);
+                .add(Blocks.COARSE_DIRT)
+                .add(Blocks.GRASS_BLOCK);;
 
         // Minecraft Tags
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
