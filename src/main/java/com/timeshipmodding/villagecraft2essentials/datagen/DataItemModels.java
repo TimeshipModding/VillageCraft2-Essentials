@@ -48,7 +48,7 @@ public class DataItemModels extends ItemModelProvider {
         handheldItem(AMBER_NETHERITE_PICKAXE.get());
         handheldItem(AMBER_NETHERITE_AXE.get());
         handheldItem(AMBER_NETHERITE_HOE.get());
-        handheldItem(WORM_ON_A_STICK.get());
+        handheldRodItem(WORM_ON_A_STICK.get());
 
         // Armor Items
         basicItem(RUBY_HELMET.get());
@@ -74,6 +74,16 @@ public class DataItemModels extends ItemModelProvider {
     public ItemModelBuilder handheldItem(ResourceLocation item) {
         return getBuilder(item.toString())
                 .parent(new ModelFile.UncheckedModelFile("item/handheld"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
+    }
+
+    public ItemModelBuilder handheldRodItem(Item item) {
+        return handheldRodItem(Objects.requireNonNull(BuiltInRegistries.ITEM.getKey(item)));
+    }
+
+    public ItemModelBuilder handheldRodItem(ResourceLocation item) {
+        return getBuilder(item.toString())
+                .parent(new ModelFile.UncheckedModelFile("item/handheld_rod"))
                 .texture("layer0", ResourceLocation.fromNamespaceAndPath(item.getNamespace(), "item/" + item.getPath()));
     }
 }

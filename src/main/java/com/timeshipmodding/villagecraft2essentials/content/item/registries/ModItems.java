@@ -43,7 +43,7 @@ public class ModItems {
     public static final DeferredItem<Item> AMBER_NETHERITE_AXE = ITEMS.register("amber_netherite_axe", () -> new AxeItem(ModToolTiers.AMBER_NETHERITE, new Item.Properties().attributes(AxeItem.createAttributes(ModToolTiers.AMBER_NETHERITE, 5.0f, -3.0f))));
     public static final DeferredItem<Item> AMBER_NETHERITE_HOE = ITEMS.register("amber_netherite_hoe", () -> new HoeItem(ModToolTiers.AMBER_NETHERITE, new Item.Properties().attributes(HoeItem.createAttributes(ModToolTiers.AMBER_NETHERITE, -4.0f, 0.0f))));
     public static final DeferredItem<Item> AMBER_HORSE_ARMOR = ITEMS.register("amber_horse_armor",() -> new AnimalArmorItem(ModArmorMaterials.AMBER, AnimalArmorItem.BodyType.EQUESTRIAN, false, new Item.Properties().stacksTo(1)));
-    public static final DeferredItem<Item> MOLE_SPAWN_EGG = ITEMS.register("mole_spawn_egg", () -> new DeferredSpawnEggItem(ModEntities.MOLE, 0xdebd47, 0xccbfbe, new Item.Properties()));
+    public static final DeferredItem<Item> MOLE_SPAWN_EGG = ITEMS.register("mole_spawn_egg", () -> new DeferredSpawnEggItem(ModEntities.MOLE, 0x6f6860, 0xcd9a97, new Item.Properties()));
     public static final DeferredItem<Item> WORM = ITEMS.register("worm", () -> new Item(new Item.Properties().food(ModFoodProperties.WORM)));
     public static final DeferredItem<Item> COOKED_WORM = ITEMS.register("cooked_worm", () -> new Item(new Item.Properties().food(ModFoodProperties.COOKED_WORM)));
     public static final DeferredItem<Item> WORM_ON_A_STICK = ITEMS.register("worm_on_a_stick", () -> new FoodOnAStickItem<>(new Item.Properties().durability(25), ModEntities.MOLE.get(), 7));
