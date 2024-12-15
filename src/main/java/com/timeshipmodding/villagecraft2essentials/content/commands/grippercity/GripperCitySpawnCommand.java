@@ -15,10 +15,10 @@ public class GripperCitySpawnCommand {
 
     private int execute(CommandContext<CommandSourceStack> context) {
         ServerPlayer player = context.getSource().getPlayer();
-        boolean hasHomepos = CompoundTags.villagecraftcity.getIntArray("villagecraft2essentials.grippercityspawnpos").length != 0;
+        boolean hasSpawnPos = CompoundTags.gripperCitySpawn.getIntArray("villagecraft2essentials.grippercityspawnpos").length != 0;
 
-        if(hasHomepos) {
-            int[] spawnPos = CompoundTags.villagecraftcity.getIntArray("villagecraft2essentials.grippercityspawnpos");
+        if(hasSpawnPos) {
+            int[] spawnPos = CompoundTags.gripperCitySpawn.getIntArray("villagecraft2essentials.grippercityspawnpos");
             player.teleportTo(spawnPos[0], spawnPos[1], spawnPos[2]);
 
             context.getSource().sendSuccess(() -> Component.literal("You have been teleported to Gripper City!"), false);

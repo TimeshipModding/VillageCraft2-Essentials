@@ -22,7 +22,7 @@ public class GripperCitySetSpawnCommand {
         ServerLevel serverLevel = context.getSource().getLevel();
         BlockPos playerPos = player.blockPosition();
         String positionString = playerPos.getX() + ", " + playerPos.getY() + ", " + playerPos.getZ();
-        CompoundTags.villagecraftcity.putIntArray("villagecraft2essentials.grippercityspawnpos",
+        CompoundTags.gripperCitySpawn.putIntArray("villagecraft2essentials.grippercityspawnpos",
                 new int[] { playerPos.getX(), playerPos.getY(), playerPos.getZ() });
 
         if (serverLevel.dimension() != Level.OVERWORLD) {

@@ -15,10 +15,10 @@ public class VillageCraftCitySpawnCommand {
 
     private int execute(CommandContext<CommandSourceStack> context) {
         ServerPlayer player = context.getSource().getPlayer();
-        boolean hasHomepos = CompoundTags.villagecraftcity.getIntArray("villagecraft2essentials.villagecraftcityspawnpos").length != 0;
+        boolean hasSpawnPos = CompoundTags.villagecraftCitySpawn.getIntArray("villagecraft2essentials.villagecraftcityspawnpos").length != 0;
 
-        if(hasHomepos) {
-            int[] spawnPos = CompoundTags.villagecraftcity.getIntArray("villagecraft2essentials.villagecraftcityspawnpos");
+        if(hasSpawnPos) {
+            int[] spawnPos = CompoundTags.villagecraftCitySpawn.getIntArray("villagecraft2essentials.villagecraftcityspawnpos");
             player.teleportTo(spawnPos[0], spawnPos[1], spawnPos[2]);
 
             context.getSource().sendSuccess(() -> Component.literal("You have been teleported to VillageCraft City!"), false);

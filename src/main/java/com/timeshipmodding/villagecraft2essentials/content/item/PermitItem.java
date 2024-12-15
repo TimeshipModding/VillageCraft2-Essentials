@@ -18,9 +18,7 @@ public class PermitItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-        if (pTooltip == 0 && Screen.hasShiftDown()) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_value_0"));
-        } else if (pTooltip == 0) {
-            pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_shift"));
+        if (pTooltip == 0) {
             pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_0"));
         } else if (pTooltip == 1 && Screen.hasShiftDown()) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_value_1"));
         } else if (pTooltip == 1) {

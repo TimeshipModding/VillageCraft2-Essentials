@@ -15,10 +15,10 @@ public class AmberCavesSpawnCommand {
 
     private int execute(CommandContext<CommandSourceStack> context) {
         ServerPlayer player = context.getSource().getPlayer();
-        boolean hasHomepos = CompoundTags.villagecraftcity.getIntArray("villagecraft2essentials.ambercavesspawnpos").length != 0;
+        boolean hasSpawnPos = CompoundTags.amberCavesSpawn.getIntArray("villagecraft2essentials.ambercavesspawnpos").length != 0;
 
-        if(hasHomepos) {
-            int[] spawnPos = CompoundTags.villagecraftcity.getIntArray("villagecraft2essentials.ambercavesspawnpos");
+        if(hasSpawnPos) {
+            int[] spawnPos = CompoundTags.amberCavesSpawn.getIntArray("villagecraft2essentials.ambercavesspawnpos");
             player.teleportTo(spawnPos[0], spawnPos[1], spawnPos[2]);
 
             context.getSource().sendSuccess(() -> Component.literal("You have been teleported to The Amber Caves!"), false);

@@ -22,7 +22,7 @@ public class VillageCraftCitySetSpawnCommand {
         ServerLevel serverLevel = context.getSource().getLevel();
         BlockPos playerPos = player.blockPosition();
         String positionString = playerPos.getX() + ", " + playerPos.getY() + ", " + playerPos.getZ();
-        CompoundTags.villagecraftcity.putIntArray("villagecraft2essentials.villagecraftcityspawnpos",
+        CompoundTags.villagecraftCitySpawn.putIntArray("villagecraft2essentials.villagecraftcityspawnpos",
                 new int[] { playerPos.getX(), playerPos.getY(), playerPos.getZ() });
 
         if (serverLevel.dimension() != Level.OVERWORLD) {

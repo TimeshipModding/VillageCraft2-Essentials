@@ -1,4 +1,4 @@
-package com.timeshipmodding.villagecraft2essentials.content.commands.ambercaves;
+package com.timeshipmodding.villagecraft2essentials.content.commands.villagecraftcity;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
@@ -11,9 +11,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
 
-public class AmberCavesSetSpawnCommand {
-    public AmberCavesSetSpawnCommand(CommandDispatcher<CommandSourceStack> dispatcher) {
-        dispatcher.register(Commands.literal("ambercaves").then(Commands.literal("setspawn")
+public class VillageCraftCitySetJailCommand {
+    public VillageCraftCitySetJailCommand(CommandDispatcher<CommandSourceStack> dispatcher) {
+        dispatcher.register(Commands.literal("villagecraftcity").then(Commands.literal("setjail")
                 .executes(this::execute)));
     }
 
@@ -22,14 +22,14 @@ public class AmberCavesSetSpawnCommand {
         ServerLevel serverLevel = context.getSource().getLevel();
         BlockPos playerPos = player.blockPosition();
         String positionString = playerPos.getX() + ", " + playerPos.getY() + ", " + playerPos.getZ();
-        CompoundTags.amberCavesSpawn.putIntArray("villagecraft2essentials.ambercavesspawnpos",
+        CompoundTags.villagecraftCityJail.putIntArray("villagecraft2essentials.villagecraftcityjailpos",
                 new int[] { playerPos.getX(), playerPos.getY(), playerPos.getZ() });
 
         if (serverLevel.dimension() != Level.OVERWORLD) {
-            context.getSource().sendFailure(Component.literal("Can only set Amber Caves' spawn in the overworld."));
+            context.getSource().sendFailure(Component.literal("Can only set VillageCraft City's jail in the overworld."));
             return 0;
         } else {
-            context.getSource().sendSuccess(() -> Component.literal("Set Amber Caves' Spawn to " + positionString), true);
+            context.getSource().sendSuccess(() -> Component.literal("Set VillageCraft City's Jail to " + positionString), true);
             return 1;
         }
     }
