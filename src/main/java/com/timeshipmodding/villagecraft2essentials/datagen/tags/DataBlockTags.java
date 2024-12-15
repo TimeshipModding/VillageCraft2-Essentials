@@ -25,7 +25,8 @@ public class DataBlockTags extends BlockTagsProvider {
         this.tag(ModBlockTags.MOLES_SPAWNABLE_ON)
                 .add(Blocks.DIRT)
                 .add(Blocks.COARSE_DIRT)
-                .add(Blocks.GRASS_BLOCK);;
+                .add(Blocks.GRASS_BLOCK)
+                .add(Blocks.PODZOL);
 
         // Minecraft Tags
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)

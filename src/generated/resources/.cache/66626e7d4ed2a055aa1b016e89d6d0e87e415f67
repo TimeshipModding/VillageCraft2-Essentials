@@ -1,4 +1,4 @@
-// 1.21.1	2024-10-02T18:38:23.5663574	Item Models: villagecraft2essentials
+// 1.21.1	2024-12-14T11:43:38.2954845	Item Models: villagecraft2essentials
 7f5864b0e65c9fd4c141d8374ad42db8c19623c1 assets/villagecraft2essentials/models/item/amber.json
 63e6d6da334028e56c1ee36ab579beb6b624cd4c assets/villagecraft2essentials/models/item/amber_axe.json
 85cf076eeb57b9dfc34451c264b04cc97809a4e2 assets/villagecraft2essentials/models/item/amber_boots.json
@@ -34,4 +34,4 @@ dd817b7bfc5229015f3d09abef73c83e05b56655 assets/villagecraft2essentials/models/i
 20f667db94bbf96c1e7f6766b364845790a207ec assets/villagecraft2essentials/models/item/ruby_shovel.json
 ba158567f72ab793ffbe858d1056d788724a09a0 assets/villagecraft2essentials/models/item/ruby_sword.json
 620750d2d06537b347c4f136ece1117d71de5ce4 assets/villagecraft2essentials/models/item/worm.json
-f96a0236d456193b81825fbd13a6a0ab0109c959 assets/villagecraft2essentials/models/item/worm_on_a_stick.json
+c7557a9ae79a8c70c02f79ec7897489f9a5dfe17 assets/villagecraft2essentials/models/item/worm_on_a_stick.json
