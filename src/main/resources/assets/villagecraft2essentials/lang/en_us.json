@@ -134,6 +134,9 @@
   "tooltip.villagecraft2essentials.permit_tooltip_value_63": "§eWIP",
   "tooltip.villagecraft2essentials.permit_tooltip_value_64": "§eWIP",
 
+  "trim_material.villagecraft2essentials.ruby": "Ruby Material",
+  "trim_material.villagecraft2essentials.amber": "Amber Material",
+
   "block.villagecraft2essentials.ruby_block": "Block of Ruby",
   "block.villagecraft2essentials.ruby_ore": "Ruby Ore",
   "block.villagecraft2essentials.deepslate_ruby_ore": "Deepslate Ruby Ore",

@@ -1,0 +1,9 @@
+{
+  "asset_name": "amber",
+  "description": {
+    "color": "#CA8513",
+    "translate": "trim_material.villagecraft2essentials.amber"
+  },
+  "ingredient": "villagecraft2essentials:amber",
+  "item_model_index": 1.2
+}

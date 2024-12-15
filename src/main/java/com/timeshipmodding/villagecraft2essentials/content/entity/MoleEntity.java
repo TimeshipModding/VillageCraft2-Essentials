@@ -233,7 +233,7 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        return super.getAmbientSound();
+        return ModSounds.MOLE_AMBIENT.get();
     }
 
     @Nullable
@@ -245,6 +245,6 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     @Nullable
     @Override
     protected SoundEvent getDeathSound() {
-        return super.getDeathSound();
+        return ModSounds.MOLE_DEATH.get();
     }
 }

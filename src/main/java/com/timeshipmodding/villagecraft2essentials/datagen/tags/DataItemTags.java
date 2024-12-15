@@ -33,6 +33,10 @@ public class DataItemTags extends ItemTagsProvider {
                 .add(AMBER_LEGGINGS.get())
                 .add(AMBER_BOOTS.get());
 
+        tag(ItemTags.TRIM_MATERIALS)
+                .add(RUBY.get())
+                .add(AMBER.get());
+
         // VillageCraft 2 Essentials Tags
         tag(NETHERITE_UPGRADE_SMITHING_TEMPLATE_GEMS)
                 .add(DIAMOND)

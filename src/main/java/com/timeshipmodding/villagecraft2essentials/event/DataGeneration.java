@@ -1,10 +1,7 @@
 package com.timeshipmodding.villagecraft2essentials.event;
 
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
-import com.timeshipmodding.villagecraft2essentials.datagen.DataBlockStates;
-import com.timeshipmodding.villagecraft2essentials.datagen.DataItemModels;
-import com.timeshipmodding.villagecraft2essentials.datagen.DataRecipes;
-import com.timeshipmodding.villagecraft2essentials.datagen.DataWorldgen;
+import com.timeshipmodding.villagecraft2essentials.datagen.*;
 import com.timeshipmodding.villagecraft2essentials.datagen.loot.DataBlockLootTables;
 import com.timeshipmodding.villagecraft2essentials.datagen.tags.DataBlockTags;
 import com.timeshipmodding.villagecraft2essentials.datagen.tags.DataItemTags;
@@ -33,7 +30,7 @@ public class DataGeneration {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new DataRecipes(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new DataWorldgen(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new DataWorldgenAndDatapack(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(DataBlockLootTables::new, LootContextParamSets.BLOCK)), lookupProvider));
 
@@ -43,6 +40,5 @@ public class DataGeneration {
 
         generator.addProvider(event.includeClient(), new DataBlockStates(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new DataItemModels(packOutput, existingFileHelper));
-
     }
 }
