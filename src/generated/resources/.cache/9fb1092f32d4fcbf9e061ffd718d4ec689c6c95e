@@ -1,4 +1,6 @@
-// 1.21.1	2024-10-02T18:38:23.558363	Recipes
+// 1.21.1	2024-12-17T10:51:01.0284165	Recipes
+ec270d18133dce9e35bd35fed26395ceab8e8379 data/minecraft/advancement/recipes/food/worm_from_campfire_cooking.json
+a0302116be4f949747058007595dbab899294580 data/minecraft/advancement/recipes/food/worm_from_smoking.json
 97df304d032860f511306b3d0f9412f4f5a4aab5 data/minecraft/advancement/recipes/misc/amber_from_blasting_amber_ore.json
 6d39ac602a281aeec4380aade5137fa48e852243 data/minecraft/advancement/recipes/misc/amber_from_blasting_deepslate_amber_ore.json
 fbbd1c21f3417594bafbd5771499bcd113e6add6 data/minecraft/advancement/recipes/misc/amber_from_smelting_amber_ore.json
@@ -51,6 +53,8 @@ a256879cfe952e9d59f870a0a83c004d0e1ddc4e data/minecraft/recipe/ruby_netherite_ho
 b1f2a2425830b10925e08a7d09321dd9300e06fa data/minecraft/recipe/ruby_netherite_pickaxe_smithing.json
 0e4b8a244d5936ff2cf0dff0ce93032f221b3428 data/minecraft/recipe/ruby_netherite_shovel_smithing.json
 941596b407d285e88a3bf3f375e2d48aeaa17b1c data/minecraft/recipe/ruby_netherite_sword_smithing.json
+5d59e5f5f074e013b950f9519091723a69471e5e data/minecraft/recipe/worm_from_campfire_cooking.json
+1e791474ae8842cc9a7e904158e6ce917c6ed97a data/minecraft/recipe/worm_from_smoking.json
 3eacaf364d05d33b13fcace967b5fad62c86950f data/villagecraft2essentials/advancement/recipes/combat/amber_boots.json
 78df27947c9ecaeccf208e4ca61ed40f12b1505a data/villagecraft2essentials/advancement/recipes/combat/amber_chestplate.json
 55ab3f4dfe50d30cd766963db294ecc8acca6e32 data/villagecraft2essentials/advancement/recipes/combat/amber_helmet.json

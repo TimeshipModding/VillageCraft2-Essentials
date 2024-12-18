@@ -22,8 +22,8 @@ public class ModTrimMaterials {
             ResourceKey.create(Registries.TRIM_MATERIAL, ResourceLocation.fromNamespaceAndPath(VillageCraft2Essentials.MODID, "amber"));
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
-        register(context, RUBY, ModItems.RUBY.get(), Style.EMPTY.withColor(TextColor.parseColor("#c71836").getOrThrow()), 1.1F);
-        register(context, AMBER, ModItems.AMBER.get(), Style.EMPTY.withColor(TextColor.parseColor("#ca8513").getOrThrow()), 1.2F);
+        register(context, RUBY, ModItems.RUBY.get(), Style.EMPTY.withColor(TextColor.parseColor("#c71836").getOrThrow()), 0.4F);
+        register(context, AMBER, ModItems.AMBER.get(), Style.EMPTY.withColor(TextColor.parseColor("#ca8513").getOrThrow()), 0.6F);
     }
 
     private static void register(BootstrapContext<TrimMaterial> context, ResourceKey<TrimMaterial> trimKey, Item item,

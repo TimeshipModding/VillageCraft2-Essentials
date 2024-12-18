@@ -403,6 +403,10 @@ public class DataRecipes extends RecipeProvider implements IConditionBuilder {
         // Simple Cooking Recipe
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(WORM), RecipeCategory.FOOD, COOKED_WORM, 0.35F, 200)
                 .unlockedBy(getHasName(WORM.get()), has(WORM)).save(recipeOutput);
+        SimpleCookingRecipeBuilder.smoking(Ingredient.of(WORM), RecipeCategory.FOOD, COOKED_WORM, 0.35F, 100)
+                .unlockedBy(getHasName(WORM.get()), has(WORM)).save(recipeOutput, getItemName(WORM) + "_from_smoking");
+        SimpleCookingRecipeBuilder.campfireCooking(Ingredient.of(WORM), RecipeCategory.FOOD, COOKED_WORM, 0.35F, 600)
+                .unlockedBy(getHasName(WORM.get()), has(WORM)).save(recipeOutput, getItemName(WORM) + "_from_campfire_cooking");
 
         // Ore Smelting
         oreSmelting(recipeOutput, RUBY_SMELTABLES, RecipeCategory.MISC, RUBY.get(), 1.0F, 200, "ruby");
@@ -433,7 +437,6 @@ public class DataRecipes extends RecipeProvider implements IConditionBuilder {
         amberNetheriteSmithing(recipeOutput, AMBER_CHESTPLATE.get(), RecipeCategory.TOOLS, NETHERITE_CHESTPLATE);
         amberNetheriteSmithing(recipeOutput, AMBER_LEGGINGS.get(), RecipeCategory.TOOLS, NETHERITE_LEGGINGS);
         amberNetheriteSmithing(recipeOutput, AMBER_BOOTS.get(), RecipeCategory.TOOLS, NETHERITE_BOOTS);
-
     }
 
     // Generate Methods

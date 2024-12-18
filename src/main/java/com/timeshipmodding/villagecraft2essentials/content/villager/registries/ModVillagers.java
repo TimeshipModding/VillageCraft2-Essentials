@@ -1,5 +1,6 @@
 package com.timeshipmodding.villagecraft2essentials.content.villager.registries;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.timeshipmodding.villagecraft2essentials.VillageCraft2Essentials;
 import com.timeshipmodding.villagecraft2essentials.content.block.registries.ModBlocks;
@@ -8,6 +9,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
+import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.Set;
@@ -18,10 +20,10 @@ public class ModVillagers {
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(BuiltInRegistries.VILLAGER_PROFESSION, VillageCraft2Essentials.MODID);
 
     /*private static final Set<BlockState> ATMS = ImmutableList.of(
-            ModBlocks.RED_ATM.get()
+            ModBlocks.RED_ATM
             )
             .stream()
-            .flatMap(ATMS -> ATMS.getStateDefinition().getPossibleStates().stream())
+            .flatMap(ATMS -> ATMS.get().getStateDefinition().getPossibleStates().stream())
             //.filter(ATMS -> ATMS.getValue(DoubleBlock.HALF) == DoubleBlockHalf.UPPER)
             .collect(ImmutableSet.toImmutableSet()); */
 
