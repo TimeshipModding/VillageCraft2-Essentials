@@ -32,8 +32,10 @@ public class DataItemTags extends ItemTagsProvider {
                 .add(AMBER_CHESTPLATE.get())
                 .add(AMBER_LEGGINGS.get())
                 .add(AMBER_BOOTS.get());
-
         tag(ItemTags.TRIM_MATERIALS)
+                .add(RUBY.get())
+                .add(AMBER.get());
+        tag(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(RUBY.get())
                 .add(AMBER.get());
 
@@ -42,7 +44,6 @@ public class DataItemTags extends ItemTagsProvider {
                 .add(DIAMOND)
                 .add(RUBY.get())
                 .add(AMBER.get());
-
         tag(MOLE_FOOD)
                 .add(WORM.get())
                 .add(COOKED_WORM.get());

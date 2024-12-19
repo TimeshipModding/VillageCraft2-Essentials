@@ -22,14 +22,14 @@ public class DataBlockTags extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         // VillageCraft 2 Essentials Tags
-        this.tag(ModBlockTags.MOLES_SPAWNABLE_ON)
+        tag(ModBlockTags.MOLES_SPAWNABLE_ON)
                 .add(Blocks.DIRT)
                 .add(Blocks.COARSE_DIRT)
                 .add(Blocks.GRASS_BLOCK)
                 .add(Blocks.PODZOL);
 
         // Minecraft Tags
-        this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(RUBY_ORE.get())
                 .add(DEEPSLATE_RUBY_ORE.get())
                 .add(RUBY_BLOCK.get())
@@ -52,16 +52,14 @@ public class DataBlockTags extends BlockTagsProvider {
                 .add(RED_ATM.get())
                 .add(WHITE_ATM.get())
                 .add(YELLOW_ATM.get());
-
-        this.tag(BlockTags.NEEDS_IRON_TOOL)
+        tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(RUBY_ORE.get())
                 .add(DEEPSLATE_RUBY_ORE.get())
                 .add(RUBY_BLOCK.get())
                 .add(AMBER_ORE.get())
                 .add(DEEPSLATE_AMBER_ORE.get())
                 .add(AMBER_BLOCK.get());
-
-        this.tag(BlockTags.NEEDS_STONE_TOOL)
+        tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(BLACK_ATM.get())
                 .add(BLUE_ATM.get())
                 .add(BROWN_ATM.get())
@@ -78,5 +76,8 @@ public class DataBlockTags extends BlockTagsProvider {
                 .add(RED_ATM.get())
                 .add(WHITE_ATM.get())
                 .add(YELLOW_ATM.get());
+        tag(BlockTags.BEACON_BASE_BLOCKS)
+                .add(RUBY_BLOCK.get())
+                .add(AMBER_BLOCK.get());
     }
 }

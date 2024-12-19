@@ -1,4 +1,5 @@
-// 1.21.1	2024-12-15T21:36:25.1593272	Tags for minecraft:item mod id villagecraft2essentials
+// 1.21.1	2024-12-19T13:03:38.555191	Tags for minecraft:item mod id villagecraft2essentials
+bd2a04a92a2eb44119cdb9bd10e2caf5882df561 data/minecraft/tags/item/beacon_payment_items.json
 d0f28bc050594221c17da113bf5f739f2f8d8299 data/minecraft/tags/item/trimmable_armor.json
 bd2a04a92a2eb44119cdb9bd10e2caf5882df561 data/minecraft/tags/item/trim_materials.json
 98d9771fe1b5b02f02c0b74ec6238b98687624d1 data/villagecraft2essentials/tags/item/mole_food.json
