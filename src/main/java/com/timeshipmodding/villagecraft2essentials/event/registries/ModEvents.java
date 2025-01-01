@@ -15,6 +15,8 @@ import com.timeshipmodding.villagecraft2essentials.content.commands.villagecraft
 import com.timeshipmodding.villagecraft2essentials.content.commands.villagecraftcity.VillageCraftCitySetSpawnCommand;
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModItems;
 import com.timeshipmodding.villagecraft2essentials.content.villager.registries.ModVillagers;
+import com.timeshipmodding.villagecraft2essentials.util.saveddata.JailSavedData;
+import com.timeshipmodding.villagecraft2essentials.util.saveddata.SpawnSavedData;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
@@ -25,7 +27,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
-import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import net.neoforged.neoforge.event.village.VillagerTradesEvent;
 import net.neoforged.neoforge.server.command.ConfigCommand;
 
@@ -92,5 +95,17 @@ public class ModEvents {
         new VillageCraftCitySpawnCommand(event.getDispatcher());
 
         ConfigCommand.register(event.getDispatcher());
+    }
+
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+        VillageCraft2Essentials.spawnSavedData = SpawnSavedData.getData(event.getServer());
+        VillageCraft2Essentials.jailSavedData = JailSavedData.getData(event.getServer());
+    }
+
+    @SubscribeEvent
+    public void onServerStopping(ServerStoppingEvent event) {
+        VillageCraft2Essentials.spawnSavedData.setDirty(true);
+        VillageCraft2Essentials.jailSavedData.setDirty(true);
     }
 }

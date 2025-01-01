@@ -2,11 +2,12 @@ package com.timeshipmodding.villagecraft2essentials.content.commands.villagecraf
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
-import com.timeshipmodding.villagecraft2essentials.util.tags.CompoundTags;
+import com.timeshipmodding.villagecraft2essentials.util.saveddata.SpawnSavedData;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
@@ -20,10 +21,13 @@ public class VillageCraftCitySetSpawnCommand {
     private int execute(CommandContext<CommandSourceStack> context) {
         ServerPlayer player = context.getSource().getPlayer();
         ServerLevel serverLevel = context.getSource().getLevel();
+        MinecraftServer server = context.getSource().getServer();
         BlockPos playerPos = player.blockPosition();
         String positionString = playerPos.getX() + ", " + playerPos.getY() + ", " + playerPos.getZ();
-        CompoundTags.villagecraftCitySpawn.putIntArray("villagecraft2essentials.villagecraftcityspawnpos",
-                new int[] { playerPos.getX(), playerPos.getY(), playerPos.getZ() });
+
+        int[] spawnPos = {playerPos.getX(), playerPos.getY(), playerPos.getZ()};
+        SpawnSavedData savedData = SpawnSavedData.getData(server);
+        savedData.setVillagecraftCitySpawnPos(spawnPos);
 
         if (serverLevel.dimension() != Level.OVERWORLD) {
             context.getSource().sendFailure(Component.literal("Can only set Villagecraft City's spawn in the overworld."));

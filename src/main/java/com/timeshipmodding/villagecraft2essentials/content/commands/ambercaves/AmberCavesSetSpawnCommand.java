@@ -2,11 +2,12 @@ package com.timeshipmodding.villagecraft2essentials.content.commands.ambercaves;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
-import com.timeshipmodding.villagecraft2essentials.util.tags.CompoundTags;
+import com.timeshipmodding.villagecraft2essentials.util.saveddata.SpawnSavedData;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.level.Level;
@@ -20,16 +21,19 @@ public class AmberCavesSetSpawnCommand {
     private int execute(CommandContext<CommandSourceStack> context) {
         ServerPlayer player = context.getSource().getPlayer();
         ServerLevel serverLevel = context.getSource().getLevel();
+        MinecraftServer server = context.getSource().getServer();
         BlockPos playerPos = player.blockPosition();
         String positionString = playerPos.getX() + ", " + playerPos.getY() + ", " + playerPos.getZ();
-        CompoundTags.amberCavesSpawn.putIntArray("villagecraft2essentials.ambercavesspawnpos",
-                new int[] { playerPos.getX(), playerPos.getY(), playerPos.getZ() });
+
+        int[] spawnPos = {playerPos.getX(), playerPos.getY(), playerPos.getZ()};
+        SpawnSavedData savedData = SpawnSavedData.getData(server);
+        savedData.setAmberCavesSpawnPos(spawnPos);
 
         if (serverLevel.dimension() != Level.OVERWORLD) {
-            context.getSource().sendFailure(Component.literal("Can only set Amber Caves' spawn in the overworld."));
+            context.getSource().sendFailure(Component.literal("Can only set The Amber Caves' spawn in the overworld."));
             return 0;
         } else {
-            context.getSource().sendSuccess(() -> Component.literal("Set Amber Caves' Spawn to " + positionString), true);
+            context.getSource().sendSuccess(() -> Component.literal("Set The Amber Caves' Spawn to " + positionString), true);
             return 1;
         }
     }

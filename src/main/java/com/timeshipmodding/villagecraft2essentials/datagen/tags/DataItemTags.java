@@ -38,6 +38,43 @@ public class DataItemTags extends ItemTagsProvider {
         tag(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(RUBY.get())
                 .add(AMBER.get());
+        tag(ItemTags.SHOVELS)
+                .add(RUBY_SHOVEL.get())
+                .add(RUBY_NETHERITE_SHOVEL.get())
+                .add(AMBER_SHOVEL.get())
+                .add(AMBER_NETHERITE_SHOVEL.get());
+        tag(ItemTags.PICKAXES)
+                .add(RUBY_PICKAXE.get())
+                .add(RUBY_NETHERITE_PICKAXE.get())
+                .add(AMBER_PICKAXE.get())
+                .add(AMBER_NETHERITE_PICKAXE.get());
+        tag(ItemTags.AXES)
+                .add(RUBY_AXE.get())
+                .add(RUBY_NETHERITE_AXE.get())
+                .add(AMBER_AXE.get())
+                .add(AMBER_NETHERITE_AXE.get());
+        tag(ItemTags.HOES)
+                .add(RUBY_HOE.get())
+                .add(RUBY_NETHERITE_HOE.get())
+                .add(AMBER_HOE.get())
+                .add(AMBER_NETHERITE_HOE.get());
+        tag(ItemTags.SWORDS)
+                .add(RUBY_SWORD.get())
+                .add(RUBY_NETHERITE_SWORD.get())
+                .add(AMBER_SWORD.get())
+                .add(AMBER_NETHERITE_SWORD.get());
+        tag(ItemTags.FOOT_ARMOR)
+                .add(RUBY_BOOTS.get())
+                .add(AMBER_BOOTS.get());
+        tag(ItemTags.LEG_ARMOR)
+                .add(RUBY_LEGGINGS.get())
+                .add(AMBER_LEGGINGS.get());
+        tag(ItemTags.CHEST_ARMOR)
+                .add(RUBY_CHESTPLATE.get())
+                .add(AMBER_CHESTPLATE.get());
+        tag(ItemTags.HEAD_ARMOR)
+                .add(RUBY_HELMET.get())
+                .add(AMBER_HELMET.get());
 
         // VillageCraft 2 Essentials Tags
         tag(NETHERITE_UPGRADE_SMITHING_TEMPLATE_GEMS)

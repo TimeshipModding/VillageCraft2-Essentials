@@ -8,7 +8,11 @@ import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModIt
 import com.timeshipmodding.villagecraft2essentials.content.item.registries.ModPermitItems;
 import com.timeshipmodding.villagecraft2essentials.content.sound.registries.ModSounds;
 import com.timeshipmodding.villagecraft2essentials.content.villager.registries.ModVillagers;
-import net.neoforged.fml.ModContainer;
+import com.timeshipmodding.villagecraft2essentials.util.saveddata.JailSavedData;
+import com.timeshipmodding.villagecraft2essentials.util.saveddata.SpawnSavedData;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.neoforged.neoforge.event.server.ServerStoppingEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -17,13 +21,13 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
 @Mod(VillageCraft2Essentials.MODID)
-public class VillageCraft2Essentials
-{
+public class VillageCraft2Essentials {
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final String MODID = "villagecraft2essentials";
+    public static SpawnSavedData spawnSavedData;
+    public static JailSavedData jailSavedData;
 
-    public VillageCraft2Essentials(IEventBus modEventBus)
-    {
+    public VillageCraft2Essentials(IEventBus modEventBus) {
         // Register registry classes
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
