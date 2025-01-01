@@ -41,4 +41,16 @@ public class VillageCraft2Essentials {
         // Register creative mode tab
         EssentialsTab.CREATIVE_MODE_TABS.register(modEventBus);
     }
+
+    @SubscribeEvent
+    public void onServerStarting(ServerStartingEvent event) {
+        VillageCraft2Essentials.spawnSavedData = SpawnSavedData.getData(event.getServer());
+        VillageCraft2Essentials.jailSavedData = JailSavedData.getData(event.getServer());
+    }
+
+    @SubscribeEvent
+    public void onServerStopping(ServerStoppingEvent event) {
+        VillageCraft2Essentials.spawnSavedData.setDirty(true);
+        VillageCraft2Essentials.jailSavedData.setDirty(true);
+    }
 }
