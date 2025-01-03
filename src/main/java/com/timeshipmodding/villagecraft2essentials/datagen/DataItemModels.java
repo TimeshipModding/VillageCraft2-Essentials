@@ -71,6 +71,7 @@ public class DataItemModels extends ItemModelProvider {
         handheldItem(AMBER_NETHERITE_PICKAXE.get());
         handheldItem(AMBER_NETHERITE_AXE.get());
         handheldItem(AMBER_NETHERITE_HOE.get());
+        handheldItem(POLICE_BATON.get());
         handheldRodItem(WORM_ON_A_STICK.get());
 
         // Armor Items

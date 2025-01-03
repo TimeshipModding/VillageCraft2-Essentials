@@ -5,6 +5,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -75,6 +76,16 @@ public class DataItemTags extends ItemTagsProvider {
         tag(ItemTags.HEAD_ARMOR)
                 .add(RUBY_HELMET.get())
                 .add(AMBER_HELMET.get());
+        tag(ItemTags.BREAKS_DECORATED_POTS)
+                .add(POLICE_BATON.get());
+        tag(ItemTags.FIRE_ASPECT_ENCHANTABLE)
+                .add(POLICE_BATON.get());
+        tag(ItemTags.WEAPON_ENCHANTABLE)
+                .add(POLICE_BATON.get());
+        tag(ItemTags.MACE_ENCHANTABLE)
+                .add(POLICE_BATON.get());
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(POLICE_BATON.get());
 
         // VillageCraft 2 Essentials Tags
         tag(NETHERITE_UPGRADE_SMITHING_TEMPLATE_GEMS)

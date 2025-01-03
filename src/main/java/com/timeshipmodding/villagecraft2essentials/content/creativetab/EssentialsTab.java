@@ -98,6 +98,7 @@ public class EssentialsTab {
                 pOutput.accept(NETHERITE_CHESTPLATE);
                 pOutput.accept(NETHERITE_LEGGINGS);
                 pOutput.accept(NETHERITE_BOOTS);
+                pOutput.accept(POLICE_BATON);
                 pOutput.accept(WORM_ON_A_STICK);
                 pOutput.accept(WORM);
                 pOutput.accept(COOKED_WORM);
