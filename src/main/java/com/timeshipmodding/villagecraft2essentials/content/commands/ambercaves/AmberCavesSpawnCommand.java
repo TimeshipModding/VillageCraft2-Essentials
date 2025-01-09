@@ -7,7 +7,9 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.level.Level;
 
 public class AmberCavesSpawnCommand {
     public AmberCavesSpawnCommand(CommandDispatcher<CommandSourceStack> dispatcher) {
@@ -17,17 +19,22 @@ public class AmberCavesSpawnCommand {
     private int execute(CommandContext<CommandSourceStack> context) {
         ServerPlayer player = context.getSource().getPlayer();
         MinecraftServer server = context.getSource().getServer();
+        ServerLevel serverLevel = context.getSource().getLevel();
         SpawnSavedData savedData = SpawnSavedData.getData(server);
         int[] spawnPos = savedData.getAmberCavesSpawnPos();
 
-        if(spawnPos[0] != 0 && spawnPos[1] != 0 && spawnPos[2] != 0) {
-            player.teleportTo(spawnPos[0], spawnPos[1], spawnPos[2]);
+        if(serverLevel.dimension() == Level.OVERWORLD) {
+            if(spawnPos[0] != 0 && spawnPos[1] != 0 && spawnPos[2] != 0) {
+                player.teleportTo(spawnPos[0], spawnPos[1], spawnPos[2]);
 
-            context.getSource().sendSuccess(() -> Component.literal("You have been teleported to The Amber Caves!"), false);
-            return 1;
-        } else {
-            context.getSource().sendFailure(Component.literal("No Amber Caves Spawn Position has been set."));
-            return -1;
+                context.getSource().sendSuccess(() -> Component.literal("You have been teleported to The Amber Caves!"), false);
+                return 1;
+            } else {
+                context.getSource().sendFailure(Component.literal("No Amber Caves Spawn Position has been set."));
+                return -1;
+            }
         }
+        context.getSource().sendFailure(Component.literal("Can only teleport to The Amber Caves' Spawn while in the overworld."));
+        return -1;
     }
 }

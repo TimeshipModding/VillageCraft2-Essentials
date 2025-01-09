@@ -9,7 +9,9 @@ import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
+import org.apache.logging.log4j.core.jmx.Server;
 
 import java.util.Collection;
 
@@ -25,19 +27,24 @@ public class GripperCityJailCommand {
 
     private int execute(CommandContext<CommandSourceStack> context, Collection<? extends Entity> targets) {
         MinecraftServer server = context.getSource().getServer();
+        ServerLevel serverLevel = context.getSource().getLevel();
         JailSavedData savedData = JailSavedData.getData(server);
         int[] jailPos = savedData.getGripperCityJailPos();
 
-        if(jailPos[0] != 0 && jailPos[1] != 0 && jailPos[2] != 0) {
-            for (Entity entity : targets) {
-                entity.teleportTo(jailPos[0], jailPos[1], jailPos[2]);
-            }
+        if(serverLevel.dimension() == ServerLevel.OVERWORLD) {
+            if(jailPos[0] != 0 && jailPos[1] != 0 && jailPos[2] != 0) {
+                for (Entity entity : targets) {
+                    entity.teleportTo(jailPos[0], jailPos[1], jailPos[2]);
+                }
 
-            context.getSource().sendSuccess(() -> Component.literal("You have been teleported to Gripper Jail!"), false);
-            return 1;
-        } else {
-            context.getSource().sendFailure(Component.literal("No Gripper City Jail Position has been set."));
-            return -1;
+                context.getSource().sendSuccess(() -> Component.literal("You have been teleported to Gripper Jail!"), false);
+                return 1;
+            } else {
+                context.getSource().sendFailure(Component.literal("No Gripper City Jail Position has been set."));
+                return -1;
+            }
         }
+        context.getSource().sendFailure(Component.literal("Can only teleport to Gripper City's Jail while in the overworld."));
+        return -1;
     }
 }

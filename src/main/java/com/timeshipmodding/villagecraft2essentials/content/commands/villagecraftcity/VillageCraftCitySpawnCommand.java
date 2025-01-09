@@ -7,6 +7,7 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 
 public class VillageCraftCitySpawnCommand {
@@ -17,17 +18,22 @@ public class VillageCraftCitySpawnCommand {
     private int execute(CommandContext<CommandSourceStack> context) {
         ServerPlayer player = context.getSource().getPlayer();
         MinecraftServer server = context.getSource().getServer();
+        ServerLevel serverLevel = context.getSource().getLevel();
         SpawnSavedData savedData = SpawnSavedData.getData(server);
         int[] spawnPos = savedData.getVillagecraftCitySpawnPos();
 
-        if(spawnPos[0] != 0 && spawnPos[1] != 0 && spawnPos[2] != 0) {
-            player.teleportTo(spawnPos[0], spawnPos[1], spawnPos[2]);
+        if(serverLevel.dimension() == ServerLevel.OVERWORLD) {
+            if(spawnPos[0] != 0 && spawnPos[1] != 0 && spawnPos[2] != 0) {
+                player.teleportTo(spawnPos[0], spawnPos[1], spawnPos[2]);
 
-            context.getSource().sendSuccess(() -> Component.literal("You have been teleported to VillageCraft City!"), false);
-            return 1;
-        } else {
-            context.getSource().sendFailure(Component.literal("No VillageCraft City Spawn Position has been set."));
-            return -1;
+                context.getSource().sendSuccess(() -> Component.literal("You have been teleported to VillageCraft City!"), false);
+                return 1;
+            } else {
+                context.getSource().sendFailure(Component.literal("No VillageCraft City Spawn Position has been set."));
+                return -1;
+            }
         }
+        context.getSource().sendFailure(Component.literal("Can only teleport to VillageCraft City's Spawn while in the overworld."));
+        return -1;
     }
 }
