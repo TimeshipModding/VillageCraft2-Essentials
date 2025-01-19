@@ -28,21 +28,21 @@ public class ModOrePlacements {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, ORE_RUBY_SMALL, configuredFeatures.getOrThrow(ModOreFeatures.ORE_RUBY_SMALL),
-                ModOrePlacements.commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(32))));
+                ModOrePlacements.commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(80))));
         register(context, ORE_RUBY_MEDIUM, configuredFeatures.getOrThrow(ModOreFeatures.ORE_RUBY_MEDIUM),
                 ModOrePlacements.commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-4))));
         register(context, ORE_RUBY_LARGE, configuredFeatures.getOrThrow(ModOreFeatures.ORE_RUBY_LARGE),
                 ModOrePlacements.rareOrePlacement(9, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(80))));
         register(context, ORE_RUBY_BURIED, configuredFeatures.getOrThrow(ModOreFeatures.ORE_RUBY_BURIED),
-                ModOrePlacements.commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(32))));
+                ModOrePlacements.commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(80))));
         register(context, ORE_AMBER_SMALL, configuredFeatures.getOrThrow(ModOreFeatures.ORE_AMBER_SMALL),
-                ModOrePlacements.commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(32))));
+                ModOrePlacements.commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(80))));
         register(context, ORE_AMBER_MEDIUM, configuredFeatures.getOrThrow(ModOreFeatures.ORE_AMBER_MEDIUM),
                 ModOrePlacements.commonOrePlacement(2, HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(-4))));
         register(context, ORE_AMBER_LARGE, configuredFeatures.getOrThrow(ModOreFeatures.ORE_AMBER_LARGE),
                 ModOrePlacements.rareOrePlacement(9, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(80))));
         register(context, ORE_AMBER_BURIED, configuredFeatures.getOrThrow(ModOreFeatures.ORE_AMBER_BURIED),
-                ModOrePlacements.commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(32))));
+                ModOrePlacements.commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.absolute(80))));
 
     }
 

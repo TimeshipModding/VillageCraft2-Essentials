@@ -63,7 +63,7 @@ public class GripperCityPermitItem extends Item {
         } else if (pTooltip == 11 && Screen.hasShiftDown()) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.grippercity_permit_tooltip_value_11"));
         } else if (pTooltip == 11) {
             pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_shift"));
-            pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_5"));
+            pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_11"));
         } else if (pTooltip == 12 && Screen.hasShiftDown()) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.grippercity_permit_tooltip_value_12"));
         } else if (pTooltip == 12) {
             pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_shift"));
@@ -71,7 +71,7 @@ public class GripperCityPermitItem extends Item {
         } else if (pTooltip == 13 && Screen.hasShiftDown()) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.grippercity_permit_tooltip_value_13"));
         } else if (pTooltip == 13) {
             pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_shift"));
-            pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_5"));
+            pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_13"));
         } else if (pTooltip == 14 && Screen.hasShiftDown()) {pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.grippercity_permit_tooltip_value_14"));
         } else if (pTooltip == 14) {
             pTooltipComponents.add(Component.translatable("tooltip.villagecraft2essentials.permit_tooltip_shift"));

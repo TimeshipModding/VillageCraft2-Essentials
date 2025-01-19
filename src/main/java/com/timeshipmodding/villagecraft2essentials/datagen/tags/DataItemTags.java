@@ -88,10 +88,6 @@ public class DataItemTags extends ItemTagsProvider {
                 .add(POLICE_BATON.get());
 
         // VillageCraft 2 Essentials Tags
-        tag(NETHERITE_UPGRADE_SMITHING_TEMPLATE_GEMS)
-                .add(DIAMOND)
-                .add(RUBY.get())
-                .add(AMBER.get());
         tag(MOLE_FOOD)
                 .add(WORM.get())
                 .add(COOKED_WORM.get());

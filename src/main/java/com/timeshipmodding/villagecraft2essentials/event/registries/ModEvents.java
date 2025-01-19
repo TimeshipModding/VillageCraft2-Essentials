@@ -44,39 +44,39 @@ public class ModEvents {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.DIAMOND, 1),
-                    new ItemStack(ModItems.RUBY.get(), 5), 128, 64, 0.0f
+                    new ItemStack(ModItems.RUBY.get(), 5), 128, 10, 0.0f
             ));
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(ModItems.RUBY.get(), 5),
-                    new ItemStack(Items.DIAMOND, 1), 128, 64, 0.0f
+                    new ItemStack(Items.DIAMOND, 1), 128, 10, 0.0f
             ));
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.DIAMOND, 2),
-                    new ItemStack(ModItems.AMBER.get(), 1), 128, 64, 0.0f
+                    new ItemStack(ModItems.AMBER.get(), 1), 128, 15, 0.0f
             ));
             trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(ModItems.AMBER.get(), 1),
-                    new ItemStack(Items.DIAMOND, 2), 128, 64, 0.0f
+                    new ItemStack(Items.DIAMOND, 2), 128, 15, 0.0f
             ));
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(ModItems.AMBER.get(), 1),
-                    new ItemStack(ModItems.RUBY.get(), 10), 128, 64, 0.0f
+                    new ItemStack(ModItems.RUBY.get(), 10), 128, 30, 0.0f
             ));
             trades.get(3).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(ModItems.RUBY.get(), 10),
-                    new ItemStack(ModItems.AMBER.get(), 1), 128, 64, 0.0f
+                    new ItemStack(ModItems.AMBER.get(), 1), 128, 30, 0.0f
             ));
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Blocks.EMERALD_BLOCK, 8),
-                    new ItemStack(Items.DIAMOND, 1), 128, 64, 0.0f
+                    new ItemStack(Items.DIAMOND, 1), 128, 45, 0.0f
             ));
             trades.get(4).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Blocks.EMERALD_BLOCK, 8),
-                    new ItemStack(ModItems.RUBY.get(), 5), 128, 64, 0.0f
+                    new ItemStack(ModItems.RUBY.get(), 5), 128, 45, 0.0f
             ));
             trades.get(5).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Blocks.EMERALD_BLOCK, 16),
-                    new ItemStack(ModItems.AMBER.get(), 1), 128, 64, 0.0f
+                    new ItemStack(ModItems.AMBER.get(), 1), 128, 45, 0.0f
             ));
         }
 
