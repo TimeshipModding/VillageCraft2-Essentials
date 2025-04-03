@@ -7,6 +7,7 @@ import com.timeshipmodding.villagecraft2essentials.util.tags.registries.ModBlock
 import com.timeshipmodding.villagecraft2essentials.util.tags.registries.ModItemTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -32,8 +33,11 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
+import net.neoforged.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
@@ -61,7 +65,7 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     public static AttributeSupplier.Builder createAttributes() {
         return Mob.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 14)
-                .add(Attributes.MOVEMENT_SPEED, 0.25)
+                .add(Attributes.MOVEMENT_SPEED, 0.15)
                 .add(Attributes.FOLLOW_RANGE, 24);
     }
 
@@ -135,21 +139,66 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         boolean flag = this.isFood(player.getItemInHand(hand));
+        ItemStack itemstack = player.getItemInHand(hand);
         if (!flag && this.isSaddled() && !this.isVehicle() && !player.isSecondaryUseActive()) {
             if (!this.level().isClientSide) {
                 player.startRiding(this);
             }
-
             return InteractionResult.sidedSuccess(this.level().isClientSide);
+        } else if (this.isFood(itemstack)) {
+            return this.fedFood(player, itemstack);
         } else {
             InteractionResult interactionresult = super.mobInteract(player, hand);
             if (!interactionresult.consumesAction()) {
-                ItemStack itemstack = player.getItemInHand(hand);
                 return itemstack.is(Items.SADDLE) ? itemstack.interactLivingEntity(player, this, hand) : InteractionResult.PASS;
             } else {
                 return interactionresult;
             }
         }
+    }
+
+    public InteractionResult fedFood(Player player, ItemStack stack) {
+        boolean flag = this.handleEating(player, stack);
+        if (flag) {
+            stack.consume(1, player);
+        }
+
+        if (this.level().isClientSide) {
+            return InteractionResult.CONSUME;
+        } else {
+            return flag ? InteractionResult.SUCCESS : InteractionResult.PASS;
+        }
+    }
+
+    public boolean handleEating(Player player, ItemStack stack) {
+        boolean flag = false;
+        float f = 0.0F;
+        int i = 0;
+        if (stack.is(ModItems.COOKED_WORM)) {
+            f = 2.0F;
+            i = 30;
+        } else if (stack.is(ModItems.WORM)) {
+            f = 1.0F;
+            i = 20;
+        }
+
+            if (this.getHealth() < this.getMaxHealth() && f > 0.0F) {
+                this.heal(f);
+                flag = true;
+            }
+
+            if (this.isBaby() && i > 0) {
+                this.level().addParticle(ParticleTypes.HAPPY_VILLAGER, this.getRandomX(1.0), this.getRandomY() + 0.5, this.getRandomZ(1.0), 0.0, 0.0, 0.0);
+                if (!this.level().isClientSide) {
+                    this.ageUp(i);
+                    flag = true;
+                }
+            }
+
+            if (flag) {
+                this.gameEvent(GameEvent.EAT);
+            }
+        return flag;
     }
 
     @Override
@@ -222,7 +271,7 @@ public class MoleEntity extends Animal implements ItemSteerable, Saddleable {
 
     @Override
     protected float getRiddenSpeed(Player player) {
-        return (float)(this.getAttributeValue(Attributes.MOVEMENT_SPEED) * 0.75 * (double)this.steering.boostFactor());
+        return (float)(this.getAttributeValue(Attributes.MOVEMENT_SPEED) * 0.65 * (double)this.steering.boostFactor());
     }
 
     @Override
